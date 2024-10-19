@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Oct 17 12:00:28 2024
+# Process ID: 25988
+# Current directory: C:/Users/cyber/Desktop/MODS
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1612 C:\Users\cyber\Desktop\MODS\MODS.xpr
+# Log file: C:/Users/cyber/Desktop/MODS/vivado.log
+# Journal file: C:/Users/cyber/Desktop/MODS\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/cyber/Desktop/MODS/MODS.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/cyber/Desktop/MODS/.Xil/Vivado-22468-Kashfy-yoga7/PrjAr/_X_' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 815.195 ; gain = 120.465
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Oct 17 12:01:16 2024] Launched synth_1...
+Run output will be captured here: C:/Users/cyber/Desktop/MODS/MODS.runs/synth_1/runme.log
+[Thu Oct 17 12:01:16 2024] Launched impl_1...
+Run output will be captured here: C:/Users/cyber/Desktop/MODS/MODS.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 184 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1642.531 ; gain = 0.000
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1642.531 ; gain = 807.953
+INFO: [Common 17-344] 'open_run' was cancelled
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 17 12:03:12 2024...
