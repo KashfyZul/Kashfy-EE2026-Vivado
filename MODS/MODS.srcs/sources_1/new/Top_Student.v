@@ -65,13 +65,16 @@ wire [3:0] hitbox_size = 8;
 wire [3:0] sprite_no;
 animate(.clk(clk), .x_start(48), .y_start(0), .x_vect(x_vect), .y_vect(y_vect), .sq_width(hitbox_size), .sq_height(hitbox_size), .fps(20), //ignore fps 
 //        .stat_colour(16'b11111_000000_00000), .move_colour(16'b11100_001111_00000), .jump_colour(16'b11111_000000_11000), 
-        .x_obstacle(30), .y_obstacle(40), .x_var(x_var), .y_var(y_var), .center_sq_colour(center_sq_colour), .is_y_stat(is_y_stat), .sprite_no(sprite_no));
+        .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
+        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
+        .x_var(x_var), .y_var(y_var), .center_sq_colour(center_sq_colour), .is_y_stat(is_y_stat), .sprite_no(sprite_no));
 
 // draw the squares
 make_square draw_sq (.clk(clk), .x(x), .y(y), .sprite_no(sprite_no),
         .x_val(x_var), .y_val(y_var), .sq_width(8),.sq_height(8), .sq_colour(center_sq_colour),
-        .x_val2(30), .y_val2(40), .sq_width2(25),.sq_height2(5), .sq_colour2(16'b00000_111111_00000), 
-        .bg_colour(0), .oled_data(oled_data));
+        .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
+        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
+        .platform_colour(16'b00000_111111_00000), .bg_colour(0), .oled_data(oled_data));
 
 // track damage of player (3 lives)
 wire hit;

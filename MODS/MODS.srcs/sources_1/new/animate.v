@@ -22,7 +22,9 @@
 
 module animate(
     input clk, [6:0]x_start, [6:0]y_start, [6:0]x_vect, [6:0]y_vect, [6:0]sq_width, [6:0]sq_height, 
-    [31:0]fps, [15:0]stat_colour, [15:0]move_colour, [15:0]jump_colour, [6:0]x_obstacle, [6:0]y_obstacle,
+    [31:0]fps, [15:0]stat_colour, [15:0]move_colour, [15:0]jump_colour, 
+    [6:0]x_platform1, [6:0]y_platform1, [6:0]width_platform1, [6:0]height_platform1,
+    [6:0]x_platform2, [6:0]y_platform2, [6:0]width_platform2, [6:0]height_platform2,
     output reg [6:0]x_var, reg [6:0]y_var, reg [15:0]center_sq_colour, reg is_y_stat, reg [3:0]sprite_no
     );
     
@@ -46,11 +48,6 @@ module animate(
 //    m_value_calculator calc_m (.freq(fps), .m_value(m_value));
     wire fps_clock;
     flexy_clock get_fps_clock (.clk(clk), .m_value(1_249_999), .slow_clk(fps_clock));
-   
-   // s = ut + 1/2 at**2
-   // 64 = 1t + 1/2 (0.33)t**2
-   // t**2 + 3t - 192 = 0
-   // t = 12.4 or 
    
    // assume time taken for y to fall through screen is 30 clock cycles
    
@@ -86,27 +83,53 @@ module animate(
         // REFINE THE COLLISIONS! 
         
         // check for collisions with boundaries of screen
-        if (x_var == 0 && x_vect == 127) begin // check position (x_var) as well as direvtion vector (x_vect)
+        // check left bound of screen
+        if (x_var == 0 && x_vect == 127) begin 
             x_increment = 0;
-        end else if (x_var + sq_width - 1 == 95 && x_vect == 1) begin
+        // check right bound of screen
+        end else if (x_var + sq_width - 1 == 95 && x_vect == 1) begin 
             x_increment = 0;    
-        end else if (x_var + sq_width == x_obstacle && (y_var + sq_height > y_obstacle && y_var < y_obstacle + 5) && x_vect == 1) begin // left bound of red square
+        // check left bound of platform1
+        end else if (x_var + sq_width == x_platform1 && (y_var + sq_height > y_platform1 && y_var < y_platform1 + height_platform1) && x_vect == 1) begin // left bound of red square
             x_increment = 0;
-        end else if (x_var == x_obstacle + 25 && (y_var + sq_height > y_obstacle && y_var < y_obstacle + 5) && x_vect == 127) begin // right bound of red square
+        // check right bound of platform1
+        end else if (x_var == x_platform1 + width_platform1 && (y_var + sq_height > y_platform1 && y_var < y_platform1 + height_platform1) && x_vect == 127) begin // right bound of red square
+            x_increment = 0;
+        // check left bound of platform2
+        end else if (x_var + sq_width == x_platform2 && (y_var + sq_height > y_platform2 && y_var < y_platform2 + height_platform2) && x_vect == 1) begin // left bound of red square
+            x_increment = 0;
+        // check right bound of platform2
+        end else if (x_var == x_platform2 + width_platform2 && (y_var + sq_height > y_platform2 && y_var < y_platform2 + height_platform2) && x_vect == 127) begin // right bound of red square
             x_increment = 0;
         end
+        
+        // check upper bound of screen
         if ((y_var == 0 || y_var > 63) && (jumping > 0 && jumping < 15)) begin
             y_increment = 1;
+        // check lower bound of screen
         end else if (y_var + sq_height - 1 == 63 && (falling > 0 && falling < 30)) begin
             y_increment = 0;
-        end else if ((y_var + sq_height == y_obstacle && y_var + sq_height < y_obstacle + 5) && (x_var + sq_width > x_obstacle && x_var - 1 < x_obstacle + 25) && (falling > 0 && falling < 30)) begin // upper bound of red square
+        // check upper bound of platform1
+        end else if ((y_var + sq_height == y_platform1 && y_var + sq_height < y_platform1 + height_platform1) && (x_var + sq_width > x_platform1 && x_var - 1 < x_platform1 + width_platform1) && (falling > 0 && falling < 30)) begin // upper bound of red square
             y_increment = 0;
+        // check upper bound of platform2
+        end else if ((y_var + sq_height == y_platform2 && y_var + sq_height < y_platform2 + height_platform2) && (x_var + sq_width > x_platform2 && x_var - 1 < x_platform2 + width_platform2) && (falling > 0 && falling < 30)) begin // upper bound of red square
+            y_increment = 0;
+        // check lower bound of screen before collision to slow down player
         end else if (y_var + sq_height - 1 + y_increment >= 63 && (falling > 0 && falling < 30)) begin
-            y_increment = 1; // falling counter 
-        end else if ((y_var + sq_height + y_increment >= y_obstacle && y_var + sq_height < y_obstacle + 5) && (x_var + sq_width > x_obstacle && x_var - 1 < x_obstacle + 25) && (falling > 0 && falling < 30)) begin // upper bound of red square
+            y_increment = 1; // falling counter
+         // check upper bound of platform1 before collision to slow down player
+        end else if ((y_var + sq_height + y_increment >= y_platform1 && y_var + sq_height < y_platform1 + height_platform1) && (x_var + sq_width > x_platform1 && x_var - 1 < x_platform1 + width_platform1) && (falling > 0 && falling < 30)) begin // upper bound of red square
+            y_increment = 1; // falling counter resets
+        // check upper bound of platform2 before collision to slow down player
+        end else if ((y_var + sq_height + y_increment >= y_platform2 && y_var + sq_height < y_platform2 + height_platform2) && (x_var + sq_width > x_platform2 && x_var - 1 < x_platform2 + width_platform2) && (falling > 0 && falling < 30)) begin // upper bound of red square
             y_increment = 1; // falling counter resets
 //        end else if (y_var <= y_obstacle + 5 - 1 && (x_var + sq_width - 1 > x_obstacle && x_var - 1 < x_obstacle + 25) && y_vect == 127) begin // lower bound of red square
-        end else if ((y_var <= y_obstacle + 5 - 1 && y_var > y_obstacle) && (x_var + sq_width - 1 > x_obstacle && x_var - 1 < x_obstacle + 25) && (jumping > 0 && jumping < 15)) begin // lower bound of red square
+        // check lower bound of platform 1
+        end else if ((y_var <= y_platform1 + height_platform1 - 1 && y_var > y_platform1) && (x_var + sq_width - 1 > x_platform1 && x_var - 1 < x_platform1 + width_platform1) && (jumping > 0 && jumping < 15)) begin // lower bound of red square
+            y_increment = 1;
+        // check lower bound of platform 1
+        end else if ((y_var <= y_platform2 + height_platform2 - 1 && y_var > y_platform2) && (x_var + sq_width - 1 > x_platform2 && x_var - 1 < x_platform2 + width_platform2) && (jumping > 0 && jumping < 15)) begin // lower bound of red square
             y_increment = 1;
         
         end
