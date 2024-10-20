@@ -29,7 +29,10 @@ module hero_damage(
         LED = 3'b111;
     end
     
-    always @ (posedge clk) begin
+    wire damage_clk;
+    flexy_clock(.clk(clk), .m_value(49_999_999), .slow_clk(damage_clk));
+    
+    always @ (posedge damage_clk) begin
         if (hit) begin
             LED = LED >> 1;
         end

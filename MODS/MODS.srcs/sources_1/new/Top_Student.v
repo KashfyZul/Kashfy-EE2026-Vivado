@@ -13,7 +13,7 @@
 
 module Top_Student (
     input clk, btnC, btnL, btnR, btnD, btnU, [4:0]sw,  
-    output [7:0]JC, [15:13]led
+    output [7:0]JC, [2:0]led
     );
 // 3.A3: oled_data initialisation
 //reg [15:0] oled_data;
@@ -24,6 +24,8 @@ wire [6:0] x;
 wire [6:0] y;
 wire [6:0] x_var;
 wire [6:0] y_var;
+wire [6:0] x_var2;
+wire [6:0] y_var2;
 
 
 wire frame_begin, sending_pixels, sample_pixels;
@@ -63,23 +65,33 @@ wire [6:0] x_spawn = 48;
 wire [6:0] y_spawn = 0;
 wire [3:0] hitbox_size = 8; 
 wire [3:0] sprite_no;
-animate(.clk(clk), .x_start(48), .y_start(0), .x_vect(x_vect), .y_vect(y_vect), .sq_width(hitbox_size), .sq_height(hitbox_size), .fps(20), //ignore fps 
-//        .stat_colour(16'b11111_000000_00000), .move_colour(16'b11100_001111_00000), .jump_colour(16'b11111_000000_11000), 
+animate animate_hero (.clk(clk), 
+        .x_start(48), .y_start(0), .x_vect(x_vect), .y_vect(y_vect), .sq_width(hitbox_size), .sq_height(hitbox_size),
+//        .fps(20), .stat_colour(16'b11111_000000_00000), .move_colour(16'b11100_001111_00000), .jump_colour(16'b11111_000000_11000), 
         .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
         .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
         .x_var(x_var), .y_var(y_var), .center_sq_colour(center_sq_colour), .is_y_stat(is_y_stat), .sprite_no(sprite_no));
-
-// draw the squares
-make_square draw_sq (.clk(clk), .x(x), .y(y), .sprite_no(sprite_no),
-        .x_val(x_var), .y_val(y_var), .sq_width(8),.sq_height(8), .sq_colour(center_sq_colour),
-        .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
-        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
-        .platform_colour(16'b00000_111111_00000), .bg_colour(0), .oled_data(oled_data));
 
 // track damage of player (3 lives)
 wire hit;
 hero_damage(.clk(clk), .hit(hit), .LED(led));
 
+// animate the enemy (for test)
+enimate animate_enemy (.clk(clk), 
+        .x_start(80), .y_start(0), .x_vect(127), .y_vect(1), .sq_width(hitbox_size), .sq_height(hitbox_size),
+        .x_hero(x_var), .y_hero(y_var), .width_hero(8), .height_hero(8),
+//        .fps(20), .stat_colour(16'b11111_000000_00000), .move_colour(16'b11100_001111_00000), .jump_colour(16'b11111_000000_11000), 
+        .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
+        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
+        .x_var(x_var2), .y_var(y_var2), .center_sq_colour(center_sq_colour), .hit(hit));
+
+// draw the squares
+make_square draw_sq (.clk(clk), .x(x), .y(y), .sprite_no(sprite_no),
+        .x_val(x_var), .y_val(y_var), .sq_width(8),.sq_height(8), .sq_colour(center_sq_colour),
+        .x_val2(x_var2), .y_val2(y_var2), .sq_width2(8),.sq_height2(8), .sq_colour2(center_sq_colour),
+        .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
+        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
+        .platform_colour(16'b00000_111111_00000), .bg_colour(0), .oled_data(oled_data));
 
 // 3.A1: instantiate Oled_Display
 Oled_Display Q3A1 (.clk(clk6p25m), .reset(0), .frame_begin(frame_begin), .sending_pixels(sending_pixels),

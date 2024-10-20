@@ -36,6 +36,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v
   C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v
   C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/direction_mux.v
+  C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/enimate.v
   C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/flexy_clock.v
   C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/hero_damage.v
   C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v

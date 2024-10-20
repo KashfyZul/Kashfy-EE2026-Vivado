@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Mon Oct 21 00:38:38 2024
+| Date             : Mon Oct 21 01:41:34 2024
 | Host             : Kashfy-yoga7 running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.077        |
+| Total On-Chip Power (W)  | 0.086        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.005        |
+| Dynamic (W)              | 0.014        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.001 |     2723 |       --- |             --- |
-|   LUT as Logic |     0.001 |     1834 |     20800 |            8.82 |
-|   CARRY4       |    <0.001 |      352 |      8150 |            4.32 |
-|   Register     |    <0.001 |      281 |     41600 |            0.68 |
-|   F7/F8 Muxes  |    <0.001 |        6 |     32600 |            0.02 |
-|   Others       |     0.000 |       24 |       --- |             --- |
-|   BUFG         |     0.000 |        2 |        32 |            6.25 |
-| Signals        |     0.001 |     2218 |       --- |             --- |
+| Slice Logic    |     0.004 |     4659 |       --- |             --- |
+|   LUT as Logic |     0.004 |     3062 |     20800 |           14.72 |
+|   CARRY4       |    <0.001 |      638 |      8150 |            7.83 |
+|   Register     |    <0.001 |      430 |     41600 |            1.03 |
+|   F7/F8 Muxes  |    <0.001 |        5 |     32600 |            0.02 |
+|   Others       |     0.000 |       31 |       --- |             --- |
+|   BUFG         |     0.000 |        3 |        32 |            9.38 |
+| Signals        |     0.003 |     3655 |       --- |             --- |
 | DSPs           |     0.000 |        6 |        90 |            6.67 |
-| I/O            |    <0.001 |       15 |       106 |           14.15 |
+| I/O            |     0.005 |       15 |       106 |           14.15 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.077 |          |           |                 |
+| Total          |     0.086 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.014 |       0.005 |      0.010 |
+| Vccint    |       1.000 |     0.019 |       0.010 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -143,17 +143,20 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| Top_Student        |     0.005 |
+| Top_Student        |     0.014 |
 |   Q3A1             |    <0.001 |
+|   animate_enemy    |     0.004 |
+|     get_fps_clock  |    <0.001 |
+|   animate_hero     |     0.003 |
+|     get_fps_clock  |    <0.001 |
 |   choose_direction |    <0.001 |
 |   clk_6p25MHz      |    <0.001 |
 |   draw_sq          |    <0.001 |
 |     draw_sprite_1  |     0.000 |
 |     draw_sprite_2  |     0.000 |
 |     draw_sprite_3  |     0.000 |
-|   nolabel_line66   |     0.003 |
-|     get_fps_clock  |    <0.001 |
-|   nolabel_line81   |     0.000 |
+|   nolabel_line77   |    <0.001 |
+|     nolabel_line33 |    <0.001 |
 +--------------------+-----------+
 
 

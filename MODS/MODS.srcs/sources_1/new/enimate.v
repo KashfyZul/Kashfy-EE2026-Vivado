@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 04.10.2024 18:04:11
+// Create Date: 21.10.2024 01:13:39
 // Design Name: 
-// Module Name: animate
+// Module Name: enimate
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,13 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module animate(
+module enimate(
     input clk, 
-    [6:0]x_start, [6:0]y_start, [6:0]x_vect, [6:0]y_vect, [6:0]sq_width, [6:0]sq_height, 
+    [6:0]x_start, [6:0]y_start, [6:0]x_vect, [6:0]y_vect, [6:0]sq_width, [6:0]sq_height,
+    [6:0]x_hero, [6:0]y_hero, [6:0]width_hero, [6:0]height_hero,
     [31:0]fps, [15:0]stat_colour, [15:0]move_colour, [15:0]jump_colour, 
     [6:0]x_platform1, [6:0]y_platform1, [6:0]width_platform1, [6:0]height_platform1,
     [6:0]x_platform2, [6:0]y_platform2, [6:0]width_platform2, [6:0]height_platform2,
-    output reg [6:0]x_var, reg [6:0]y_var, reg [15:0]center_sq_colour, reg is_y_stat, reg [3:0]sprite_no
+    output reg [6:0]x_var, reg [6:0]y_var, reg [15:0]center_sq_colour, reg hit
     );
     
     reg [6:0] x_increment;
@@ -34,10 +35,10 @@ module animate(
     reg [31:0]jump_time;
     reg [31:0]jumping;
     reg [31:0]falling;
-    
+    reg is_y_stat;
     initial begin
-        x_var = x_start;
-        y_var = y_start;
+        x_var = 80;
+        y_var = 0;
         // for some reason x_var and y_var cant take values of x_start and y_start... values must be written dirctly in this initial block
         center_sq_colour = 16'b11111_000000_00000;
         is_y_stat = 0;
@@ -156,21 +157,15 @@ module animate(
            
 //           end
         
-        if (x_increment == 0 && y_increment == 0) begin
-//           center_sq_colour = stat_colour;
-            sprite_no = 1; // stationary
-//            center_sq_colour = 16'b11111_000000_00000; 
-        end else if (x_increment != 0 && y_increment == 0) begin // lateral movement but no jumping/falling
-//            center_sq_colour = move_colour;
-            sprite_no = 2; // walking
-//            center_sq_colour = 16'b11111_000111_00000;
-        end else begin
-//            center_sq_colour = jump_colour;
-            sprite_no = 3; // jumping
-        end
         is_y_stat = (y_increment == 0) ? 1 : 0; 
         x_var = x_var + x_increment;
         y_var = y_var + y_increment;
+        
+        if ((x_var < x_hero + width_hero && x_var + sq_width > x_hero)&& (y_var + sq_height > y_hero && y_var < y_hero + height_hero)) begin
+            hit = 1;
+        end else begin
+            hit = 0;
+        end
     end
     
 endmodule
