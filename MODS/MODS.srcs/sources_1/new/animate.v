@@ -23,7 +23,7 @@
 module animate(
     input clk, [6:0]x_start, [6:0]y_start, [6:0]x_vect, [6:0]y_vect, [6:0]sq_width, [6:0]sq_height, 
     [31:0]fps, [15:0]stat_colour, [15:0]move_colour, [15:0]jump_colour, [6:0]x_obstacle, [6:0]y_obstacle,
-    output reg [6:0]x_var, reg [6:0]y_var, reg [15:0]center_sq_colour, reg is_y_stat
+    output reg [6:0]x_var, reg [6:0]y_var, reg [15:0]center_sq_colour, reg is_y_stat, reg [3:0]sprite_no
     );
     
     reg [6:0] x_increment;
@@ -31,16 +31,14 @@ module animate(
     reg [31:0]jump_time;
     reg [31:0]jumping;
     reg [31:0]falling;
-    reg [31:0]jumptime;
-    reg [31:0]jump_timer;
     
     initial begin
         x_var = x_start;
         y_var = y_start;
+        // for some reason x_var and y_var cant take values of x_start and y_start... values must be written dirctly in this initial block
         center_sq_colour = 16'b11111_000000_00000;
         is_y_stat = 0;
         jump_time = 15;
-        jumptime = 30;
         jumping = 0;  
         falling = 0;
     end
@@ -74,16 +72,6 @@ module animate(
             falling = falling;
         end
          
-//        if (jumping > 6) begin
-//            y_increment = 125;
-//        end else if (jumping > 3) begin
-//            y_increment = 126;
-//        end else if (jumping > 0) begin
-//            y_increment = 127;
-//        end else begin
-//            y_increment = y_vect;
-//        end
-//        y_increment = (jumping > 0) ? 127 - jumping / 3 + 1 : y_vect;
         if (jumping > 0) begin
             y_increment = 127 - jumping / 3 + 1;
         end else if (falling < 30) begin
@@ -101,7 +89,7 @@ module animate(
         if (x_var == 0 && x_vect == 127) begin // check position (x_var) as well as direvtion vector (x_vect)
             x_increment = 0;
         end else if (x_var + sq_width - 1 == 95 && x_vect == 1) begin
-            x_increment = 0;
+            x_increment = 0;    
         end else if (x_var + sq_width == x_obstacle && (y_var + sq_height > y_obstacle && y_var < y_obstacle + 5) && x_vect == 1) begin // left bound of red square
             x_increment = 0;
         end else if (x_var == x_obstacle + 25 && (y_var + sq_height > y_obstacle && y_var < y_obstacle + 5) && x_vect == 127) begin // right bound of red square
@@ -145,13 +133,16 @@ module animate(
 //           end
         
         if (x_increment == 0 && y_increment == 0) begin
-           center_sq_colour = stat_colour;
+//           center_sq_colour = stat_colour;
+            sprite_no = 1; // stationary
 //            center_sq_colour = 16'b11111_000000_00000; 
         end else if (x_increment != 0 && y_increment == 0) begin // lateral movement but no jumping/falling
-            center_sq_colour = move_colour;
+//            center_sq_colour = move_colour;
+            sprite_no = 2; // walking
 //            center_sq_colour = 16'b11111_000111_00000;
         end else begin
-            center_sq_colour = jump_colour;
+//            center_sq_colour = jump_colour;
+            sprite_no = 3; // jumping
         end
         is_y_stat = (y_increment == 0) ? 1 : 0; 
         x_var = x_var + x_increment;

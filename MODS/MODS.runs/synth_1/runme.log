@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 20684 
+INFO: Helper process launched with PID 21992 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 359.398 ; gain = 99.117
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 359.348 ; gain = 99.758
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
 INFO: [Synth 8-6157] synthesizing module 'flexy_clock' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/flexy_clock.v:23]
@@ -24,13 +24,25 @@ INFO: [Synth 8-6155] done synthesizing module 'flexy_clock' (1#1) [C:/Users/cybe
 INFO: [Synth 8-6157] synthesizing module 'direction_mux' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/direction_mux.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'direction_mux' (2#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/direction_mux.v:23]
 INFO: [Synth 8-6157] synthesizing module 'animate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v:23]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v:38]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v:39]
-WARNING: [Synth 8-6014] Unused sequential element x_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v:60]
-WARNING: [Synth 8-6014] Unused sequential element y_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v:88]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v:36]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v:37]
+WARNING: [Synth 8-6014] Unused sequential element x_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v:58]
+WARNING: [Synth 8-6014] Unused sequential element y_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v:76]
 INFO: [Synth 8-6155] done synthesizing module 'animate' (3#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v:23]
+WARNING: [Synth 8-689] width (4) of port connection 'sq_width' does not match port width (7) of module 'animate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:66]
+WARNING: [Synth 8-689] width (4) of port connection 'sq_height' does not match port width (7) of module 'animate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:66]
+WARNING: [Synth 8-350] instance 'nolabel_line66' of module 'animate' requires 18 connections, but only 15 given [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:66]
 INFO: [Synth 8-6157] synthesizing module 'make_square' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'make_square' (4#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sprite_1' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:69]
+WARNING: [Synth 8-85] always block has no event control specified [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:78]
+INFO: [Synth 8-6155] done synthesizing module 'sprite_1' (4#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:69]
+INFO: [Synth 8-6157] synthesizing module 'sprite_2' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:90]
+WARNING: [Synth 8-85] always block has no event control specified [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:99]
+INFO: [Synth 8-6155] done synthesizing module 'sprite_2' (5#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:90]
+INFO: [Synth 8-6157] synthesizing module 'sprite_3' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:111]
+WARNING: [Synth 8-85] always block has no event control specified [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:123]
+INFO: [Synth 8-6155] done synthesizing module 'sprite_3' (6#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'make_square' (7#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:23]
 INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
 	Parameter Width bound to: 96 - type: integer 
 	Parameter Height bound to: 64 - type: integer 
@@ -85,9 +97,67 @@ INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/cyber/Desktop/
 INFO: [Synth 8-226] default block is never used [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:123]
 INFO: [Synth 8-226] default block is never used [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:198]
 WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:346]
-INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (5#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (8#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
 WARNING: [Synth 8-3848] Net led in module/entity Top_Student does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:16]
-INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (6#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (9#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port y_oled[6]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port y_oled[5]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port y_oled[4]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port y_oled[3]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port y_oled[2]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port y_oled[1]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port y_oled[0]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port y_ref[6]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port y_ref[5]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port y_ref[4]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port y_ref[3]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port y_ref[2]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port y_ref[1]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port y_ref[0]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port sprite_height[6]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port sprite_height[5]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port sprite_height[4]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port sprite_height[3]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port sprite_height[2]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port sprite_height[1]
+WARNING: [Synth 8-3331] design sprite_2 has unconnected port sprite_height[0]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port x_oled[6]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port x_oled[5]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port x_oled[4]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port x_oled[3]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port x_oled[2]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port x_oled[1]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port x_oled[0]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port x_ref[6]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port x_ref[5]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port x_ref[4]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port x_ref[3]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port x_ref[2]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port x_ref[1]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port x_ref[0]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port sprite_width[6]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port sprite_width[5]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port sprite_width[4]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port sprite_width[3]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port sprite_width[2]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port sprite_width[1]
+WARNING: [Synth 8-3331] design sprite_1 has unconnected port sprite_width[0]
+WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour[15]
+WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour[14]
+WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour[13]
+WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour[12]
+WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour[11]
+WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour[10]
+WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour[9]
+WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour[8]
+WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour[7]
+WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour[6]
+WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour[5]
+WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour[4]
+WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour[3]
+WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour[2]
+WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour[1]
+WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour[0]
 WARNING: [Synth 8-3331] design animate has unconnected port x_start[6]
 WARNING: [Synth 8-3331] design animate has unconnected port x_start[5]
 WARNING: [Synth 8-3331] design animate has unconnected port x_start[4]
@@ -130,23 +200,9 @@ WARNING: [Synth 8-3331] design animate has unconnected port fps[7]
 WARNING: [Synth 8-3331] design animate has unconnected port fps[6]
 WARNING: [Synth 8-3331] design animate has unconnected port fps[5]
 WARNING: [Synth 8-3331] design animate has unconnected port fps[4]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[3]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[2]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[1]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[0]
-WARNING: [Synth 8-3331] design direction_mux has unconnected port btnC
-WARNING: [Synth 8-3331] design direction_mux has unconnected port btnD
-WARNING: [Synth 8-3331] design Top_Student has unconnected port JC[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[15]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[14]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port led[13]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[4]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[3]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[2]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[1]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port sw[0]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 414.188 ; gain = 153.906
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 414.691 ; gain = 155.102
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -159,10 +215,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 414.188 ; gain = 153.906
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 414.691 ; gain = 155.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 414.188 ; gain = 153.906
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 414.691 ; gain = 155.102
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -184,26 +240,27 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 740.324 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 748.984 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 740.324 ; gain = 480.043
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 748.984 ; gain = 489.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 740.324 ; gain = 480.043
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 748.984 ; gain = 489.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 740.324 ; gain = 480.043
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 748.984 ; gain = 489.395
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "is_y_stat0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "is_y_stat0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "sprite_no" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "fsm_next_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -246,7 +303,7 @@ INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 740.324 ; gain = 480.043
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 748.984 ; gain = 489.395
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'clk_6p25MHz' (flexy_clock) to 'clk_25MHz'
 
@@ -260,22 +317,26 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 4     
-	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 5     
+	   3 Input     32 Bit       Adders := 3     
 	   2 Input     17 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 2     
-	   2 Input      8 Bit       Adders := 5     
+	   4 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 7     
 	   3 Input      8 Bit       Adders := 4     
-	   2 Input      7 Bit       Adders := 11    
+	   2 Input      7 Bit       Adders := 13    
 	   2 Input      6 Bit       Adders := 1     
 +---Registers : 
 	               40 Bit    Registers := 1     
 	               32 Bit    Registers := 2     
 	               17 Bit    Registers := 1     
-	               16 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
 	                7 Bit    Registers := 4     
 	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 3     
++---Multipliers : 
+	                32x32  Multipliers := 2     
 +---Muxes : 
 	   2 Input     40 Bit        Muxes := 3     
 	   2 Input     32 Bit        Muxes := 4     
@@ -283,13 +344,17 @@ Detailed RTL Component Info :
 	  32 Input     20 Bit        Muxes := 1     
 	   2 Input     17 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 4     
+	   3 Input     16 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 8     
 	  32 Input      6 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 2     
 	  32 Input      5 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -319,14 +384,36 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit       Adders := 7     
 +---Registers : 
 	               32 Bit    Registers := 2     
-	               16 Bit    Registers := 1     
 	                7 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 2     
-	   2 Input     16 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 5     
 	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+Module sprite_1 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+Module sprite_2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+Module sprite_3 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 2     
++---Multipliers : 
+	                32x32  Multipliers := 2     
 Module make_square 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -335,7 +422,9 @@ Detailed RTL Component Info :
 +---Registers : 
 	               16 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 2     
+	   3 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 1     
 Module Oled_Display 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -373,67 +462,48 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5545] ROM "slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "is_y_stat0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "Q3A1/fsm_next_state0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "clk_6p25MHz/slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "Q3A1/fsm_next_state0" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-3917] design Top_Student has port JC[7] driven by constant 1
-WARNING: [Synth 8-3331] design animate has unconnected port x_start[6]
-WARNING: [Synth 8-3331] design animate has unconnected port x_start[5]
-WARNING: [Synth 8-3331] design animate has unconnected port x_start[4]
-WARNING: [Synth 8-3331] design animate has unconnected port x_start[3]
-WARNING: [Synth 8-3331] design animate has unconnected port x_start[2]
-WARNING: [Synth 8-3331] design animate has unconnected port x_start[1]
-WARNING: [Synth 8-3331] design animate has unconnected port x_start[0]
-WARNING: [Synth 8-3331] design animate has unconnected port y_start[6]
-WARNING: [Synth 8-3331] design animate has unconnected port y_start[5]
-WARNING: [Synth 8-3331] design animate has unconnected port y_start[4]
-WARNING: [Synth 8-3331] design animate has unconnected port y_start[3]
-WARNING: [Synth 8-3331] design animate has unconnected port y_start[2]
-WARNING: [Synth 8-3331] design animate has unconnected port y_start[1]
-WARNING: [Synth 8-3331] design animate has unconnected port y_start[0]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[31]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[30]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[29]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[28]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[27]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[26]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[25]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[24]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[23]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[22]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[21]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[20]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[19]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[18]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[17]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[16]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[15]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[14]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[13]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[12]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[11]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[10]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[9]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[8]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[7]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[6]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[5]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[4]
-WARNING: [Synth 8-3331] design animate has unconnected port fps[3]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'nolabel_line62/center_sq_colour_reg[0]' (FD) to 'nolabel_line62/center_sq_colour_reg[10]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line62/center_sq_colour_reg[1]' (FD) to 'nolabel_line62/center_sq_colour_reg[10]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line62/center_sq_colour_reg[2]' (FD) to 'nolabel_line62/center_sq_colour_reg[10]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line62/center_sq_colour_reg[3]' (FD) to 'nolabel_line62/center_sq_colour_reg[4]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line62/center_sq_colour_reg[5]' (FD) to 'nolabel_line62/center_sq_colour_reg[6]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line62/center_sq_colour_reg[6]' (FD) to 'nolabel_line62/center_sq_colour_reg[7]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line62/center_sq_colour_reg[7]' (FD) to 'nolabel_line62/center_sq_colour_reg[8]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line62/center_sq_colour_reg[9]' (FD) to 'nolabel_line62/center_sq_colour_reg[10]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (nolabel_line62/\center_sq_colour_reg[10] )
-INFO: [Synth 8-3886] merging instance 'nolabel_line62/center_sq_colour_reg[11]' (FD) to 'nolabel_line62/center_sq_colour_reg[12]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line62/center_sq_colour_reg[13]' (FD) to 'nolabel_line62/center_sq_colour_reg[15]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line62/center_sq_colour_reg[14]' (FD) to 'nolabel_line62/center_sq_colour_reg[15]'
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:125]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:125]
+DSP Report: Generating DSP draw_sprite_3/colour3, operation Mode is: A*B.
+DSP Report: operator draw_sprite_3/colour3 is absorbed into DSP draw_sprite_3/colour3.
+DSP Report: operator draw_sprite_3/colour3 is absorbed into DSP draw_sprite_3/colour3.
+DSP Report: Generating DSP draw_sprite_3/colour3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator draw_sprite_3/colour3 is absorbed into DSP draw_sprite_3/colour3.
+DSP Report: operator draw_sprite_3/colour3 is absorbed into DSP draw_sprite_3/colour3.
+DSP Report: Generating DSP draw_sprite_3/colour3, operation Mode is: A*B.
+DSP Report: operator draw_sprite_3/colour3 is absorbed into DSP draw_sprite_3/colour3.
+DSP Report: operator draw_sprite_3/colour3 is absorbed into DSP draw_sprite_3/colour3.
+DSP Report: Generating DSP draw_sprite_3/colour3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator draw_sprite_3/colour3 is absorbed into DSP draw_sprite_3/colour3.
+DSP Report: operator draw_sprite_3/colour3 is absorbed into DSP draw_sprite_3/colour3.
+DSP Report: Generating DSP draw_sprite_3/colour3, operation Mode is: A*B.
+DSP Report: operator draw_sprite_3/colour3 is absorbed into DSP draw_sprite_3/colour3.
+DSP Report: operator draw_sprite_3/colour3 is absorbed into DSP draw_sprite_3/colour3.
+DSP Report: Generating DSP draw_sprite_3/colour3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator draw_sprite_3/colour3 is absorbed into DSP draw_sprite_3/colour3.
+DSP Report: operator draw_sprite_3/colour3 is absorbed into DSP draw_sprite_3/colour3.
+DSP Report: Generating DSP draw_sprite_3/colour3, operation Mode is: A*B.
+DSP Report: operator draw_sprite_3/colour3 is absorbed into DSP draw_sprite_3/colour3.
+DSP Report: operator draw_sprite_3/colour3 is absorbed into DSP draw_sprite_3/colour3.
+DSP Report: Generating DSP draw_sprite_3/colour3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator draw_sprite_3/colour3 is absorbed into DSP draw_sprite_3/colour3.
+DSP Report: operator draw_sprite_3/colour3 is absorbed into DSP draw_sprite_3/colour3.
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[0]' (FDE) to 'draw_sq/oled_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[1]' (FDE) to 'draw_sq/oled_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[2]' (FDE) to 'draw_sq/oled_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[3]' (FDE) to 'draw_sq/oled_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[5]' (FDE) to 'draw_sq/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[6]' (FDE) to 'draw_sq/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[7]' (FDE) to 'draw_sq/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[8]' (FDE) to 'draw_sq/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[9]' (FDE) to 'draw_sq/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[11]' (FDE) to 'draw_sq/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[12]' (FDE) to 'draw_sq/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[13]' (FDE) to 'draw_sq/oled_data_reg[15]'
 INFO: [Synth 8-3886] merging instance 'choose_direction/x_vect_reg[6]' (FD) to 'choose_direction/x_vect_reg[1]'
 INFO: [Synth 8-3886] merging instance 'choose_direction/x_vect_reg[5]' (FD) to 'choose_direction/x_vect_reg[1]'
 INFO: [Synth 8-3886] merging instance 'choose_direction/x_vect_reg[4]' (FD) to 'choose_direction/x_vect_reg[1]'
@@ -444,23 +514,31 @@ INFO: [Synth 8-3886] merging instance 'choose_direction/y_vect_reg[2]' (FDSE) to
 INFO: [Synth 8-3886] merging instance 'choose_direction/y_vect_reg[3]' (FDSE) to 'choose_direction/y_vect_reg[4]'
 INFO: [Synth 8-3886] merging instance 'choose_direction/y_vect_reg[4]' (FDSE) to 'choose_direction/y_vect_reg[5]'
 INFO: [Synth 8-3886] merging instance 'choose_direction/y_vect_reg[5]' (FDSE) to 'choose_direction/y_vect_reg[6]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (nolabel_line62/\center_sq_colour_reg[15] )
-INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[0]' (FD) to 'draw_sq/oled_data_reg[1]'
-INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[1]' (FD) to 'draw_sq/oled_data_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\draw_sq/oled_data_reg[2] )
-INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[3]' (FD) to 'draw_sq/oled_data_reg[4]'
-INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[5]' (FD) to 'draw_sq/oled_data_reg[6]'
-INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[6]' (FD) to 'draw_sq/oled_data_reg[7]'
-INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[7]' (FD) to 'draw_sq/oled_data_reg[8]'
-INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[9]' (FD) to 'draw_sq/oled_data_reg[10]'
-INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[11]' (FD) to 'draw_sq/oled_data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[13]' (FD) to 'draw_sq/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[14]' (FD) to 'draw_sq/oled_data_reg[15]'
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[15]) is unused and will be removed from module animate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[10]) is unused and will be removed from module animate.
-WARNING: [Synth 8-3332] Sequential element (draw_sq/oled_data_reg[2]) is unused and will be removed from module Top_Student.
+INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[14]' (FDE) to 'draw_sq/oled_data_reg[15]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 740.324 ; gain = 480.043
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 748.984 ; gain = 489.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|make_square | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|make_square | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|make_square | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|make_square | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|make_square | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|make_square | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|make_square | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|make_square | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -472,13 +550,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 743.391 ; gain = 483.109
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 791.773 ; gain = 532.184
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 764.016 ; gain = 503.734
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 812.539 ; gain = 552.949
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -490,7 +568,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 792.121 ; gain = 531.840
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 842.395 ; gain = 582.805
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -514,7 +592,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 792.121 ; gain = 531.840
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 842.395 ; gain = 582.805
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -527,7 +605,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 792.121 ; gain = 531.840
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 842.395 ; gain = 582.805
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -539,25 +617,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 792.121 ; gain = 531.840
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 842.395 ; gain = 582.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 792.121 ; gain = 531.840
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 842.395 ; gain = 582.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 792.121 ; gain = 531.840
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 842.395 ; gain = 582.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 792.121 ; gain = 531.840
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 842.395 ; gain = 582.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -570,45 +648,49 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     3|
-|2     |CARRY4 |   276|
-|3     |LUT1   |    26|
-|4     |LUT2   |   239|
-|5     |LUT3   |   273|
-|6     |LUT4   |   244|
-|7     |LUT5   |   261|
-|8     |LUT6   |   717|
-|9     |MUXF7  |     7|
-|10    |FDE_1  |    32|
-|11    |FDRE   |   251|
-|12    |IBUF   |     4|
-|13    |OBUF   |     7|
-|14    |OBUFT  |     4|
-+------+-------+------+
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     3|
+|2     |CARRY4  |   327|
+|3     |DSP48E1 |     6|
+|4     |LUT1    |    46|
+|5     |LUT2    |   346|
+|6     |LUT3    |   273|
+|7     |LUT4    |   296|
+|8     |LUT5    |   269|
+|9     |LUT6    |   713|
+|10    |MUXF7   |     7|
+|11    |FDE_1   |    32|
+|12    |FDRE    |   249|
+|13    |IBUF    |     4|
+|14    |OBUF    |     7|
+|15    |OBUFT   |     4|
++------+--------+------+
 
 Report Instance Areas: 
 +------+-------------------+--------------+------+
 |      |Instance           |Module        |Cells |
 +------+-------------------+--------------+------+
-|1     |top                |              |  2344|
-|2     |  Q3A1             |Oled_Display  |   440|
-|3     |  choose_direction |direction_mux |   157|
-|4     |  clk_6p25MHz      |flexy_clock   |    52|
-|5     |  draw_sq          |make_square   |    13|
-|6     |  nolabel_line62   |animate       |  1651|
-|7     |    get_fps_clock  |flexy_clock_0 |    63|
+|1     |top                |              |  2582|
+|2     |  Q3A1             |Oled_Display  |   502|
+|3     |  choose_direction |direction_mux |   161|
+|4     |  clk_6p25MHz      |flexy_clock   |    63|
+|5     |  draw_sq          |make_square   |   152|
+|6     |    draw_sprite_1  |sprite_1      |     4|
+|7     |    draw_sprite_2  |sprite_2      |     3|
+|8     |    draw_sprite_3  |sprite_3      |   119|
+|9     |  nolabel_line66   |animate       |  1685|
+|10    |    get_fps_clock  |flexy_clock_0 |    63|
 +------+-------------------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 792.121 ; gain = 531.840
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 842.395 ; gain = 582.805
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 61 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 792.121 ; gain = 205.703
-Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 792.121 ; gain = 531.840
+Synthesis finished with 0 errors, 0 critical warnings and 121 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 842.395 ; gain = 248.512
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 842.395 ; gain = 582.805
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 319 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 376 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -617,11 +699,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDE_1 => FDRE (inverted pins: C): 32 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-75 Infos, 112 Warnings, 2 Critical Warnings and 0 Errors encountered.
+73 Infos, 114 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:25 . Memory (MB): peak = 792.121 ; gain = 544.637
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 842.395 ; gain = 595.363
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 792.121 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Oct 19 19:21:34 2024...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 842.395 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 20 17:01:49 2024...
