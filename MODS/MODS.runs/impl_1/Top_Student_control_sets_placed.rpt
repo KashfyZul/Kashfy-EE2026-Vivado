@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Thu Oct 24 13:45:08 2024
+| Date         : Thu Oct 31 14:28:53 2024
 | Host         : Kashfy-yoga7 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    18 |
-| Unused register locations in slices containing registers |    28 |
+| Number of unique control sets                            |    19 |
+| Unused register locations in slices containing registers |    24 |
 +----------------------------------------------------------+-------+
 
 
@@ -37,7 +37,7 @@ Table of Contents
 |      4 |            1 |
 |      8 |            1 |
 |     12 |            1 |
-|    16+ |           15 |
+|    16+ |           16 |
 +--------+--------------+
 
 
@@ -47,10 +47,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             336 |           70 |
+| No           | No                    | No                     |             288 |           62 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             580 |           82 |
-| Yes          | No                    | No                     |             104 |           16 |
+| No           | Yes                   | No                     |             640 |           99 |
+| Yes          | No                    | No                     |             104 |           15 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -63,23 +63,24 @@ Table of Contents
 |                 Clock Signal                |           Enable Signal           |              Set/Reset Signal             | Slice Load Count | Bel Load Count |
 +---------------------------------------------+-----------------------------------+-------------------------------------------+------------------+----------------+
 | ~clk6p25m_BUFG                              |                                   |                                           |                2 |              4 |
-|  slow_clk                                   |                                   |                                           |                3 |              8 |
-|  animate_projectile/get_fps_clock/fps_clock |                                   | animate_projectile/x_increment[5]_i_1_n_0 |                3 |             12 |
+|  slow_clk                                   |                                   |                                           |                1 |              8 |
+|  animate_projectile/get_fps_clock/fps_clock |                                   | animate_projectile/x_increment[5]_i_1_n_0 |                5 |             12 |
 |  animate_projectile/get_fps_clock/fps_clock |                                   |                                           |                5 |             30 |
 | ~clk6p25m_BUFG                              |                                   | Q3A1/frame_counter[16]_i_1_n_0            |                4 |             32 |
-|  clk_IBUF_BUFG                              |                                   |                                           |               13 |             34 |
+|  clk_IBUF_BUFG                              |                                   |                                           |               10 |             32 |
 | ~clk6p25m_BUFG                              | Q3A1/delay[0]_i_1_n_0             |                                           |                5 |             40 |
+|  fps_clock                                  |                                   | animate_hero/jumping[31]_i_1_n_0          |               15 |             60 |
 |  slow_clk                                   |                                   | nolabel_line82/counter[31]_i_1_n_0        |                8 |             62 |
-| ~clk6p25m_BUFG                              | Q3A1/FSM_onehot_state[31]_i_1_n_0 |                                           |               11 |             64 |
+|  fps_clock_0                                |                                   | animate_enemy/jumping[31]_i_1__0_n_0      |                9 |             64 |
+| ~clk6p25m_BUFG                              | Q3A1/FSM_onehot_state[31]_i_1_n_0 |                                           |               10 |             64 |
 |  clk_IBUF_BUFG                              |                                   | animate_hero/get_fps_clock/clear          |                8 |             64 |
 |  clk_IBUF_BUFG                              |                                   | animate_enemy/get_fps_clock/clear         |                8 |             64 |
 |  clk_IBUF_BUFG                              |                                   | clk_6p25MHz/clear                         |                8 |             64 |
 |  clk_IBUF_BUFG                              |                                   | nolabel_line82/nolabel_line36/clear       |                8 |             64 |
 |  clk_IBUF_BUFG                              |                                   | animate_projectile/get_fps_clock/clear    |                8 |             64 |
-|  fps_clock_0                                |                                   | animate_enemy/jumping[31]_i_1__0_n_0      |                9 |             64 |
 | ~clk6p25m_BUFG                              |                                   | Q3A1/spi_word[39]_i_1_n_0                 |               18 |             90 |
 |  fps_clock_0                                |                                   |                                           |               15 |             96 |
-|  fps_clock                                  |                                   |                                           |               32 |            164 |
+|  fps_clock                                  |                                   |                                           |               29 |            118 |
 +---------------------------------------------+-----------------------------------+-------------------------------------------+------------------+----------------+
 
 

@@ -84,13 +84,13 @@ module animate(
             y_increment = 127 - jumping / 3 + 1;
         end else if (falling < 64) begin
             y_increment = 1 + falling / 3; 
-        end else begin
-            y_increment = y_vect;
+//        end else begin
+//            y_increment = y_vect;
         end
 //        y_increment = (jumping > 0) ? 127 : y_vect;
         jumping = (jumping > 0) ? jumping - 1 : 0; // count down to 0
 //        falling = (falling < jump_time) ? falling + 1: jump_time; // count up to jump_time
-        falling = falling + 1; // falling counter will count continuously, will reset when y is stationary 
+        falling = (jumping > 0) ? 0 : falling + 1; // falling counter will count continuously, will reset when y is stationary 
         // REFINE THE COLLISIONS! 
         
         // check for collisions with boundaries of screen
@@ -99,16 +99,18 @@ module animate(
             if (y_increment > 1) begin // added "cling to walls"
                 y_increment = 1;
                 jumping = 0;
+                falling = 0;
 //                if (y_vect == 127) begin
 //                    jumping = jump_time;
 //                end
-            end
+            end 
             x_increment = 0;
         // check right bound of screen
         end else if (x_var + sq_width - 1 == 95 && x_vect == 1) begin
             if (y_increment > 1) begin // added "cling to walls"
                 y_increment = 1;
                 jumping = 0;
+                falling = 0;
 //                if (y_vect == 127) begin
 //                    jumping = jump_time;
 //                end
@@ -132,16 +134,16 @@ module animate(
         if ((y_var == 0 || y_var > 63) && (jumping > 0 && jumping < 15)) begin
             y_increment = 1;
         // check lower bound of screen
-        end else if (y_var + sq_height - 1 == 63 && (falling > 0 && falling < 64)) begin
+        end else if (y_var + sq_height - 1 == 63 && (falling >= 0 && falling < 64) && jumping == 0) begin
             y_increment = 0;
         // check upper bound of platform1
-        end else if ((y_var + sq_height == y_platform1 && y_var + sq_height < y_platform1 + height_platform1) && (x_var + sq_width > x_platform1 && x_var - 1 < x_platform1 + width_platform1) && (falling > 0 && falling < 64)) begin // upper bound of red square
+        end else if ((y_var + sq_height == y_platform1) && (x_var + sq_width > x_platform1 && x_var - 1 < x_platform1 + width_platform1) && (falling >= 0 && falling < 64) && jumping == 0) begin // upper bound of red square
             y_increment = 0;
         // check upper bound of platform2
-        end else if ((y_var + sq_height == y_platform2 && y_var + sq_height < y_platform2 + height_platform2) && (x_var + sq_width > x_platform2 && x_var - 1 < x_platform2 + width_platform2) && (falling > 0 && falling < 64)) begin // upper bound of red square
+        end else if ((y_var + sq_height == y_platform2) && (x_var + sq_width > x_platform2 && x_var - 1 < x_platform2 + width_platform2) && (falling >= 0 && falling < 64) && jumping == 0) begin // upper bound of red square
             y_increment = 0;
         // check lower bound of screen before collision to slow down player
-        end else if (y_var + sq_height - 1 + y_increment >= 63 && (falling > 0 && falling < 30)) begin
+        end else if (y_var + sq_height - 1 + y_increment >= 63 && (falling >= 0 && falling < 64) && jumping == 0) begin
             y_increment = 1; // falling counter
         // check upper bound of platform1 before collision to slow down player
         end else if ((y_var + sq_height + y_increment >= y_platform1 && y_var + sq_height < y_platform1 + height_platform1) && (x_var + sq_width > x_platform1 && x_var - 1 < x_platform1 + width_platform1) && (falling > 0 && falling < 64)) begin // upper bound of red square
