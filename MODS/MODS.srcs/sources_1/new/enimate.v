@@ -27,6 +27,7 @@ module enimate(
     [31:0]fps, [15:0]stat_colour, [15:0]move_colour, [15:0]jump_colour, 
     [6:0]x_platform1, [6:0]y_platform1, [6:0]width_platform1, [6:0]height_platform1,
     [6:0]x_platform2, [6:0]y_platform2, [6:0]width_platform2, [6:0]height_platform2,
+    reset,
     output reg [6:0]x_var, reg [6:0]y_var, reg [15:0]center_sq_colour, reg hit
     );
     
@@ -54,6 +55,18 @@ module enimate(
    // assume time taken for y to fall through screen is 30 clock cycles
    
     always @ (posedge fps_clock) begin
+        if (reset) begin
+            x_var = 80;
+            y_var = 0;
+            center_sq_colour = 16'b11111_000000_00000;
+            is_y_stat = 0;
+            jump_time = 15;
+            jumping = 0;  
+            falling = 0;
+            x_increment = 0;
+            y_increment = 0;
+        end
+    
         x_increment = x_vect;
         
         // y_vect == 127 -> start jumping counter 

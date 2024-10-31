@@ -24,12 +24,14 @@ module make_square(
     input clk, [6:0]x, [6:0]y, [3:0]sprite_no,  
     [6:0]x_val, [6:0]y_val, [6:0]sq_width, [6:0]sq_height, [15:0]sq_colour,
     [6:0]x_val2, [6:0]y_val2, [6:0]sq_width2, [6:0]sq_height2, [15:0]sq_colour2, 
+    [6:0]x_proj, [6:0]y_proj, [6:0]proj_width, [6:0]proj_height, [15:0]proj_colour,
     [6:0]x_platform1, [6:0]y_platform1, [6:0]width_platform1, [6:0]height_platform1,
     [6:0]x_platform2, [6:0]y_platform2, [6:0]width_platform2, [6:0]height_platform2, 
     [15:0]platform_colour, [15:0]bg_colour,
     output reg [15:0]oled_data
     );
     
+    wire [15:0]WHITE = 16'b11111_111111_11111;
     wire [15:0]RED = 16'b11111_000000_00000; 
     wire [15:0]BLUE = 16'b00000_000000_11111;
     wire [15:0]MAGENTA = 16'b11111_000000_11111;
@@ -56,6 +58,8 @@ module make_square(
             end
         end else if (x >= x_val2 && x < x_val2 + sq_width2 && y >= y_val2 && y < y_val2 + sq_height2) begin
             oled_data = MAGENTA;
+        end else if (x >= x_proj && x < x_proj + proj_width && y >= y_proj && y < y_proj + proj_height) begin
+                        oled_data = WHITE;
         end else if (x >= x_platform1 && x < x_platform1 + width_platform1 && y >= y_platform1 && y < y_platform1 + height_platform1) begin
             oled_data = platform_colour;
         end else if (x >= x_platform2 && x < x_platform2 + width_platform2 && y >= y_platform2 && y < y_platform2 + height_platform2) begin

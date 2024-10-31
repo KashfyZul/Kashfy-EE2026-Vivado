@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Oct 24 16:13:16 2024
+# Process ID: 7140
+# Current directory: C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/EE2026_Exam_subtask_A.xpr/EE2026_Exam
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent33668 C:\Users\cyber\Desktop\Kashfy-EE2026-Vivado\EE2026_Exam_subtask_A.xpr\EE2026_Exam\EE2026_Exam.xpr
+# Log file: C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/EE2026_Exam_subtask_A.xpr/EE2026_Exam/vivado.log
+# Journal file: C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/EE2026_Exam_subtask_A.xpr/EE2026_Exam\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/EE2026_Exam_subtask_A.xpr/EE2026_Exam/EE2026_Exam.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_run impl_1
+archive_project C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/EE2026_Exam_subtask_A.xpr/EE2026_Exam_subtask_A.xpr.zip -temp_dir C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/EE2026_Exam_subtask_A.xpr/EE2026_Exam/.Xil/Vivado-7140-Kashfy-yoga7 -force -include_local_ip_cache -include_config_settings

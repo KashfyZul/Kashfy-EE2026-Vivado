@@ -26,6 +26,11 @@ wire [6:0] x_var;
 wire [6:0] y_var;
 wire [6:0] x_var2;
 wire [6:0] y_var2;
+wire [6:0] x_proj;
+wire [6:0] y_proj;
+wire reset;
+
+assign reset = btnC;
 
 
 wire frame_begin, sending_pixels, sample_pixels;
@@ -69,12 +74,21 @@ animate animate_hero (.clk(clk),
         .x_start(48), .y_start(0), .x_vect(x_vect), .y_vect(y_vect), .sq_width(hitbox_size), .sq_height(hitbox_size),
 //        .fps(20), .stat_colour(16'b11111_000000_00000), .move_colour(16'b11100_001111_00000), .jump_colour(16'b11111_000000_11000), 
         .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
-        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
+        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), .reset(reset),
         .x_var(x_var), .y_var(y_var), .center_sq_colour(center_sq_colour), .is_y_stat(is_y_stat), .sprite_no(sprite_no));
 
 // track damage of player (3 lives)
 wire hit;
-hero_damage(.clk(clk), .hit(hit), .LED(led));
+hero_damage(.clk(clk), .hit(hit), .reset(reset), .LED(led));
+
+// animate movement of projectile
+projectile_animate animate_projectile (.clk(clk), .btnD(btnD), 
+        .x_ref(x_var), .y_ref(y_var), .x_vect(x_vect), .y_vect(y_vect), .sq_width(hitbox_size), .sq_height(hitbox_size),
+        .proj_width(2), .proj_height(2), 
+        .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
+        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), .reset(reset),
+        .x_var(x_proj), .y_var(y_proj)
+);
 
 // animate the enemy (for test)
 enimate animate_enemy (.clk(clk), 
@@ -82,13 +96,14 @@ enimate animate_enemy (.clk(clk),
         .x_hero(x_var), .y_hero(y_var), .width_hero(8), .height_hero(8),
 //        .fps(20), .stat_colour(16'b11111_000000_00000), .move_colour(16'b11100_001111_00000), .jump_colour(16'b11111_000000_11000), 
         .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
-        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
+        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), .reset(reset),
         .x_var(x_var2), .y_var(y_var2), .center_sq_colour(center_sq_colour), .hit(hit));
 
 // draw the squares
 make_square draw_sq (.clk(clk), .x(x), .y(y), .sprite_no(sprite_no),
         .x_val(x_var), .y_val(y_var), .sq_width(8),.sq_height(8), .sq_colour(center_sq_colour),
         .x_val2(x_var2), .y_val2(y_var2), .sq_width2(8),.sq_height2(8), .sq_colour2(center_sq_colour),
+        .x_proj(x_proj), .y_proj(y_proj), .proj_width(2), .proj_height(2), .proj_colour(center_sq_colour),
         .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
         .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
         .platform_colour(16'b00000_111111_00000), .bg_colour(0), .oled_data(oled_data));
