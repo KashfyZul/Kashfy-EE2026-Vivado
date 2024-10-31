@@ -21,9 +21,10 @@
 
 
 module make_square(
-    input clk, [6:0]x, [6:0]y, [3:0]sprite_no,  
+    input clk, [6:0]x, [6:0]y, [3:0]sprite_no, [2:0]char_no,
     [6:0]x_val, [6:0]y_val, [6:0]sq_width, [6:0]sq_height, [15:0]sq_colour,
     [6:0]x_val2, [6:0]y_val2, [6:0]sq_width2, [6:0]sq_height2, [15:0]sq_colour2, 
+    [6:0]x_muff, [6:0]y_muff, [6:0]sq_width3, [6:0]sq_height3, [15:0]sq_colour3, 
     [6:0]x_proj, [6:0]y_proj, [6:0]proj_width, [6:0]proj_height, [15:0]proj_colour,
     [6:0]x_platform1, [6:0]y_platform1, [6:0]width_platform1, [6:0]height_platform1,
     [6:0]x_platform2, [6:0]y_platform2, [6:0]width_platform2, [6:0]height_platform2, 
@@ -33,6 +34,7 @@ module make_square(
     
     wire [15:0]WHITE = 16'b11111_111111_11111;
     wire [15:0]RED = 16'b11111_000000_00000; 
+    wire [15:0]YELLOW = 16'b11111_111111_00000;
     wire [15:0]BLUE = 16'b00000_000000_11111;
     wire [15:0]MAGENTA = 16'b11111_000000_11111;
     wire [15:0]sprite_1_colour;
@@ -41,7 +43,7 @@ module make_square(
     
     always @ (posedge clk) begin
         if (x >= x_val && x < x_val + sq_width && y >= y_val && y < y_val + sq_height) begin
-            if (sprite_no == 1) begin
+            if (char_no == 0) begin
 //                oled_data = 16'b11111_000000_00000;
 //                if (y < y_val + (sq_height / 4)) begin
 //                    oled_data = RED;
@@ -51,15 +53,17 @@ module make_square(
 //                    oled_data = 16'b11111_111111_11111;
 //                end
                 oled_data = sprite_1_colour;
-            end else if (sprite_no == 2) begin
+            end else if (char_no == 1) begin
                 oled_data = sprite_2_colour;
-            end else if (sprite_no == 3) begin
+            end else if (char_no == 2) begin
                 oled_data = sprite_3_colour;
             end
         end else if (x >= x_val2 && x < x_val2 + sq_width2 && y >= y_val2 && y < y_val2 + sq_height2) begin
             oled_data = MAGENTA;
+        end else if (x >= x_muff && x < x_muff + sq_width3 && y >= y_muff && y < y_muff + sq_height3) begin
+            oled_data = YELLOW;
         end else if (x >= x_proj && x < x_proj + proj_width && y >= y_proj && y < y_proj + proj_height) begin
-                        oled_data = WHITE;
+            oled_data = WHITE;
         end else if (x >= x_platform1 && x < x_platform1 + width_platform1 && y >= y_platform1 && y < y_platform1 + height_platform1) begin
             oled_data = platform_colour;
         end else if (x >= x_platform2 && x < x_platform2 + width_platform2 && y >= y_platform2 && y < y_platform2 + height_platform2) begin
@@ -126,24 +130,40 @@ module sprite_3(
     wire [15:0]YELLOW = 16'b11111_111111_00000; 
     wire [15:0]CYAN = 16'b00000_111111_11111;
     wire [15:0]MAGENTA = 16'b11111_000000_11111;
+    wire [15:0]RED = 16'b11111_000000_00000; 
+    wire [15:0]YELLOW = 16'b11111_111111_00000;
+    wire [15:0]BLUE = 16'b00000_000000_11111;
     
     wire [6:0]x_center = x_ref + (sprite_width / 2);
     wire [6:0]y_center = y_ref + (sprite_height / 2);
     
-    always begin
+//    always begin
 //        if ((x_oled - x_center)**2 + (y_oled - y_center)**2 == (sprite_width/2)**2) begin
-        if ((x_oled - x_center)*(x_oled - x_center) + (y_oled - y_center)*(y_oled - y_center) == (sprite_width/2)*(sprite_width/2)) begin
-            colour = MAGENTA;
+//        if ((x_oled - x_center)*(x_oled - x_center) + (y_oled - y_center)*(y_oled - y_center) == (sprite_width/2)*(sprite_width/2)) begin
+//            colour = MAGENTA;
 //        end else if ((x_oled - x_center)**2 + (y_oled - y_center)**2 == (sprite_width/2 - 1)**2) begin
 //            colour = CYAN;
 //        end else if ((x_oled - x_center)**2 + (y_oled - y_center)**2 == (sprite_width/2 - 2)**2) begin
 //            colour = MAGENTA;
 //        end else if ((x_oled - x_center)**2 + (y_oled - y_center)**2 == (sprite_width/2 - 3)**2) begin
 //            colour = CYAN;
+//        end else begin
+//            colour = 0;
+//        end
+//    end
+
+    always begin
+        if (x_oled < x_ref + (sprite_width / 4)) begin
+            colour = RED;
+        end else if (x_oled >= x_ref + (sprite_width / 4) && x_oled < x_ref + ( 2 * (sprite_width / 4))) begin
+            colour = MAGENTA;
+        end else if (x_oled >= x_ref + 2 * (sprite_width / 4) && x_oled < x_ref + ( 3 * (sprite_width / 4))) begin
+            colour = BLUE;
         end else begin
-            colour = 0;
+            colour = CYAN;
         end
     end
+
     
 endmodule
 

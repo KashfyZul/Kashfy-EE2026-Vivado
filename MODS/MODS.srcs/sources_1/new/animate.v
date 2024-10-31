@@ -23,6 +23,7 @@
 module animate(
     input clk, 
     [6:0]x_start, [6:0]y_start, [6:0]x_vect, [6:0]y_vect, [6:0]sq_width, [6:0]sq_height, 
+    [6:0]x_hero, [6:0]y_hero, [6:0]width_hero, [6:0]height_hero,
     [31:0]fps, [15:0]stat_colour, [15:0]move_colour, [15:0]jump_colour, 
     [6:0]x_platform1, [6:0]y_platform1, [6:0]width_platform1, [6:0]height_platform1,
     [6:0]x_platform2, [6:0]y_platform2, [6:0]width_platform2, [6:0]height_platform2,
