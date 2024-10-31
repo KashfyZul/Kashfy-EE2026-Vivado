@@ -86,14 +86,16 @@ wire [2:0]char_no;
 hero_damage(.clk(clk), .hit(hit), .reset(reset), .LED(led));
 touch_muff(.clk(clk), .hit_muff(hit_muff), .start_muff(0), .reset(reset), .char_no(char_no));
 
-
+wire proj_move;
+wire proj_hit_enemy;
+wire [6:0]new_proj_width;
 // animate movement of projectile
 projectile_animate animate_projectile (.clk(clk), .btnD(btnD), 
         .x_ref(x_var), .y_ref(y_var), .x_vect(x_vect), .y_vect(y_vect), .sq_width(hitbox_size), .sq_height(hitbox_size),
-        .proj_width(2), .proj_height(2), 
+        .proj_width(2), .proj_height(2), .char_no(char_no),
         .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
         .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), .reset(reset),
-        .x_var(x_proj), .y_var(y_proj)
+        .x_var(x_proj), .y_var(y_proj), .new_proj_width(new_proj_width), .proj_move(proj_move), .proj_hit_enemy(proj_hit_enemy)
 );
 
 // animate the enemy (for test)
@@ -116,11 +118,11 @@ muffinimate animate_muffin (.clk(clk),
 
 
 // draw the squares
-make_square draw_sq (.clk(clk), .x(x), .y(y), .sprite_no(sprite_no), .char_no(char_no),
+make_square draw_sq (.clk(clk), .x(x), .y(y), .sprite_no(sprite_no), .char_no(char_no), .proj_move(proj_move),
         .x_val(x_var), .y_val(y_var), .sq_width(8),.sq_height(8), .sq_colour(center_sq_colour),
         .x_val2(x_var2), .y_val2(y_var2), .sq_width2(8), .sq_height2(8), .sq_colour2(center_sq_colour),
         .x_muff(x_muff), .y_muff(y_muff), .sq_width3(8), .sq_height3(8), .sq_colour3(center_sq_colour),
-        .x_proj(x_proj), .y_proj(y_proj), .proj_width(2), .proj_height(2), .proj_colour(center_sq_colour),
+        .x_proj(x_proj), .y_proj(y_proj), .proj_width(new_proj_width), .proj_height(2), .proj_colour(center_sq_colour),
         .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
         .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
         .platform_colour(16'b00000_111111_00000), .bg_colour(0), .oled_data(oled_data));
