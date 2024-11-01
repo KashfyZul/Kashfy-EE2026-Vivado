@@ -25,7 +25,7 @@ module make_square(
     [6:0]x_val, [6:0]y_val, [6:0]sq_width, [6:0]sq_height, [15:0]sq_colour,
     [6:0]x_val2, [6:0]y_val2, [6:0]sq_width2, [6:0]sq_height2, [15:0]sq_colour2, 
     [6:0]x_muff, [6:0]y_muff, [6:0]sq_width3, [6:0]sq_height3, [15:0]sq_colour3, 
-    [6:0]x_proj, [6:0]y_proj, [6:0]proj_width, [6:0]proj_height, [15:0]proj_colour,
+    [6:0]x_proj1, [6:0]y_proj1, [6:0]x_proj2, [6:0]y_proj2, [6:0]proj_width, [6:0]proj_height, [15:0]proj_colour,
     [6:0]x_platform1, [6:0]y_platform1, [6:0]width_platform1, [6:0]height_platform1,
     [6:0]x_platform2, [6:0]y_platform2, [6:0]width_platform2, [6:0]height_platform2, 
     [15:0]platform_colour, [15:0]bg_colour,
@@ -62,7 +62,19 @@ module make_square(
             oled_data = MAGENTA;
         end else if (x >= x_muff && x < x_muff + sq_width3 && y >= y_muff && y < y_muff + sq_height3) begin
             oled_data = YELLOW;
-        end else if (x >= x_proj && x < x_proj + proj_width && y >= y_proj && y < y_proj + proj_height) begin
+        end else if (x >= x_proj1 && x < x_proj1 + proj_width && y >= y_proj1 && y < y_proj1 + proj_height) begin
+            if (char_no == 2) begin
+                if ((y >= y_proj1 && y < y_proj1 + 1) || (y >= y_proj1 + 5 && y < y_proj1 + proj_height)) begin
+                    oled_data = proj_move ? 16'b00111_000111_00000 : 0;
+                end else if ((y >= y_proj1 + 1 && y < y_proj1 + 2) || (y >= y_proj1 + 4 && y < y_proj1 + 5)) begin
+                    oled_data = proj_move ? 16'b11111_111111_00011 : 0;
+                end else if ((y >= y_proj1 + 2 && y < y_proj1 + 4)) begin
+                    oled_data = proj_move ? WHITE : 0;
+                end
+            end else begin
+            oled_data = proj_move ? WHITE : 0;
+            end
+        end else if (x_proj2 && y_proj2 && x >= x_proj2 && x < x_proj2 + proj_width && y >= y_proj2 && y < y_proj2 + proj_height) begin
             oled_data = proj_move ? WHITE : 0;
         end else if (x >= x_platform1 && x < x_platform1 + width_platform1 && y >= y_platform1 && y < y_platform1 + height_platform1) begin
             oled_data = platform_colour;
