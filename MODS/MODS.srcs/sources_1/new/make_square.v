@@ -27,7 +27,9 @@ module make_square(
     [6:0]x_muff, [6:0]y_muff, [6:0]sq_width3, [6:0]sq_height3, [15:0]sq_colour3, 
     [6:0]x_proj1, [6:0]y_proj1, [6:0]x_proj2, [6:0]y_proj2, [6:0]proj_width, [6:0]proj_height, [15:0]proj_colour,
     [6:0]x_platform1, [6:0]y_platform1, [6:0]width_platform1, [6:0]height_platform1,
-    [6:0]x_platform2, [6:0]y_platform2, [6:0]width_platform2, [6:0]height_platform2, 
+    [6:0]x_platform2, [6:0]y_platform2, [6:0]width_platform2, [6:0]height_platform2,
+    [6:0]x_platform3, [6:0]y_platform3, [6:0]width_platform3, [6:0]height_platform3,
+    [6:0]x_platform4, [6:0]y_platform4, [6:0]width_platform4, [6:0]height_platform4, 
     [15:0]platform_colour, [15:0]bg_colour,
     output reg [15:0]oled_data
     );
@@ -44,14 +46,7 @@ module make_square(
     always @ (posedge clk) begin
         if (x >= x_val && x < x_val + sq_width && y >= y_val && y < y_val + sq_height) begin
             if (char_no == 0) begin
-//                oled_data = 16'b11111_000000_00000;
-//                if (y < y_val + (sq_height / 4)) begin
-//                    oled_data = RED;
-//                end else if (y >= y_val + (sq_height / 4) && y < y_val + ( 2 * sq_height / 4)) begin
-//                    oled_data = MAGENTA;
-//                end else begin
-//                    oled_data = 16'b11111_111111_11111;
-//                end
+
                 oled_data = sprite_1_colour;
             end else if (char_no == 1) begin
                 oled_data = sprite_2_colour;
@@ -79,6 +74,10 @@ module make_square(
         end else if (x >= x_platform1 && x < x_platform1 + width_platform1 && y >= y_platform1 && y < y_platform1 + height_platform1) begin
             oled_data = platform_colour;
         end else if (x >= x_platform2 && x < x_platform2 + width_platform2 && y >= y_platform2 && y < y_platform2 + height_platform2) begin
+            oled_data = platform_colour;
+        end else if (x >= x_platform3 && x < x_platform3 + width_platform3 && y >= y_platform3 && y < y_platform3 + height_platform3) begin
+            oled_data = platform_colour;
+        end else if (x >= x_platform4 && x < x_platform4 + width_platform4 && y >= y_platform4 && y < y_platform4 + height_platform4) begin
             oled_data = platform_colour;
         end else begin
             oled_data = bg_colour;

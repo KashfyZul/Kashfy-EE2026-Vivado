@@ -78,7 +78,9 @@ animate animate_hero (.clk(clk),
         .x_start(84), .y_start(0), .x_vect(x_vect), .y_vect(y_vect), .sq_width(hitbox_size), .sq_height(hitbox_size),
 //        .fps(20), .stat_colour(16'b11111_000000_00000), .move_colour(16'b11100_001111_00000), .jump_colour(16'b11111_000000_11000), 
         .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
-        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), .reset(reset),
+        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
+        .x_platform3(0), .y_platform3(90), .width_platform3(25), .height_platform3(5),
+        .x_platform4(39), .y_platform4(90), .width_platform4(25), .height_platform4(5), .reset(reset),
         .x_var(x_var), .y_var(y_var), .center_sq_colour(center_sq_colour), .is_y_stat(is_y_stat), .sprite_no(sprite_no));
 
 // track damage of player (3 lives)
@@ -98,7 +100,9 @@ projectile_animate animate_projectile (.clk(clk), .btnD(btnD),
         .x_ref(x_var), .y_ref(y_var), .x_vect(x_vect), .y_vect(y_vect), .sq_width(hitbox_size), .sq_height(hitbox_size),
         .char_no(char_no),
         .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
-        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), .reset(reset),
+        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
+        .x_platform3(0), .y_platform3(90), .width_platform3(25), .height_platform3(5),
+        .x_platform4(39), .y_platform4(90), .width_platform4(25), .height_platform4(5), .reset(reset),
         .x_varA(x_proj1), .y_varA(y_proj1), .x_varB(x_proj2), .y_varB(y_proj2), .proj_width(proj_width), .proj_height(proj_height), .proj_move(proj_move), .proj_hit_enemy(proj_hit_enemy)
 );
 
@@ -108,7 +112,9 @@ enimate animate_enemy (.clk(clk),
         .x_hero(x_var), .y_hero(y_var), .width_hero(8), .height_hero(8),
 //        .fps(20), .stat_colour(16'b11111_000000_00000), .move_colour(16'b11100_001111_00000), .jump_colour(16'b11111_000000_11000), 
         .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
-        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), .reset(reset),
+        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
+        .x_platform3(0), .y_platform3(90), .width_platform3(25), .height_platform3(5),
+        .x_platform4(39), .y_platform4(90), .width_platform4(25), .height_platform4(5), .reset(reset),
         .x_var(x_var2), .y_var(y_var2), .center_sq_colour(center_sq_colour), .hit(hit));
 
 // animate the muffin (for test)
@@ -117,7 +123,9 @@ muffinimate animate_muffin (.clk(clk),
         .x_hero(x_var), .y_hero(y_var), .width_hero(8), .height_hero(8),
 //        .fps(20), .stat_colour(16'b11111_000000_00000), .move_colour(16'b11100_001111_00000), .jump_colour(16'b11111_000000_11000), 
         .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
-        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), .reset(reset),
+        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
+        .x_platform3(0), .y_platform3(90), .width_platform3(25), .height_platform3(5),
+        .x_platform4(39), .y_platform4(90), .width_platform4(25), .height_platform4(5), .reset(reset),
         .x_var(x_muff), .y_var(y_muff), .center_sq_colour(center_sq_colour), .hit_muff(hit_muff));
 
 
@@ -129,6 +137,8 @@ make_square draw_sq (.clk(clk), .x(x), .y(y), .sprite_no(sprite_no), .char_no(ch
         .x_proj1(x_proj1), .y_proj1(y_proj1), .x_proj2(x_proj2), .y_proj2(y_proj2), .proj_width(proj_width), .proj_height(proj_height), .proj_colour(center_sq_colour),
         .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
         .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
+        .x_platform3(0), .y_platform3(90), .width_platform3(25), .height_platform3(5),
+        .x_platform4(39), .y_platform4(90), .width_platform4(25), .height_platform4(5), 
         .platform_colour(16'b00000_111111_00000), .bg_colour(0), .oled_data(oled_data));
 
 // 3.A1: instantiate Oled_Display

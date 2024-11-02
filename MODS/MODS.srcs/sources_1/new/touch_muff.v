@@ -26,7 +26,7 @@ module touch_muff(
     );
     
     wire damage_clk;
-    flexy_clock(.clk(clk), .m_value(49_999), .slow_clk(damage_clk)); // every 1ms
+    flexy_clock(.clk(clk), .m_value(1_249_999), .slow_clk(damage_clk)); // every 1ms
     
     reg [31:0]muff_count;
     reg [2:0]random_counter; // count from 0 to 4

@@ -14,12 +14,12 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23956 
-WARNING: [Synth 8-976] YELLOW has already been declared [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:146]
-WARNING: [Synth 8-2654] second declaration of YELLOW ignored [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:146]
-INFO: [Synth 8-994] YELLOW is declared here [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:142]
+INFO: Helper process launched with PID 20500 
+WARNING: [Synth 8-976] YELLOW has already been declared [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:145]
+WARNING: [Synth 8-2654] second declaration of YELLOW ignored [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:145]
+INFO: [Synth 8-994] YELLOW is declared here [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:141]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 371.633 ; gain = 111.453
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 371.328 ; gain = 111.617
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
 INFO: [Synth 8-6157] synthesizing module 'flexy_clock' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/flexy_clock.v:23]
@@ -27,14 +27,14 @@ INFO: [Synth 8-6155] done synthesizing module 'flexy_clock' (1#1) [C:/Users/cybe
 INFO: [Synth 8-6157] synthesizing module 'direction_mux' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/direction_mux.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'direction_mux' (2#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/direction_mux.v:23]
 INFO: [Synth 8-6157] synthesizing module 'animate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v:23]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v:42]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v:43]
-WARNING: [Synth 8-6014] Unused sequential element x_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v:69]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v:44]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v:45]
+WARNING: [Synth 8-6014] Unused sequential element x_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v:71]
 INFO: [Synth 8-6155] done synthesizing module 'animate' (3#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/animate.v:23]
 WARNING: [Synth 8-689] width (4) of port connection 'sq_width' does not match port width (7) of module 'animate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:78]
 WARNING: [Synth 8-689] width (4) of port connection 'sq_height' does not match port width (7) of module 'animate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:78]
-WARNING: [Synth 8-689] width (1) of port connection 'reset' does not match port width (7) of module 'animate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:81]
-WARNING: [Synth 8-350] instance 'animate_hero' of module 'animate' requires 29 connections, but only 21 given [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:77]
+WARNING: [Synth 8-689] width (1) of port connection 'reset' does not match port width (7) of module 'animate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:83]
+WARNING: [Synth 8-350] instance 'animate_hero' of module 'animate' requires 37 connections, but only 29 given [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:77]
 INFO: [Synth 8-6157] synthesizing module 'hero_damage' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/hero_damage.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'hero_damage' (4#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/hero_damage.v:23]
 INFO: [Synth 8-6157] synthesizing module 'touch_muff' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/touch_muff.v:23]
@@ -42,57 +42,60 @@ WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Use
 WARNING: [Synth 8-6014] Unused sequential element muff_count_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/touch_muff.v:42]
 INFO: [Synth 8-6155] done synthesizing module 'touch_muff' (5#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/touch_muff.v:23]
 INFO: [Synth 8-6157] synthesizing module 'projectile_animate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:23]
-INFO: [Synth 8-6157] synthesizing module 'single_shot' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:481]
-WARNING: [Synth 8-6014] Unused sequential element y_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:523]
-WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity single_shot does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:489]
-INFO: [Synth 8-6155] done synthesizing module 'single_shot' (6#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:481]
-INFO: [Synth 8-6157] synthesizing module 'laser_shot2' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:399]
-WARNING: [Synth 8-6014] Unused sequential element launchpt_x_left_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:440]
-WARNING: [Synth 8-6014] Unused sequential element launchpt_x_right_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:441]
-WARNING: [Synth 8-6014] Unused sequential element launchpt_y_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:442]
-WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity laser_shot2 does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:407]
-INFO: [Synth 8-6155] done synthesizing module 'laser_shot2' (7#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:399]
-INFO: [Synth 8-6157] synthesizing module 'dual_shot' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:297]
-WARNING: [Synth 8-6014] Unused sequential element y_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:342]
-WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity dual_shot does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:305]
-INFO: [Synth 8-6155] done synthesizing module 'dual_shot' (8#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:297]
-INFO: [Synth 8-6157] synthesizing module 'parab_shot' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:132]
-WARNING: [Synth 8-6014] Unused sequential element start_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:190]
-WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity parab_shot does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:140]
-INFO: [Synth 8-6155] done synthesizing module 'parab_shot' (9#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:132]
-INFO: [Synth 8-6155] done synthesizing module 'projectile_animate' (10#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:23]
-WARNING: [Synth 8-689] width (4) of port connection 'sq_width' does not match port width (7) of module 'projectile_animate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:98]
-WARNING: [Synth 8-689] width (4) of port connection 'sq_height' does not match port width (7) of module 'projectile_animate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:98]
-WARNING: [Synth 8-689] width (1) of port connection 'reset' does not match port width (7) of module 'projectile_animate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:101]
+INFO: [Synth 8-6157] synthesizing module 'single_shot' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:647]
+WARNING: [Synth 8-6014] Unused sequential element y_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:690]
+WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity single_shot does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:656]
+INFO: [Synth 8-6155] done synthesizing module 'single_shot' (6#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:647]
+INFO: [Synth 8-6157] synthesizing module 'laser_shot2' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:567]
+WARNING: [Synth 8-6014] Unused sequential element launchpt_x_left_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:610]
+WARNING: [Synth 8-6014] Unused sequential element launchpt_x_right_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:611]
+WARNING: [Synth 8-6014] Unused sequential element launchpt_y_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:612]
+WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity laser_shot2 does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:577]
+INFO: [Synth 8-6155] done synthesizing module 'laser_shot2' (7#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:567]
+INFO: [Synth 8-6157] synthesizing module 'dual_shot' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:451]
+WARNING: [Synth 8-6014] Unused sequential element y_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:498]
+WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity dual_shot does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:461]
+INFO: [Synth 8-6155] done synthesizing module 'dual_shot' (8#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:451]
+INFO: [Synth 8-6157] synthesizing module 'parab_shot' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:251]
+WARNING: [Synth 8-6014] Unused sequential element start_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:311]
+WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity parab_shot does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:261]
+INFO: [Synth 8-6155] done synthesizing module 'parab_shot' (9#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:251]
+INFO: [Synth 8-6157] synthesizing module 'poison_bottle' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:154]
+WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity poison_bottle does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:158]
+INFO: [Synth 8-6155] done synthesizing module 'poison_bottle' (10#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:154]
+INFO: [Synth 8-6155] done synthesizing module 'projectile_animate' (11#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:23]
+WARNING: [Synth 8-689] width (4) of port connection 'sq_width' does not match port width (7) of module 'projectile_animate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:100]
+WARNING: [Synth 8-689] width (4) of port connection 'sq_height' does not match port width (7) of module 'projectile_animate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:100]
+WARNING: [Synth 8-689] width (1) of port connection 'reset' does not match port width (7) of module 'projectile_animate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:105]
 INFO: [Synth 8-6157] synthesizing module 'enimate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/enimate.v:23]
-WARNING: [Synth 8-6014] Unused sequential element x_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/enimate.v:66]
-WARNING: [Synth 8-6014] Unused sequential element y_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/enimate.v:67]
-INFO: [Synth 8-6155] done synthesizing module 'enimate' (11#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/enimate.v:23]
-WARNING: [Synth 8-689] width (4) of port connection 'sq_width' does not match port width (7) of module 'enimate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:107]
-WARNING: [Synth 8-689] width (4) of port connection 'sq_height' does not match port width (7) of module 'enimate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:107]
-WARNING: [Synth 8-689] width (1) of port connection 'reset' does not match port width (7) of module 'enimate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:111]
-WARNING: [Synth 8-350] instance 'animate_enemy' of module 'enimate' requires 28 connections, but only 24 given [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:106]
+WARNING: [Synth 8-6014] Unused sequential element x_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/enimate.v:68]
+WARNING: [Synth 8-6014] Unused sequential element y_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/enimate.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'enimate' (12#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/enimate.v:23]
+WARNING: [Synth 8-689] width (4) of port connection 'sq_width' does not match port width (7) of module 'enimate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:111]
+WARNING: [Synth 8-689] width (4) of port connection 'sq_height' does not match port width (7) of module 'enimate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:111]
+WARNING: [Synth 8-689] width (1) of port connection 'reset' does not match port width (7) of module 'enimate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:117]
+WARNING: [Synth 8-350] instance 'animate_enemy' of module 'enimate' requires 36 connections, but only 32 given [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:110]
 INFO: [Synth 8-6157] synthesizing module 'muffinimate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/muffinimate.v:23]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/muffinimate.v:41]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/muffinimate.v:42]
-WARNING: [Synth 8-6014] Unused sequential element x_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/muffinimate.v:64]
-INFO: [Synth 8-6155] done synthesizing module 'muffinimate' (12#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/muffinimate.v:23]
-WARNING: [Synth 8-689] width (4) of port connection 'sq_width' does not match port width (7) of module 'muffinimate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:116]
-WARNING: [Synth 8-689] width (4) of port connection 'sq_height' does not match port width (7) of module 'muffinimate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:116]
-WARNING: [Synth 8-689] width (1) of port connection 'reset' does not match port width (7) of module 'muffinimate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:120]
-WARNING: [Synth 8-350] instance 'animate_muffin' of module 'muffinimate' requires 28 connections, but only 24 given [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:115]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/muffinimate.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/muffinimate.v:44]
+WARNING: [Synth 8-6014] Unused sequential element x_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/muffinimate.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'muffinimate' (13#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/muffinimate.v:23]
+WARNING: [Synth 8-689] width (4) of port connection 'sq_width' does not match port width (7) of module 'muffinimate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:122]
+WARNING: [Synth 8-689] width (4) of port connection 'sq_height' does not match port width (7) of module 'muffinimate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:122]
+WARNING: [Synth 8-689] width (1) of port connection 'reset' does not match port width (7) of module 'muffinimate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:128]
+WARNING: [Synth 8-350] instance 'animate_muffin' of module 'muffinimate' requires 36 connections, but only 32 given [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:121]
 INFO: [Synth 8-6157] synthesizing module 'make_square' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:23]
-INFO: [Synth 8-6157] synthesizing module 'sprite_1' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:95]
-WARNING: [Synth 8-85] always block has no event control specified [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:104]
-INFO: [Synth 8-6155] done synthesizing module 'sprite_1' (13#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:95]
-INFO: [Synth 8-6157] synthesizing module 'sprite_2' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:116]
-WARNING: [Synth 8-85] always block has no event control specified [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:125]
-INFO: [Synth 8-6155] done synthesizing module 'sprite_2' (14#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:116]
-INFO: [Synth 8-6157] synthesizing module 'sprite_3' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:137]
-WARNING: [Synth 8-85] always block has no event control specified [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:167]
-INFO: [Synth 8-6155] done synthesizing module 'sprite_3' (15#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:137]
-INFO: [Synth 8-6155] done synthesizing module 'make_square' (16#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:23]
-WARNING: [Synth 8-689] width (1) of port connection 'proj_move' does not match port width (3) of module 'make_square' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:125]
+INFO: [Synth 8-6157] synthesizing module 'sprite_1' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:94]
+WARNING: [Synth 8-85] always block has no event control specified [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'sprite_1' (14#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:94]
+INFO: [Synth 8-6157] synthesizing module 'sprite_2' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:115]
+WARNING: [Synth 8-85] always block has no event control specified [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:124]
+INFO: [Synth 8-6155] done synthesizing module 'sprite_2' (15#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:115]
+INFO: [Synth 8-6157] synthesizing module 'sprite_3' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:136]
+WARNING: [Synth 8-85] always block has no event control specified [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:166]
+INFO: [Synth 8-6155] done synthesizing module 'sprite_3' (16#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:136]
+INFO: [Synth 8-6155] done synthesizing module 'make_square' (17#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'proj_move' does not match port width (3) of module 'make_square' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:133]
 INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
 	Parameter Width bound to: 96 - type: integer 
 	Parameter Height bound to: 64 - type: integer 
@@ -147,8 +150,8 @@ INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/cyber/Desktop/
 INFO: [Synth 8-226] default block is never used [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:123]
 INFO: [Synth 8-226] default block is never used [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:198]
 WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:346]
-INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (17#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
-INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (18#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (18#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (19#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
 WARNING: [Synth 8-3331] design sprite_3 has unconnected port y_oled[6]
 WARNING: [Synth 8-3331] design sprite_3 has unconnected port y_oled[5]
 WARNING: [Synth 8-3331] design sprite_3 has unconnected port y_oled[4]
@@ -251,7 +254,7 @@ WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour2[0]
 WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour3[15]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 420.512 ; gain = 160.332
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 426.922 ; gain = 167.211
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -264,10 +267,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 420.512 ; gain = 160.332
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 426.922 ; gain = 167.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 420.512 ; gain = 160.332
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 426.922 ; gain = 167.211
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -289,22 +292,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 770.113 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 775.742 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 770.113 ; gain = 509.934
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 775.742 ; gain = 516.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 770.113 ; gain = 509.934
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 775.742 ; gain = 516.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 770.113 ; gain = 509.934
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 775.742 ; gain = 516.031
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "is_y_stat0" won't be mapped to RAM because it is too sparse
@@ -315,6 +318,9 @@ INFO: [Synth 8-5546] ROM "x_var" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "is_y_stat0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "is_y_stat0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "proj_move0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "stop_falling" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "stop_falling" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "proj_move0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "x_varA" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "is_y_stat0" won't be mapped to RAM because it is too sparse
@@ -363,7 +369,7 @@ INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 770.113 ; gain = 509.934
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 775.742 ; gain = 516.031
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'clk_6p25MHz' (flexy_clock) to 'clk_25MHz'
 
@@ -377,53 +383,55 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   4 Input     33 Bit       Adders := 4     
-	   2 Input     32 Bit       Adders := 20    
-	   3 Input     32 Bit       Adders := 10    
+	   4 Input     33 Bit       Adders := 5     
+	   2 Input     32 Bit       Adders := 23    
+	   3 Input     32 Bit       Adders := 16    
+	   4 Input     32 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 7     
 	   4 Input      9 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 20    
-	   3 Input      8 Bit       Adders := 21    
-	   2 Input      7 Bit       Adders := 94    
+	   2 Input      8 Bit       Adders := 30    
+	   3 Input      8 Bit       Adders := 27    
+	   2 Input      7 Bit       Adders := 132   
 	   2 Input      6 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
 	               40 Bit    Registers := 1     
-	               32 Bit    Registers := 12    
+	               32 Bit    Registers := 13    
 	               17 Bit    Registers := 1     
 	               16 Bit    Registers := 4     
-	                7 Bit    Registers := 33    
+	                7 Bit    Registers := 36    
 	                6 Bit    Registers := 1     
 	                3 Bit    Registers := 3     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 24    
+	                1 Bit    Registers := 30    
 +---Muxes : 
 	   2 Input     40 Bit        Muxes := 3     
-	   2 Input     32 Bit        Muxes := 31    
+	   2 Input     32 Bit        Muxes := 32    
 	   3 Input     32 Bit        Muxes := 1     
 	  32 Input     32 Bit        Muxes := 1     
 	  32 Input     20 Bit        Muxes := 1     
 	   2 Input     17 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 14    
+	   2 Input     16 Bit        Muxes := 16    
 	   3 Input     16 Bit        Muxes := 2     
 	   2 Input     14 Bit        Muxes := 1     
 	   2 Input     11 Bit        Muxes := 2     
-	   2 Input      7 Bit        Muxes := 128   
+	   2 Input      7 Bit        Muxes := 188   
+	  16 Input      7 Bit        Muxes := 2     
 	  10 Input      7 Bit        Muxes := 2     
-	   6 Input      7 Bit        Muxes := 1     
-	   3 Input      7 Bit        Muxes := 3     
-	   9 Input      7 Bit        Muxes := 2     
-	   7 Input      7 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 4     
+	  13 Input      7 Bit        Muxes := 1     
+	  15 Input      7 Bit        Muxes := 2     
+	  11 Input      7 Bit        Muxes := 3     
 	  32 Input      6 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 2     
 	  32 Input      5 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 4     
 	   2 Input      2 Bit        Muxes := 6     
-	   3 Input      2 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 38    
-	   3 Input      1 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 42    
+	   3 Input      1 Bit        Muxes := 3     
 	   5 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -449,10 +457,10 @@ Detailed RTL Component Info :
 +---Adders : 
 	   4 Input     33 Bit       Adders := 1     
 	   2 Input     32 Bit       Adders := 4     
-	   3 Input     32 Bit       Adders := 3     
+	   3 Input     32 Bit       Adders := 5     
 	   2 Input      9 Bit       Adders := 2     
-	   2 Input      8 Bit       Adders := 3     
-	   2 Input      7 Bit       Adders := 11    
+	   2 Input      8 Bit       Adders := 5     
+	   2 Input      7 Bit       Adders := 15    
 +---Registers : 
 	               32 Bit    Registers := 3     
 	               16 Bit    Registers := 1     
@@ -462,8 +470,8 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 13    
 	   2 Input      7 Bit        Muxes := 10    
+	  16 Input      7 Bit        Muxes := 1     
 	  10 Input      7 Bit        Muxes := 1     
-	   6 Input      7 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
 	   3 Input      2 Bit        Muxes := 1     
 Module hero_damage 
@@ -490,15 +498,16 @@ Module single_shot
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
-	   3 Input      8 Bit       Adders := 2     
 	   2 Input      8 Bit       Adders := 1     
-	   2 Input      7 Bit       Adders := 10    
+	   3 Input      8 Bit       Adders := 4     
+	   2 Input      7 Bit       Adders := 14    
 +---Registers : 
 	                7 Bit    Registers := 3     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      7 Bit        Muxes := 12    
 	   3 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 7     
+	  10 Input      7 Bit        Muxes := 1     
 	   3 Input      2 Bit        Muxes := 1     
 Module laser_shot2 
 Detailed RTL Component Info : 
@@ -521,21 +530,21 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 1     
-	   2 Input      7 Bit       Adders := 14    
+	   2 Input      7 Bit       Adders := 18    
 +---Registers : 
 	                7 Bit    Registers := 6     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      7 Bit        Muxes := 54    
+	   2 Input      7 Bit        Muxes := 86    
 Module parab_shot 
 Detailed RTL Component Info : 
 +---Adders : 
 	   4 Input     33 Bit       Adders := 1     
 	   2 Input     32 Bit       Adders := 5     
-	   3 Input     32 Bit       Adders := 3     
+	   3 Input     32 Bit       Adders := 5     
 	   2 Input      9 Bit       Adders := 2     
-	   2 Input      8 Bit       Adders := 3     
-	   2 Input      7 Bit       Adders := 14    
+	   2 Input      8 Bit       Adders := 5     
+	   2 Input      7 Bit       Adders := 18    
 +---Registers : 
 	               32 Bit    Registers := 3     
 	                7 Bit    Registers := 4     
@@ -544,9 +553,30 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit        Muxes := 8     
 	   3 Input      7 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 2     
-	   9 Input      7 Bit        Muxes := 2     
+	  13 Input      7 Bit        Muxes := 1     
+	  15 Input      7 Bit        Muxes := 2     
+	  11 Input      7 Bit        Muxes := 1     
 	   3 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
+Module poison_bottle 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 3     
+	   4 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 12    
++---Registers : 
+	               32 Bit    Registers := 1     
+	                7 Bit    Registers := 3     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 25    
+	   3 Input      7 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
 Module projectile_animate 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -560,11 +590,11 @@ Detailed RTL Component Info :
 +---Adders : 
 	   4 Input     33 Bit       Adders := 1     
 	   2 Input     32 Bit       Adders := 4     
-	   3 Input     32 Bit       Adders := 3     
+	   3 Input     32 Bit       Adders := 5     
 	   2 Input      9 Bit       Adders := 2     
-	   2 Input      8 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 5     
 	   3 Input      8 Bit       Adders := 2     
-	   2 Input      7 Bit       Adders := 16    
+	   2 Input      7 Bit       Adders := 20    
 +---Registers : 
 	               32 Bit    Registers := 3     
 	               16 Bit    Registers := 1     
@@ -573,8 +603,8 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 5     
 	   2 Input      7 Bit        Muxes := 4     
-	  10 Input      7 Bit        Muxes := 1     
-	   7 Input      7 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 1     
+	  11 Input      7 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
 Module muffinimate 
 Detailed RTL Component Info : 
@@ -583,9 +613,9 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit       Adders := 2     
 	   3 Input     32 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 4     
 	   3 Input      8 Bit       Adders := 3     
-	   2 Input      7 Bit       Adders := 11    
+	   2 Input      7 Bit       Adders := 13    
 +---Registers : 
 	               32 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
@@ -593,7 +623,8 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      7 Bit        Muxes := 24    
+	   2 Input      7 Bit        Muxes := 32    
+	  11 Input      7 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 1     
 Module sprite_1 
 Detailed RTL Component Info : 
@@ -620,12 +651,12 @@ Module make_square
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      8 Bit       Adders := 4     
-	   3 Input      8 Bit       Adders := 14    
-	   2 Input      7 Bit       Adders := 14    
+	   3 Input      8 Bit       Adders := 18    
+	   2 Input      7 Bit       Adders := 18    
 +---Registers : 
 	               16 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 11    
+	   2 Input     16 Bit        Muxes := 13    
 	   3 Input     16 Bit        Muxes := 1     
 	   2 Input     14 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 1     
@@ -667,10 +698,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5545] ROM "slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "is_y_stat0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "nolabel_line36/slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "nolabel_line29/slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "get_fps_clock/slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "get_fps_clock/slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -678,11 +706,17 @@ INFO: [Synth 8-5546] ROM "x_var" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "get_fps_clock/slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "is_y_stat0" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element get_fps_clock/slow_clk_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/flexy_clock.v:38]
+INFO: [Synth 8-5545] ROM "get_fps_clock2/slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "is_y_stat0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "get_fps_clock/slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "Q3A1/fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "clk_6p25MHz/slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line90/nolabel_line36/slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line91/nolabel_line29/slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "Q3A1/fsm_next_state0" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design Top_Student has port JC[7] driven by constant 1
 INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[0]' (FDE) to 'draw_sq/oled_data_reg[1]'
 INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[2]' (FDE) to 'draw_sq/oled_data_reg[4]'
 INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[3]' (FDE) to 'draw_sq/oled_data_reg[4]'
@@ -703,16 +737,15 @@ INFO: [Synth 8-3886] merging instance 'choose_direction/x_vect_reg[4]' (FD) to '
 INFO: [Synth 8-3886] merging instance 'choose_direction/x_vect_reg[3]' (FD) to 'choose_direction/x_vect_reg[1]'
 INFO: [Synth 8-3886] merging instance 'choose_direction/x_vect_reg[2]' (FD) to 'choose_direction/x_vect_reg[1]'
 INFO: [Synth 8-3886] merging instance 'draw_sq/oled_data_reg[14]' (FDE) to 'draw_sq/oled_data_reg[15]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (animate_projectile/\proj_height_reg[1] )
-INFO: [Synth 8-3886] merging instance 'animate_projectile/proj_height_reg[3]' (FDE) to 'animate_projectile/proj_height_reg[6]'
-INFO: [Synth 8-3886] merging instance 'animate_projectile/proj_height_reg[4]' (FDE) to 'animate_projectile/proj_height_reg[6]'
-INFO: [Synth 8-3886] merging instance 'animate_projectile/proj_height_reg[5]' (FDE) to 'animate_projectile/proj_height_reg[6]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (animate_projectile/\proj_height_reg[6] )
-INFO: [Synth 8-3886] merging instance 'animate_projectile/nolabel_line71/direction_reg[5]' (FDE) to 'animate_projectile/nolabel_line71/direction_reg[6]'
-INFO: [Synth 8-3886] merging instance 'animate_projectile/nolabel_line71/direction_reg[6]' (FDE) to 'animate_projectile/nolabel_line71/direction_reg[4]'
-INFO: [Synth 8-3886] merging instance 'animate_projectile/nolabel_line71/direction_reg[4]' (FDE) to 'animate_projectile/nolabel_line71/direction_reg[3]'
-INFO: [Synth 8-3886] merging instance 'animate_projectile/nolabel_line71/direction_reg[3]' (FDE) to 'animate_projectile/nolabel_line71/direction_reg[2]'
-INFO: [Synth 8-3886] merging instance 'animate_projectile/nolabel_line71/direction_reg[2]' (FDE) to 'animate_projectile/nolabel_line71/direction_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (animate_projectile/\proj_height_reg[0] )
+INFO: [Synth 8-3886] merging instance 'animate_projectile/proj_height_reg[2]' (FDE) to 'animate_projectile/proj_width_reg[2]'
+INFO: [Synth 8-3886] merging instance 'animate_projectile/proj_height_reg[3]' (FDE) to 'animate_projectile/proj_width_reg[4]'
+INFO: [Synth 8-3886] merging instance 'animate_projectile/proj_height_reg[4]' (FDE) to 'animate_projectile/proj_width_reg[4]'
+INFO: [Synth 8-3886] merging instance 'animate_projectile/proj_height_reg[5]' (FDE) to 'animate_projectile/proj_width_reg[4]'
+INFO: [Synth 8-3886] merging instance 'animate_projectile/proj_height_reg[6]' (FDE) to 'animate_projectile/proj_width_reg[4]'
+INFO: [Synth 8-3886] merging instance 'animate_projectile/proj_width_reg[4]' (FDE) to 'animate_projectile/proj_width_reg[5]'
+INFO: [Synth 8-3886] merging instance 'animate_projectile/proj_width_reg[5]' (FDE) to 'animate_projectile/proj_width_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (animate_projectile/\proj_width_reg[6] )
 WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[15]) is unused and will be removed from module animate.
 WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[14]) is unused and will be removed from module animate.
 WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[13]) is unused and will be removed from module animate.
@@ -731,91 +764,91 @@ WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[1]) is unused a
 WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[0]) is unused and will be removed from module animate.
 WARNING: [Synth 8-3332] Sequential element (sprite_no_reg[1]) is unused and will be removed from module animate.
 WARNING: [Synth 8-3332] Sequential element (sprite_no_reg[0]) is unused and will be removed from module animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/get_fps_clock/slow_clk_reg) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/y_var_reg[6]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/y_var_reg[5]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/y_var_reg[4]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/y_var_reg[3]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/y_var_reg[2]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/y_var_reg[1]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/y_var_reg[0]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/x_var_reg[6]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/x_var_reg[5]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/x_var_reg[4]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/x_var_reg[3]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/x_var_reg[2]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/x_var_reg[1]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/x_var_reg[0]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/x_increment_reg[6]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/x_increment_reg[5]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/x_increment_reg[4]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/x_increment_reg[3]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/x_increment_reg[2]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/x_increment_reg[1]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/x_increment_reg[0]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line63/proj_move_reg) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (proj_height_reg[6]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (proj_height_reg[1]) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (proj_hit_enemy_reg) is unused and will be removed from module projectile_animate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[31]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[30]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[29]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[28]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[27]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[26]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[25]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[24]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[23]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[22]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[21]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[20]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[19]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[18]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[17]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[16]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[15]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[14]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[13]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[12]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[11]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[10]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[9]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[8]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[7]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[6]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[5]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[4]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[3]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[2]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[1]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (jump_time_reg[0]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[15]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[14]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[13]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[12]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[11]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[10]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[9]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[8]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[7]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[6]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[5]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[4]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[3]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[2]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[1]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[0]) is unused and will be removed from module enimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[15]) is unused and will be removed from module muffinimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[14]) is unused and will be removed from module muffinimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[13]) is unused and will be removed from module muffinimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[12]) is unused and will be removed from module muffinimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[11]) is unused and will be removed from module muffinimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[10]) is unused and will be removed from module muffinimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[9]) is unused and will be removed from module muffinimate.
-WARNING: [Synth 8-3332] Sequential element (center_sq_colour_reg[8]) is unused and will be removed from module muffinimate.
+WARNING: [Synth 8-3332] Sequential element (get_fps_clock/slow_clk_reg) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (x_increment_reg[6]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (x_increment_reg[5]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (x_increment_reg[4]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (x_increment_reg[3]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (x_increment_reg[2]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (x_increment_reg[1]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (x_increment_reg[0]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (x_var_reg[6]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (x_var_reg[5]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (x_var_reg[4]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (x_var_reg[3]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (x_var_reg[2]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (x_var_reg[1]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (x_var_reg[0]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (y_var_reg[6]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (y_var_reg[5]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (y_var_reg[4]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (y_var_reg[3]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (y_var_reg[2]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (y_var_reg[1]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (y_var_reg[0]) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (proj_move_reg) is unused and will be removed from module single_shot.
+WARNING: [Synth 8-3332] Sequential element (get_fps_clock/slow_clk_reg) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[31]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[30]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[29]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[28]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[27]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[26]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[25]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[24]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[23]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[22]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[21]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[20]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[19]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[18]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[17]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[16]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[15]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[14]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[13]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[12]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[11]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[10]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[9]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[8]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[7]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[6]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[5]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[4]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[3]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[2]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[1]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (count_reg[0]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (proj_move_reg) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (direction_reg[6]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (direction_reg[5]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (direction_reg[4]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (direction_reg[3]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (direction_reg[2]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (direction_reg[1]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (direction_reg[0]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (x_var_reg[6]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (x_var_reg[5]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (x_var_reg[4]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (x_var_reg[3]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (x_var_reg[2]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (x_var_reg[1]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (x_var_reg[0]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (y_var_reg[6]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (y_var_reg[5]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (y_var_reg[4]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (y_var_reg[3]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (y_var_reg[2]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (y_var_reg[1]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (y_var_reg[0]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (proj_width_reg[6]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (proj_width_reg[5]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (proj_width_reg[4]) is unused and will be removed from module laser_shot2.
+WARNING: [Synth 8-3332] Sequential element (proj_width_reg[3]) is unused and will be removed from module laser_shot2.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:35 . Memory (MB): peak = 821.430 ; gain = 561.250
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:53 . Memory (MB): peak = 830.629 ; gain = 570.918
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -827,13 +860,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:41 . Memory (MB): peak = 821.430 ; gain = 561.250
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:01:00 . Memory (MB): peak = 830.629 ; gain = 570.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 821.430 ; gain = 561.250
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:01:02 . Memory (MB): peak = 830.629 ; gain = 570.918
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -845,7 +878,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:44 . Memory (MB): peak = 930.168 ; gain = 669.988
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:01:05 . Memory (MB): peak = 940.473 ; gain = 680.762
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -869,7 +902,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:45 . Memory (MB): peak = 930.168 ; gain = 669.988
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:01:06 . Memory (MB): peak = 940.473 ; gain = 680.762
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -882,7 +915,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:45 . Memory (MB): peak = 930.168 ; gain = 669.988
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:01:06 . Memory (MB): peak = 940.473 ; gain = 680.762
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -894,25 +927,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:46 . Memory (MB): peak = 930.168 ; gain = 669.988
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:01:06 . Memory (MB): peak = 940.473 ; gain = 680.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:46 . Memory (MB): peak = 930.168 ; gain = 669.988
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:01:06 . Memory (MB): peak = 940.473 ; gain = 680.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:46 . Memory (MB): peak = 930.168 ; gain = 669.988
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:01:06 . Memory (MB): peak = 940.473 ; gain = 680.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:46 . Memory (MB): peak = 930.168 ; gain = 669.988
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:01:06 . Memory (MB): peak = 940.473 ; gain = 680.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -929,60 +962,59 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     9|
-|2     |CARRY4 |  1130|
-|3     |LUT1   |   230|
-|4     |LUT2   |  1121|
-|5     |LUT3   |  1025|
-|6     |LUT4   |   959|
-|7     |LUT5   |  1380|
-|8     |LUT6   |  2247|
-|9     |MUXF7  |     3|
+|2     |CARRY4 |  1373|
+|3     |LUT1   |   233|
+|4     |LUT2   |  1517|
+|5     |LUT3   |  1192|
+|6     |LUT4   |  1165|
+|7     |LUT5   |  1775|
+|8     |LUT6   |  2568|
+|9     |MUXF7  |     2|
 |10    |FDE_1  |    32|
-|11    |FDRE   |   877|
-|12    |FDSE   |     1|
-|13    |IBUF   |     6|
-|14    |OBUF   |    10|
-|15    |OBUFT  |     1|
+|11    |FDRE   |   883|
+|12    |IBUF   |     6|
+|13    |OBUF   |    10|
+|14    |OBUFT  |     1|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+---------------------+-------------------+------+
 |      |Instance             |Module             |Cells |
 +------+---------------------+-------------------+------+
-|1     |top                  |                   |  9031|
-|2     |  Q3A1               |Oled_Display       |   673|
-|3     |  animate_enemy      |enimate            |  1947|
+|1     |top                  |                   | 10766|
+|2     |  Q3A1               |Oled_Display       |   734|
+|3     |  animate_enemy      |enimate            |  2176|
 |4     |    get_fps_clock    |flexy_clock_7      |    63|
-|5     |  animate_hero       |animate            |  2200|
+|5     |  animate_hero       |animate            |  2481|
 |6     |    get_fps_clock    |flexy_clock_6      |    63|
-|7     |  animate_muffin     |muffinimate        |  1098|
-|8     |    get_fps_clock    |flexy_clock_5      |    55|
-|9     |  animate_projectile |projectile_animate |  2604|
-|10    |    nolabel_line71   |laser_shot2        |   175|
-|11    |      get_fps_clock  |flexy_clock_4      |    54|
-|12    |    nolabel_line79   |dual_shot          |   169|
-|13    |      get_fps_clock  |flexy_clock_3      |    54|
-|14    |    nolabel_line88   |parab_shot         |  2117|
-|15    |      get_fps_clock  |flexy_clock_2      |    63|
-|16    |  choose_direction   |direction_mux      |    96|
-|17    |  clk_6p25MHz        |flexy_clock        |    64|
-|18    |  draw_sq            |make_square        |    75|
+|7     |  animate_muffin     |muffinimate        |  1182|
+|8     |    get_fps_clock    |flexy_clock_5      |    63|
+|9     |  animate_projectile |projectile_animate |  3697|
+|10    |    nolabel_line102  |parab_shot         |  2302|
+|11    |      get_fps_clock  |flexy_clock_4      |    63|
+|12    |    nolabel_line112  |poison_bottle      |  1097|
+|13    |      get_fps_clock2 |flexy_clock_3      |    55|
+|14    |    nolabel_line91   |dual_shot          |   169|
+|15    |      get_fps_clock  |flexy_clock_2      |    54|
+|16    |  choose_direction   |direction_mux      |    80|
+|17    |  clk_6p25MHz        |flexy_clock        |    52|
+|18    |  draw_sq            |make_square        |    77|
 |19    |    draw_sprite_1    |sprite_1           |     4|
 |20    |    draw_sprite_2    |sprite_2           |     3|
 |21    |    draw_sprite_3    |sprite_3           |     5|
-|22    |  nolabel_line88     |hero_damage        |   151|
+|22    |  nolabel_line90     |hero_damage        |   151|
 |23    |    nolabel_line36   |flexy_clock_1      |    54|
-|24    |  nolabel_line89     |touch_muff         |    79|
+|24    |  nolabel_line91     |touch_muff         |    77|
 |25    |    nolabel_line29   |flexy_clock_0      |    54|
 +------+---------------------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:46 . Memory (MB): peak = 930.168 ; gain = 669.988
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:01:06 . Memory (MB): peak = 940.473 ; gain = 680.762
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 650 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:40 . Memory (MB): peak = 930.168 ; gain = 320.387
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:46 . Memory (MB): peak = 930.168 ; gain = 669.988
+Synthesis finished with 0 errors, 0 critical warnings and 897 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:01:00 . Memory (MB): peak = 940.473 ; gain = 331.941
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:01:07 . Memory (MB): peak = 940.473 ; gain = 680.762
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1171 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1413 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -991,11 +1023,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDE_1 => FDRE (inverted pins: C): 32 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-121 Infos, 244 Warnings, 2 Critical Warnings and 0 Errors encountered.
+126 Infos, 247 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:49 . Memory (MB): peak = 930.168 ; gain = 683.031
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:01:11 . Memory (MB): peak = 940.473 ; gain = 693.266
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 930.168 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Nov  2 03:30:42 2024...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 940.473 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  2 17:56:18 2024...

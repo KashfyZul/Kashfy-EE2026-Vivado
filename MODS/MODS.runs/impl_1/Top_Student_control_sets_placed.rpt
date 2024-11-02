@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Nov  2 03:31:26 2024
+| Date         : Sat Nov  2 17:57:11 2024
 | Host         : Kashfy-yoga7 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    37 |
-| Unused register locations in slices containing registers |    60 |
+| Number of unique control sets                            |    33 |
+| Unused register locations in slices containing registers |    66 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,11 +35,10 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      2 |            1 |
-|      6 |            1 |
-|      8 |            4 |
+|      8 |            2 |
+|     10 |            1 |
 |     12 |            2 |
-|     14 |            3 |
-|    16+ |           26 |
+|    16+ |           27 |
 +--------+--------------+
 
 
@@ -49,58 +48,54 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             552 |          141 |
+| No           | No                    | No                     |             654 |          153 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             954 |          134 |
-| Yes          | No                    | No                     |             192 |           37 |
+| No           | Yes                   | No                     |             954 |          136 |
+| Yes          | No                    | No                     |             176 |           31 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             122 |           21 |
+| Yes          | Yes                   | No                     |              46 |           11 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------------------+-----------------------------------------------+----------------------------------------------------------+------------------+----------------+
-|               Clock Signal              |                 Enable Signal                 |                     Set/Reset Signal                     | Slice Load Count | Bel Load Count |
-+-----------------------------------------+-----------------------------------------------+----------------------------------------------------------+------------------+----------------+
-| ~clk6p25m_BUFG                          |                                               |                                                          |                1 |              2 |
-|  nolabel_line71/fps_clock               |                                               |                                                          |                2 |              6 |
-|  x_var_reg[5]_i_2_n_0                   | animate_muffin/y_increment[0]_i_1__1_n_0      | animate_muffin/y_increment[5]_i_1__1_n_0                 |                1 |              8 |
-|  x_var_reg[5]_i_2_n_0                   | animate_muffin/y_increment[0]_i_1__1_n_0      |                                                          |                4 |              8 |
-|  slow_clk                               |                                               |                                                          |                2 |              8 |
-|  clk_IBUF_BUFG                          | nolabel_line89/proj_width_reg[0]              | nolabel_line89/proj_width_reg[6]                         |                2 |              8 |
-|  nolabel_line89/nolabel_line29/slow_clk |                                               |                                                          |                2 |             12 |
-|  clk_IBUF_BUFG                          | nolabel_line89/E[0]                           |                                                          |                2 |             12 |
-|  nolabel_line71/fps_clock               | choose_direction/E[0]                         | animate_projectile/nolabel_line71/x_var[6]_i_1_n_0       |                3 |             14 |
-|  nolabel_line71/fps_clock               | animate_projectile/nolabel_line71/proj_width0 |                                                          |                2 |             14 |
-|  nolabel_line71/fps_clock               | choose_direction/y_var_reg[0]_0[0]            |                                                          |                3 |             14 |
-|  clk_IBUF_BUFG                          | nolabel_line89/proj_width_reg[0]              | nolabel_line89/x_varB_reg[6]                             |                4 |             28 |
-| ~clk6p25m_BUFG                          |                                               | Q3A1/frame_counter[16]_i_1_n_0                           |                5 |             34 |
-|  clk_IBUF_BUFG                          |                                               |                                                          |               13 |             34 |
-| ~clk6p25m_BUFG                          | Q3A1/delay[0]_i_1_n_0                         |                                                          |                5 |             40 |
-|  clk_IBUF_BUFG                          | nolabel_line89/proj_width_reg[0]              |                                                          |               13 |             40 |
-|  slow_clk                               |                                               | nolabel_line88/counter[31]_i_1_n_0                       |                8 |             62 |
-| ~clk6p25m_BUFG                          | Q3A1/state                                    |                                                          |                8 |             64 |
-|  clk_IBUF_BUFG                          |                                               | animate_hero/get_fps_clock/clear                         |                8 |             64 |
-|  clk_IBUF_BUFG                          |                                               | animate_enemy/get_fps_clock/clear                        |                8 |             64 |
-|  fps_clock                              |                                               | animate_projectile/nolabel_line88/jumping[31]_i_1__0_n_0 |                9 |             64 |
-|  fps_clock_1                            |                                               | animate_enemy/jumping[31]_i_1__1_n_0                     |                9 |             64 |
-|  fps_clock_0                            |                                               | animate_hero/jumping[31]_i_1_n_0                         |               16 |             64 |
-|  clk_IBUF_BUFG                          |                                               | nolabel_line89/nolabel_line29/clear                      |                8 |             64 |
-|  clk_IBUF_BUFG                          |                                               | animate_projectile/nolabel_line88/get_fps_clock/clear    |                8 |             64 |
-|  clk_IBUF_BUFG                          |                                               | animate_projectile/nolabel_line71/get_fps_clock/clear    |                8 |             64 |
-|  clk_IBUF_BUFG                          |                                               | animate_projectile/nolabel_line79/get_fps_clock/clear    |                8 |             64 |
-|  clk_IBUF_BUFG                          |                                               | animate_muffin/get_fps_clock/clear                       |                8 |             64 |
-|  clk_IBUF_BUFG                          |                                               | nolabel_line88/nolabel_line36/clear                      |                8 |             64 |
-|  clk_IBUF_BUFG                          |                                               | clk_6p25MHz/clear                                        |                8 |             64 |
-|  nolabel_line71/fps_clock               | animate_projectile/nolabel_line71/E[0]        | choose_direction/SR[0]                                   |               11 |             64 |
-|  nolabel_line79/fps_clock               |                                               |                                                          |               15 |             74 |
-|  x_var_reg[5]_i_2_n_0                   |                                               |                                                          |               26 |             86 |
-| ~clk6p25m_BUFG                          |                                               | Q3A1/spi_word[39]_i_1_n_0                                |               15 |             90 |
-|  fps_clock_1                            |                                               |                                                          |               15 |             96 |
-|  fps_clock_0                            |                                               |                                                          |               30 |            110 |
-|  fps_clock                              |                                               |                                                          |               35 |            124 |
-+-----------------------------------------+-----------------------------------------------+----------------------------------------------------------+------------------+----------------+
++------------------------------------+--------------------------------------------------------------+--------------------------------------------------------------+------------------+----------------+
+|            Clock Signal            |                         Enable Signal                        |                       Set/Reset Signal                       | Slice Load Count | Bel Load Count |
++------------------------------------+--------------------------------------------------------------+--------------------------------------------------------------+------------------+----------------+
+| ~clk6p25m_BUFG                     |                                                              |                                                              |                1 |              2 |
+|  nolabel_line112/fps_clock2        | animate_projectile/nolabel_line112/y_increment[0]_i_1__0_n_0 | animate_projectile/nolabel_line112/y_increment[5]_i_1__1_n_0 |                3 |              8 |
+|  counter_reg[0]_i_2_n_0            |                                                              |                                                              |                2 |              8 |
+|  nolabel_line112/fps_clock2        | animate_projectile/nolabel_line112/start_i_1_n_0             | btnC_IBUF                                                    |                3 |             10 |
+|  nolabel_line91/nolabel_line29/CLK |                                                              |                                                              |                1 |             12 |
+|  clk_IBUF_BUFG                     | Q3A1/E[0]                                                    |                                                              |                3 |             12 |
+|  nolabel_line112/fps_clock2        | animate_projectile/nolabel_line112/y_increment[0]_i_1__0_n_0 |                                                              |                6 |             22 |
+|  clk_IBUF_BUFG                     | nolabel_line91/proj_width_reg[1]                             | nolabel_line91/y_varB_reg[0]                                 |                5 |             28 |
+| ~clk6p25m_BUFG                     |                                                              | Q3A1/frame_counter[16]_i_1_n_0                               |                5 |             34 |
+|  clk_IBUF_BUFG                     |                                                              |                                                              |               14 |             36 |
+|  clk_IBUF_BUFG                     | nolabel_line91/proj_width_reg[1]                             |                                                              |                8 |             38 |
+| ~clk6p25m_BUFG                     | Q3A1/delay[0]_i_1_n_0                                        |                                                              |                5 |             40 |
+|  counter_reg[0]_i_2_n_0            |                                                              | nolabel_line90/counter[31]_i_1_n_0                           |                8 |             62 |
+| ~clk6p25m_BUFG                     | Q3A1/state                                                   |                                                              |                9 |             64 |
+|  clk_IBUF_BUFG                     |                                                              | animate_hero/get_fps_clock/clear                             |                8 |             64 |
+|  clk_IBUF_BUFG                     |                                                              | animate_enemy/get_fps_clock/clear                            |                8 |             64 |
+|  clk_IBUF_BUFG                     |                                                              | clk_6p25MHz/clear                                            |                8 |             64 |
+|  clk_IBUF_BUFG                     |                                                              | nolabel_line90/nolabel_line36/COUNT[0]_i_1__1_n_0            |                8 |             64 |
+|  clk_IBUF_BUFG                     |                                                              | animate_muffin/get_fps_clock/clear                           |                8 |             64 |
+|  clk_IBUF_BUFG                     |                                                              | animate_projectile/nolabel_line91/get_fps_clock/clear        |                8 |             64 |
+|  clk_IBUF_BUFG                     |                                                              | animate_projectile/nolabel_line102/get_fps_clock/clear       |                8 |             64 |
+|  clk_IBUF_BUFG                     |                                                              | nolabel_line91/nolabel_line29/COUNT[0]_i_1__2_n_0            |                8 |             64 |
+|  fps_clock_0                       |                                                              | animate_enemy/jumping[31]_i_1__1_n_0                         |                9 |             64 |
+|  nolabel_line102/fps_clock         |                                                              | animate_projectile/nolabel_line102/jumping[31]_i_1__0_n_0    |                9 |             64 |
+|  fps_clock                         |                                                              | animate_hero/jumping[31]_i_1_n_0                             |               16 |             64 |
+|  clk_IBUF_BUFG                     |                                                              | animate_projectile/nolabel_line112/get_fps_clock2/clear      |                8 |             64 |
+|  fps_clock_2                       |                                                              |                                                              |               15 |             74 |
+|  nolabel_line112/fps_clock2        |                                                              |                                                              |               22 |             82 |
+| ~clk6p25m_BUFG                     |                                                              | Q3A1/spi_word[39]_i_1_n_0                                    |               17 |             90 |
+|  fps_clock_0                       |                                                              |                                                              |               15 |             96 |
+|  fps_clock_1                       |                                                              |                                                              |               31 |            110 |
+|  fps_clock                         |                                                              |                                                              |               27 |            110 |
+|  nolabel_line102/fps_clock         |                                                              |                                                              |               25 |            124 |
++------------------------------------+--------------------------------------------------------------+--------------------------------------------------------------+------------------+----------------+
 
 

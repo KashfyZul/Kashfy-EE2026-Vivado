@@ -27,6 +27,8 @@ module animate(
     [31:0]fps, [15:0]stat_colour, [15:0]move_colour, [15:0]jump_colour, 
     [6:0]x_platform1, [6:0]y_platform1, [6:0]width_platform1, [6:0]height_platform1,
     [6:0]x_platform2, [6:0]y_platform2, [6:0]width_platform2, [6:0]height_platform2,
+    [6:0]x_platform3, [6:0]y_platform3, [6:0]width_platform3, [6:0]height_platform3,
+    [6:0]x_platform4, [6:0]y_platform4, [6:0]width_platform4, [6:0]height_platform4,
     reset,
     output reg [6:0]x_var, reg [6:0]y_var, reg [15:0]center_sq_colour, reg is_y_stat, reg [3:0]sprite_no
     );
@@ -129,7 +131,20 @@ module animate(
         // check right bound of platform2
         end else if (x_var == x_platform2 + width_platform2 && (y_var + sq_height > y_platform2 && y_var < y_platform2 + height_platform2) && x_vect == 127) begin // right bound of red square
             x_increment = 0;
+        // check left bound of platform3
+        end else if (x_var + sq_width == x_platform3 && (y_var + sq_height > y_platform3 && y_var < y_platform3 + height_platform3) && x_vect == 1) begin 
+            x_increment = 0;
+        // check right bound of platform3
+        end else if (x_var == x_platform3 + width_platform3 && (y_var + sq_height > y_platform3 && y_var < y_platform3 + height_platform3) && x_vect == 127) begin 
+            x_increment = 0;
+        // check left bound of platform4
+        end else if (x_var + sq_width == x_platform4 && (y_var + sq_height > y_platform4 && y_var < y_platform4 + height_platform4) && x_vect == 1) begin 
+            x_increment = 0;
+        // check right bound of platform4
+        end else if (x_var == x_platform4 + width_platform4 && (y_var + sq_height > y_platform4 && y_var < y_platform4 + height_platform4) && x_vect == 127) begin 
+            x_increment = 0;
         end
+        
         
         // check upper bound of screen
         if ((y_var == 0 || y_var > 63) && (jumping > 0 && jumping < 15)) begin
@@ -138,26 +153,43 @@ module animate(
         end else if (y_var + sq_height - 1 == 63 && (falling >= 0 && falling < 64) && jumping == 0) begin
             y_increment = 0;
         // check upper bound of platform1
-        end else if ((y_var + sq_height == y_platform1) && (x_var + sq_width > x_platform1 && x_var - 1 < x_platform1 + width_platform1) && (falling >= 0 && falling < 64) && jumping == 0) begin // upper bound of red square
+        end else if ((y_var + sq_height == y_platform1) && (x_var + sq_width > x_platform1 && x_var - 1 < x_platform1 + width_platform1) && (falling >= 0 && falling < 64) && jumping == 0) begin 
             y_increment = 0;
         // check upper bound of platform2
-        end else if ((y_var + sq_height == y_platform2) && (x_var + sq_width > x_platform2 && x_var - 1 < x_platform2 + width_platform2) && (falling >= 0 && falling < 64) && jumping == 0) begin // upper bound of red square
+        end else if ((y_var + sq_height == y_platform2) && (x_var + sq_width > x_platform2 && x_var - 1 < x_platform2 + width_platform2) && (falling >= 0 && falling < 64) && jumping == 0) begin 
+            y_increment = 0;
+        // check upper bound of platform3
+        end else if ((y_var + sq_height == y_platform3) && (x_var + sq_width > x_platform3 && x_var - 1 < x_platform3 + width_platform3) && (falling >= 0 && falling < 64) && jumping == 0) begin 
+            y_increment = 0;
+        // check upper bound of platform4
+        end else if ((y_var + sq_height == y_platform4) && (x_var + sq_width > x_platform4 && x_var - 1 < x_platform4 + width_platform4) && (falling >= 0 && falling < 64) && jumping == 0) begin 
             y_increment = 0;
         // check lower bound of screen before collision to slow down player
         end else if (y_var + sq_height - 1 + y_increment >= 63 && (falling >= 0 && falling < 64) && jumping == 0) begin
             y_increment = 1; // falling counter
         // check upper bound of platform1 before collision to slow down player
-        end else if ((y_var + sq_height + y_increment >= y_platform1 && y_var + sq_height < y_platform1 + height_platform1) && (x_var + sq_width > x_platform1 && x_var - 1 < x_platform1 + width_platform1) && (falling > 0 && falling < 64)) begin // upper bound of red square
+        end else if ((y_var + sq_height + y_increment >= y_platform1 && y_var + sq_height < y_platform1 + height_platform1) && (x_var + sq_width > x_platform1 && x_var - 1 < x_platform1 + width_platform1) && (falling > 0 && falling < 64)) begin 
             y_increment = 1; // falling counter resets
         // check upper bound of platform2 before collision to slow down player
-        end else if ((y_var + sq_height + y_increment >= y_platform2 && y_var + sq_height < y_platform2 + height_platform2) && (x_var + sq_width > x_platform2 && x_var - 1 < x_platform2 + width_platform2) && (falling > 0 && falling < 64)) begin // upper bound of red square
+        end else if ((y_var + sq_height + y_increment >= y_platform2 && y_var + sq_height < y_platform2 + height_platform2) && (x_var + sq_width > x_platform2 && x_var - 1 < x_platform2 + width_platform2) && (falling > 0 && falling < 64)) begin 
             y_increment = 1; // falling counter resets
-//        end else if (y_var <= y_obstacle + 5 - 1 && (x_var + sq_width - 1 > x_obstacle && x_var - 1 < x_obstacle + 25) && y_vect == 127) begin // lower bound of red square
+        // check upper bound of platform3 before collision to slow down player
+        end else if ((y_var + sq_height + y_increment >= y_platform3 && y_var + sq_height < y_platform3 + height_platform3) && (x_var + sq_width > x_platform3 && x_var - 1 < x_platform3 + width_platform3) && (falling > 0 && falling < 64)) begin 
+            y_increment = 1; // falling counter resets
+        // check upper bound of platform4 before collision to slow down player
+        end else if ((y_var + sq_height + y_increment >= y_platform4 && y_var + sq_height < y_platform4 + height_platform4) && (x_var + sq_width > x_platform4 && x_var - 1 < x_platform4 + width_platform4) && (falling > 0 && falling < 64)) begin 
+            y_increment = 1; // falling counter resets
         // check lower bound of platform 1
         end else if ((y_var <= y_platform1 + height_platform1 - 1 && y_var > y_platform1) && (x_var + sq_width - 1 > x_platform1 && x_var - 1 < x_platform1 + width_platform1) && (jumping > 0 && jumping < 15)) begin // lower bound of red square
             y_increment = 1;
         // check lower bound of platform 2
         end else if ((y_var <= y_platform2 + height_platform2 - 1 && y_var > y_platform2) && (x_var + sq_width - 1 > x_platform2 && x_var - 1 < x_platform2 + width_platform2) && (jumping > 0 && jumping < 15)) begin // lower bound of red square
+            y_increment = 1;
+        // check lower bound of platform 3
+        end else if ((y_var <= y_platform3 + height_platform3 - 1 && y_var > y_platform3) && (x_var + sq_width - 1 > x_platform3 && x_var - 1 < x_platform3 + width_platform3) && (jumping > 0 && jumping < 15)) begin // lower bound of red square
+            y_increment = 1;
+        // check lower bound of platform 4
+        end else if ((y_var <= y_platform4 + height_platform4 - 1 && y_var > y_platform4) && (x_var + sq_width - 1 > x_platform4 && x_var - 1 < x_platform4 + width_platform4) && (jumping > 0 && jumping < 15)) begin // lower bound of red square
             y_increment = 1;
         end
         
