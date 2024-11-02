@@ -14,12 +14,12 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 20500 
+INFO: Helper process launched with PID 35288 
 WARNING: [Synth 8-976] YELLOW has already been declared [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:145]
 WARNING: [Synth 8-2654] second declaration of YELLOW ignored [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:145]
 INFO: [Synth 8-994] YELLOW is declared here [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/make_square.v:141]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 371.328 ; gain = 111.617
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 372.023 ; gain = 111.668
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
 INFO: [Synth 8-6157] synthesizing module 'flexy_clock' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/flexy_clock.v:23]
@@ -42,27 +42,28 @@ WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Use
 WARNING: [Synth 8-6014] Unused sequential element muff_count_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/touch_muff.v:42]
 INFO: [Synth 8-6155] done synthesizing module 'touch_muff' (5#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/touch_muff.v:23]
 INFO: [Synth 8-6157] synthesizing module 'projectile_animate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:23]
-INFO: [Synth 8-6157] synthesizing module 'single_shot' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:647]
-WARNING: [Synth 8-6014] Unused sequential element y_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:690]
-WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity single_shot does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:656]
-INFO: [Synth 8-6155] done synthesizing module 'single_shot' (6#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:647]
-INFO: [Synth 8-6157] synthesizing module 'laser_shot2' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:567]
-WARNING: [Synth 8-6014] Unused sequential element launchpt_x_left_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:610]
-WARNING: [Synth 8-6014] Unused sequential element launchpt_x_right_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:611]
-WARNING: [Synth 8-6014] Unused sequential element launchpt_y_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:612]
-WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity laser_shot2 does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:577]
-INFO: [Synth 8-6155] done synthesizing module 'laser_shot2' (7#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:567]
-INFO: [Synth 8-6157] synthesizing module 'dual_shot' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:451]
-WARNING: [Synth 8-6014] Unused sequential element y_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:498]
-WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity dual_shot does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:461]
-INFO: [Synth 8-6155] done synthesizing module 'dual_shot' (8#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:451]
-INFO: [Synth 8-6157] synthesizing module 'parab_shot' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:251]
-WARNING: [Synth 8-6014] Unused sequential element start_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:311]
-WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity parab_shot does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:261]
-INFO: [Synth 8-6155] done synthesizing module 'parab_shot' (9#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:251]
+INFO: [Synth 8-6157] synthesizing module 'single_shot' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:662]
+WARNING: [Synth 8-6014] Unused sequential element y_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:705]
+WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity single_shot does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:671]
+INFO: [Synth 8-6155] done synthesizing module 'single_shot' (6#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:662]
+INFO: [Synth 8-6157] synthesizing module 'laser_shot2' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:582]
+WARNING: [Synth 8-6014] Unused sequential element launchpt_x_left_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:625]
+WARNING: [Synth 8-6014] Unused sequential element launchpt_x_right_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:626]
+WARNING: [Synth 8-6014] Unused sequential element launchpt_y_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:627]
+WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity laser_shot2 does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:592]
+INFO: [Synth 8-6155] done synthesizing module 'laser_shot2' (7#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:582]
+INFO: [Synth 8-6157] synthesizing module 'dual_shot' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:466]
+WARNING: [Synth 8-6014] Unused sequential element y_increment_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:513]
+WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity dual_shot does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:476]
+INFO: [Synth 8-6155] done synthesizing module 'dual_shot' (8#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:466]
+INFO: [Synth 8-6157] synthesizing module 'parab_shot' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:266]
+WARNING: [Synth 8-6014] Unused sequential element start_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:326]
+WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity parab_shot does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:276]
+INFO: [Synth 8-6155] done synthesizing module 'parab_shot' (9#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:266]
 INFO: [Synth 8-6157] synthesizing module 'poison_bottle' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:154]
-WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity poison_bottle does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:158]
+WARNING: [Synth 8-3848] Net proj_hit_enemy in module/entity poison_bottle does not have driver. [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:161]
 INFO: [Synth 8-6155] done synthesizing module 'poison_bottle' (10#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:154]
+WARNING: [Synth 8-350] instance 'nolabel_line112' of module 'poison_bottle' requires 31 connections, but only 23 given [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
 INFO: [Synth 8-6155] done synthesizing module 'projectile_animate' (11#1) [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:23]
 WARNING: [Synth 8-689] width (4) of port connection 'sq_width' does not match port width (7) of module 'projectile_animate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:100]
 WARNING: [Synth 8-689] width (4) of port connection 'sq_height' does not match port width (7) of module 'projectile_animate' [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/Top_Student.v:100]
@@ -254,7 +255,7 @@ WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour2[0]
 WARNING: [Synth 8-3331] design make_square has unconnected port sq_colour3[15]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 426.922 ; gain = 167.211
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 427.836 ; gain = 167.480
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -263,14 +264,70 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:x_platform3[6] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:x_platform3[5] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:x_platform3[4] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:x_platform3[3] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:x_platform3[2] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:x_platform3[1] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:x_platform3[0] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:y_platform3[6] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:y_platform3[5] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:y_platform3[4] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:y_platform3[3] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:y_platform3[2] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:y_platform3[1] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:y_platform3[0] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:width_platform3[6] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:width_platform3[5] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:width_platform3[4] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:width_platform3[3] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:width_platform3[2] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:width_platform3[1] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:width_platform3[0] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:height_platform3[6] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:height_platform3[5] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:height_platform3[4] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:height_platform3[3] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:height_platform3[2] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:height_platform3[1] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:height_platform3[0] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:x_platform4[6] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:x_platform4[5] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:x_platform4[4] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:x_platform4[3] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:x_platform4[2] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:x_platform4[1] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:x_platform4[0] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:y_platform4[6] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:y_platform4[5] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:y_platform4[4] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:y_platform4[3] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:y_platform4[2] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:y_platform4[1] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:y_platform4[0] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:width_platform4[6] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:width_platform4[5] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:width_platform4[4] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:width_platform4[3] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:width_platform4[2] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:width_platform4[1] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:width_platform4[0] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:height_platform4[6] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:height_platform4[5] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:height_platform4[4] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:height_platform4[3] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:height_platform4[2] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:height_platform4[1] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line112:height_platform4[0] to constant 0 [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/projectile_animate.v:112]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 426.922 ; gain = 167.211
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 427.836 ; gain = 167.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 426.922 ; gain = 167.211
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 427.836 ; gain = 167.480
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -292,22 +349,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 775.742 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 776.352 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 775.742 ; gain = 516.031
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 776.352 ; gain = 515.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 775.742 ; gain = 516.031
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 776.352 ; gain = 515.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 775.742 ; gain = 516.031
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 776.352 ; gain = 515.996
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "is_y_stat0" won't be mapped to RAM because it is too sparse
@@ -369,7 +426,7 @@ INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 775.742 ; gain = 516.031
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 776.352 ; gain = 515.996
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'clk_6p25MHz' (flexy_clock) to 'clk_25MHz'
 
@@ -390,9 +447,9 @@ Detailed RTL Component Info :
 	   2 Input     17 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 7     
 	   4 Input      9 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 30    
+	   2 Input      8 Bit       Adders := 32    
 	   3 Input      8 Bit       Adders := 27    
-	   2 Input      7 Bit       Adders := 132   
+	   2 Input      7 Bit       Adders := 134   
 	   2 Input      6 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
@@ -416,13 +473,13 @@ Detailed RTL Component Info :
 	   3 Input     16 Bit        Muxes := 2     
 	   2 Input     14 Bit        Muxes := 1     
 	   2 Input     11 Bit        Muxes := 2     
-	   2 Input      7 Bit        Muxes := 188   
+	   2 Input      7 Bit        Muxes := 196   
 	  16 Input      7 Bit        Muxes := 2     
 	  10 Input      7 Bit        Muxes := 2     
 	   3 Input      7 Bit        Muxes := 4     
 	  13 Input      7 Bit        Muxes := 1     
 	  15 Input      7 Bit        Muxes := 2     
-	  11 Input      7 Bit        Muxes := 3     
+	  11 Input      7 Bit        Muxes := 4     
 	  32 Input      6 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 2     
@@ -564,16 +621,17 @@ Detailed RTL Component Info :
 	   4 Input     33 Bit       Adders := 1     
 	   2 Input     32 Bit       Adders := 3     
 	   4 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 2     
-	   2 Input      7 Bit       Adders := 12    
+	   2 Input      8 Bit       Adders := 4     
+	   2 Input      7 Bit       Adders := 14    
 +---Registers : 
 	               32 Bit    Registers := 1     
 	                7 Bit    Registers := 3     
 	                1 Bit    Registers := 4     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      7 Bit        Muxes := 25    
+	   2 Input      7 Bit        Muxes := 33    
 	   3 Input      7 Bit        Muxes := 1     
+	  11 Input      7 Bit        Muxes := 1     
 	   3 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 2     
 	   3 Input      1 Bit        Muxes := 1     
@@ -706,8 +764,8 @@ INFO: [Synth 8-5546] ROM "x_var" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "get_fps_clock/slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "is_y_stat0" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element get_fps_clock/slow_clk_reg was removed.  [C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.srcs/sources_1/new/flexy_clock.v:38]
-INFO: [Synth 8-5545] ROM "get_fps_clock2/slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "is_y_stat0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -848,7 +906,7 @@ WARNING: [Synth 8-3332] Sequential element (proj_width_reg[4]) is unused and wil
 WARNING: [Synth 8-3332] Sequential element (proj_width_reg[3]) is unused and will be removed from module laser_shot2.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:53 . Memory (MB): peak = 830.629 ; gain = 570.918
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:51 . Memory (MB): peak = 805.410 ; gain = 545.055
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -860,13 +918,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:01:00 . Memory (MB): peak = 830.629 ; gain = 570.918
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:58 . Memory (MB): peak = 805.410 ; gain = 545.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:01:02 . Memory (MB): peak = 830.629 ; gain = 570.918
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 818.188 ; gain = 557.832
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -878,7 +936,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:01:05 . Memory (MB): peak = 940.473 ; gain = 680.762
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:01:01 . Memory (MB): peak = 944.203 ; gain = 683.848
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -902,7 +960,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:01:06 . Memory (MB): peak = 940.473 ; gain = 680.762
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:01:02 . Memory (MB): peak = 944.203 ; gain = 683.848
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -915,7 +973,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:01:06 . Memory (MB): peak = 940.473 ; gain = 680.762
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:01:02 . Memory (MB): peak = 944.203 ; gain = 683.848
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -927,25 +985,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:01:06 . Memory (MB): peak = 940.473 ; gain = 680.762
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:01:03 . Memory (MB): peak = 944.203 ; gain = 683.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:01:06 . Memory (MB): peak = 940.473 ; gain = 680.762
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:01:03 . Memory (MB): peak = 944.203 ; gain = 683.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:01:06 . Memory (MB): peak = 940.473 ; gain = 680.762
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:01:03 . Memory (MB): peak = 944.203 ; gain = 683.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:01:06 . Memory (MB): peak = 940.473 ; gain = 680.762
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:01:03 . Memory (MB): peak = 944.203 ; gain = 683.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -962,16 +1020,16 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     9|
-|2     |CARRY4 |  1373|
-|3     |LUT1   |   233|
-|4     |LUT2   |  1517|
-|5     |LUT3   |  1192|
-|6     |LUT4   |  1165|
-|7     |LUT5   |  1775|
-|8     |LUT6   |  2568|
-|9     |MUXF7  |     2|
+|2     |CARRY4 |  1376|
+|3     |LUT1   |   238|
+|4     |LUT2   |  1496|
+|5     |LUT3   |  1308|
+|6     |LUT4   |  1185|
+|7     |LUT5   |  1755|
+|8     |LUT6   |  2505|
+|9     |MUXF7  |     3|
 |10    |FDE_1  |    32|
-|11    |FDRE   |   883|
+|11    |FDRE   |   887|
 |12    |IBUF   |     6|
 |13    |OBUF   |    10|
 |14    |OBUFT  |     1|
@@ -981,40 +1039,40 @@ Report Instance Areas:
 +------+---------------------+-------------------+------+
 |      |Instance             |Module             |Cells |
 +------+---------------------+-------------------+------+
-|1     |top                  |                   | 10766|
-|2     |  Q3A1               |Oled_Display       |   734|
-|3     |  animate_enemy      |enimate            |  2176|
+|1     |top                  |                   | 10811|
+|2     |  Q3A1               |Oled_Display       |   726|
+|3     |  animate_enemy      |enimate            |  2202|
 |4     |    get_fps_clock    |flexy_clock_7      |    63|
-|5     |  animate_hero       |animate            |  2481|
+|5     |  animate_hero       |animate            |  2560|
 |6     |    get_fps_clock    |flexy_clock_6      |    63|
-|7     |  animate_muffin     |muffinimate        |  1182|
+|7     |  animate_muffin     |muffinimate        |  1187|
 |8     |    get_fps_clock    |flexy_clock_5      |    63|
-|9     |  animate_projectile |projectile_animate |  3697|
+|9     |  animate_projectile |projectile_animate |  3612|
 |10    |    nolabel_line102  |parab_shot         |  2302|
 |11    |      get_fps_clock  |flexy_clock_4      |    63|
-|12    |    nolabel_line112  |poison_bottle      |  1097|
-|13    |      get_fps_clock2 |flexy_clock_3      |    55|
+|12    |    nolabel_line112  |poison_bottle      |  1011|
+|13    |      get_fps_clock2 |flexy_clock_3      |    63|
 |14    |    nolabel_line91   |dual_shot          |   169|
 |15    |      get_fps_clock  |flexy_clock_2      |    54|
-|16    |  choose_direction   |direction_mux      |    80|
+|16    |  choose_direction   |direction_mux      |   110|
 |17    |  clk_6p25MHz        |flexy_clock        |    52|
-|18    |  draw_sq            |make_square        |    77|
+|18    |  draw_sq            |make_square        |    73|
 |19    |    draw_sprite_1    |sprite_1           |     4|
 |20    |    draw_sprite_2    |sprite_2           |     3|
 |21    |    draw_sprite_3    |sprite_3           |     5|
 |22    |  nolabel_line90     |hero_damage        |   151|
 |23    |    nolabel_line36   |flexy_clock_1      |    54|
-|24    |  nolabel_line91     |touch_muff         |    77|
-|25    |    nolabel_line29   |flexy_clock_0      |    54|
+|24    |  nolabel_line91     |touch_muff         |    78|
+|25    |    nolabel_line29   |flexy_clock_0      |    55|
 +------+---------------------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:01:06 . Memory (MB): peak = 940.473 ; gain = 680.762
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:01:03 . Memory (MB): peak = 944.203 ; gain = 683.848
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 897 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:01:00 . Memory (MB): peak = 940.473 ; gain = 331.941
-Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:01:07 . Memory (MB): peak = 940.473 ; gain = 680.762
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:57 . Memory (MB): peak = 944.203 ; gain = 335.332
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:01:03 . Memory (MB): peak = 944.203 ; gain = 683.848
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1413 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1417 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -1023,11 +1081,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDE_1 => FDRE (inverted pins: C): 32 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-126 Infos, 247 Warnings, 2 Critical Warnings and 0 Errors encountered.
+127 Infos, 303 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:01:11 . Memory (MB): peak = 940.473 ; gain = 693.266
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:01:06 . Memory (MB): peak = 944.203 ; gain = 696.539
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/cyber/Desktop/Kashfy-EE2026-Vivado/MODS/MODS.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 940.473 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Nov  2 17:56:18 2024...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 944.203 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  2 20:35:40 2024...

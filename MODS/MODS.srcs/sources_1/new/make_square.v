@@ -76,9 +76,9 @@ module make_square(
         end else if (x >= x_platform2 && x < x_platform2 + width_platform2 && y >= y_platform2 && y < y_platform2 + height_platform2) begin
             oled_data = platform_colour;
         end else if (x >= x_platform3 && x < x_platform3 + width_platform3 && y >= y_platform3 && y < y_platform3 + height_platform3) begin
-            oled_data = platform_colour;
+            oled_data = 16'b11111_111111_11111;
         end else if (x >= x_platform4 && x < x_platform4 + width_platform4 && y >= y_platform4 && y < y_platform4 + height_platform4) begin
-            oled_data = platform_colour;
+            oled_data = 16'b11111_111111_11111;
         end else begin
             oled_data = bg_colour;
         end

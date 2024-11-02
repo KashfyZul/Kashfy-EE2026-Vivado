@@ -153,7 +153,10 @@ endmodule
 
 module poison_bottle(    input CLOCK, btnD,
     [6:0]x_ref, [6:0]y_ref, [6:0]x_vect, [6:0]y_vect, [6:0]sq_width, [6:0]sq_height,         
-    [6:0]x_platform1, [6:0]y_platform1, [6:0]width_platform1, [6:0]height_platform1,    [6:0]x_platform2, [6:0]y_platform2, [6:0]width_platform2, [6:0]height_platform2,
+    [6:0]x_platform1, [6:0]y_platform1, [6:0]width_platform1, [6:0]height_platform1,    
+    [6:0]x_platform2, [6:0]y_platform2, [6:0]width_platform2, [6:0]height_platform2,
+    [6:0]x_platform3, [6:0]y_platform3, [6:0]width_platform3, [6:0]height_platform3,
+    [6:0]x_platform4, [6:0]y_platform4, [6:0]width_platform4, [6:0]height_platform4,
     reset,    
     output reg [6:0]x_var, reg [6:0]y_var, reg [6:0]proj_width, reg [6:0]proj_height, reg proj_move, reg proj_hit_enemy
 );    
@@ -216,6 +219,12 @@ module poison_bottle(    input CLOCK, btnD,
             // check upper bound of platform2            
             end else if ((y_var + proj_height == y_platform2) && (x_var + proj_width > x_platform2 && x_var - 1 < x_platform2 + width_platform2) && (falling >= 0 && falling < 64)) begin 
                 y_increment = 0;
+            // check upper bound of platform3
+            end else if ((y_var + proj_height == y_platform3) && (x_var + proj_width > x_platform3 && x_var - 1 < x_platform3 + width_platform3) && (falling >= 0 && falling < 64)) begin                 
+                y_increment = 0;
+            // check upper bound of platform4            
+            end else if ((y_var + proj_height == y_platform4) && (x_var + proj_width > x_platform4 && x_var - 1 < x_platform4 + width_platform4) && (falling >= 0 && falling < 64)) begin 
+                y_increment = 0;
             // check lower bound of screen before collision to slow down player
             end else if (y_var + sq_height - 1 + y_increment >= 63 && (falling >= 0 && falling < 64)) begin
                 y_increment = 1; // falling counter
@@ -224,6 +233,12 @@ module poison_bottle(    input CLOCK, btnD,
                 y_increment = 1; // falling counter resets
             // check upper bound of platform2 before collision to slow down player
             end else if ((y_var + sq_height + y_increment >= y_platform2 && y_var + sq_height < y_platform2 + height_platform2) && (x_var + sq_width > x_platform2 && x_var - 1 < x_platform2 + width_platform2) && (falling > 0 && falling < 64)) begin 
+                y_increment = 1; // falling counter resets
+            // check upper bound of platform3 before collision to slow down player
+            end else if ((y_var + sq_height + y_increment >= y_platform3 && y_var + sq_height < y_platform3 + height_platform3) && (x_var + sq_width > x_platform3 && x_var - 1 < x_platform3 + width_platform3) && (falling > 0 && falling < 64)) begin 
+                y_increment = 1; // falling counter resets
+            // check upper bound of platform4 before collision to slow down player
+            end else if ((y_var + sq_height + y_increment >= y_platform4 && y_var + sq_height < y_platform4 + height_platform4) && (x_var + sq_width > x_platform4 && x_var - 1 < x_platform4 + width_platform4) && (falling > 0 && falling < 64)) begin 
                 y_increment = 1; // falling counter resets
             end           
             y_var = y_var + y_increment;
