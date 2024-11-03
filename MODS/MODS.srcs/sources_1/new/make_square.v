@@ -20,16 +20,17 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module make_square(
+module make_square #(parameter NUM_PLATFORMS = 4) (
     input clk, [6:0]x, [6:0]y, [3:0]sprite_no, [2:0]char_no, proj_move,
     [6:0]x_val, [6:0]y_val, [6:0]sq_width, [6:0]sq_height, [15:0]sq_colour,
     [6:0]x_val2, [6:0]y_val2, [6:0]sq_width2, [6:0]sq_height2, [15:0]sq_colour2, 
     [6:0]x_muff, [6:0]y_muff, [6:0]sq_width3, [6:0]sq_height3, [15:0]sq_colour3, 
     [6:0]x_proj1, [6:0]y_proj1, [6:0]x_proj2, [6:0]y_proj2, [6:0]proj_width, [6:0]proj_height, [15:0]proj_colour,
-    [6:0]x_platform1, [6:0]y_platform1, [6:0]width_platform1, [6:0]height_platform1,
-    [6:0]x_platform2, [6:0]y_platform2, [6:0]width_platform2, [6:0]height_platform2,
-    [6:0]x_platform3, [6:0]y_platform3, [6:0]width_platform3, [6:0]height_platform3,
-    [6:0]x_platform4, [6:0]y_platform4, [6:0]width_platform4, [6:0]height_platform4, 
+//    [6:0]x_platform1, [6:0]y_platform1, [6:0]width_platform1, [6:0]height_platform1,
+//    [6:0]x_platform2, [6:0]y_platform2, [6:0]width_platform2, [6:0]height_platform2,
+//    [6:0]x_platform3, [6:0]y_platform3, [6:0]width_platform3, [6:0]height_platform3,
+//    [6:0]x_platform4, [6:0]y_platform4, [6:0]width_platform4, [6:0]height_platform4,
+    [6:0] x_platform [0:NUM_PLATFORMS], [6:0] y_platform [0:NUM_PLATFORMS], [6:0] width_platform [0:NUM_PLATFORMS], [6:0] height_platform [0:NUM_PLATFORMS],
     [15:0]platform_colour, [15:0]bg_colour,
     output reg [15:0]oled_data
     );
@@ -71,16 +72,22 @@ module make_square(
             end
         end else if (x_proj2 && y_proj2 && x >= x_proj2 && x < x_proj2 + proj_width && y >= y_proj2 && y < y_proj2 + proj_height) begin
             oled_data = proj_move ? WHITE : 0;
-        end else if (x >= x_platform1 && x < x_platform1 + width_platform1 && y >= y_platform1 && y < y_platform1 + height_platform1) begin
-            oled_data = platform_colour;
-        end else if (x >= x_platform2 && x < x_platform2 + width_platform2 && y >= y_platform2 && y < y_platform2 + height_platform2) begin
-            oled_data = platform_colour;
-        end else if (x >= x_platform3 && x < x_platform3 + width_platform3 && y >= y_platform3 && y < y_platform3 + height_platform3) begin
-            oled_data = 16'b11111_111111_11111;
-        end else if (x >= x_platform4 && x < x_platform4 + width_platform4 && y >= y_platform4 && y < y_platform4 + height_platform4) begin
-            oled_data = 16'b11111_111111_11111;
+//        end else if (x >= x_platform1 && x < x_platform1 + width_platform1 && y >= y_platform1 && y < y_platform1 + height_platform1) begin
+//            oled_data = platform_colour;
+//        end else if (x >= x_platform2 && x < x_platform2 + width_platform2 && y >= y_platform2 && y < y_platform2 + height_platform2) begin
+//            oled_data = platform_colour;
+//        end else if (x >= x_platform3 && x < x_platform3 + width_platform3 && y >= y_platform3 && y < y_platform3 + height_platform3) begin
+//            oled_data = 16'b11111_111111_11111;
+//        end else if (x >= x_platform4 && x < x_platform4 + width_platform4 && y >= y_platform4 && y < y_platform4 + height_platform4) begin
+//            oled_data = 16'b11111_111111_11111;
+        
         end else begin
             oled_data = bg_colour;
+        end
+        for (integer i = 0; i < NUM_PLATFORMS; i = i + 1) begin
+            if (x >= x_platform[i] && x < x_platform[i] + width_platform[i] && y >= y_platform[i] && y < y_platform[i] + height_platform[i]) begin
+                oled_data = platform_colour;
+            end
         end
     end 
         

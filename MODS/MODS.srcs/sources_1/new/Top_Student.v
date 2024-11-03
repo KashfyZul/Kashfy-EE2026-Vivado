@@ -15,6 +15,9 @@ module Top_Student (
     input clk, btnC, btnL, btnR, btnD, btnU, [4:0]sw,  
     output [7:0]JC, [2:0]led
     );
+    
+parameter NUM_PLATFORMS = 4;    
+
 // 3.A3: oled_data initialisation
 //reg [15:0] oled_data;
 wire [15:0] oled_data;
@@ -32,6 +35,15 @@ wire [6:0] x_proj1;
 wire [6:0] y_proj1;
 wire [6:0] x_proj2;
 wire [6:0] y_proj2;
+wire [6:0] x_platform [0:NUM_PLATFORMS];
+assign x_platform[0] = 30; assign x_platform[1] = 55; assign x_platform[2] = 0; assign x_platform[3] = 55;  
+wire [6:0] y_platform [0:NUM_PLATFORMS];
+assign y_platform[0] = 40; assign y_platform[1] = 20; assign y_platform[2] = 58; assign y_platform[3] = 58;
+wire [6:0] width_platform [0:NUM_PLATFORMS];
+assign width_platform[0] = 25; assign width_platform[1] = 25; assign width_platform[2] = 39; assign width_platform[3] = 39;
+wire [6:0] height_platform [0:NUM_PLATFORMS];
+assign height_platform[0] = 5; assign height_platform[1] = 5; assign height_platform[2] = 5; assign height_platform[3] = 5;
+
 wire reset;
 
 assign reset = btnC;
@@ -77,10 +89,12 @@ wire [3:0] sprite_no;
 animate animate_hero (.clk(clk), 
         .x_start(84), .y_start(0), .x_vect(x_vect), .y_vect(y_vect), .sq_width(hitbox_size), .sq_height(hitbox_size),
 //        .fps(20), .stat_colour(16'b11111_000000_00000), .move_colour(16'b11100_001111_00000), .jump_colour(16'b11111_000000_11000), 
-        .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
-        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
-        .x_platform3(0), .y_platform3(58), .width_platform3(39), .height_platform3(5),
-        .x_platform4(55), .y_platform4(58), .width_platform4(39), .height_platform4(5), .reset(reset),
+//        .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
+//        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
+//        .x_platform3(0), .y_platform3(58), .width_platform3(39), .height_platform3(5),
+//        .x_platform4(55), .y_platform4(58), .width_platform4(39), .height_platform4(5),
+        .x_platform(x_platform), .y_platform(y_platform), .width_platform(width_platform), .height_platform(height_platform), 
+        .reset(reset),
         .x_var(x_var), .y_var(y_var), .center_sq_colour(center_sq_colour), .is_y_stat(is_y_stat), .sprite_no(sprite_no));
 
 // track damage of player (3 lives)
@@ -99,10 +113,12 @@ wire [6:0]proj_height;
 projectile_animate animate_projectile (.clk(clk), .btnD(btnD), 
         .x_ref(x_var), .y_ref(y_var), .x_vect(x_vect), .y_vect(y_vect), .sq_width(hitbox_size), .sq_height(hitbox_size),
         .char_no(char_no),
-        .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
-        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
-        .x_platform3(0), .y_platform3(58), .width_platform3(39), .height_platform3(5),
-        .x_platform4(55), .y_platform4(58), .width_platform4(39), .height_platform4(5), .reset(reset),
+//        .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
+//        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
+//        .x_platform3(0), .y_platform3(58), .width_platform3(39), .height_platform3(5),
+//        .x_platform4(55), .y_platform4(58), .width_platform4(39), .height_platform4(5),
+        .x_platform(x_platform), .y_platform(y_platform), .width_platform(width_platform), .height_platform(height_platform), 
+        .reset(reset),
         .x_varA(x_proj1), .y_varA(y_proj1), .x_varB(x_proj2), .y_varB(y_proj2), .proj_width(proj_width), .proj_height(proj_height), .proj_move(proj_move), .proj_hit_enemy(proj_hit_enemy)
 );
 
@@ -135,11 +151,11 @@ make_square draw_sq (.clk(clk), .x(x), .y(y), .sprite_no(sprite_no), .char_no(ch
         .x_val2(x_var2), .y_val2(y_var2), .sq_width2(8), .sq_height2(8), .sq_colour2(center_sq_colour),
         .x_muff(x_muff), .y_muff(y_muff), .sq_width3(8), .sq_height3(8), .sq_colour3(center_sq_colour),
         .x_proj1(x_proj1), .y_proj1(y_proj1), .x_proj2(x_proj2), .y_proj2(y_proj2), .proj_width(proj_width), .proj_height(proj_height), .proj_colour(center_sq_colour),
-        .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
-        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
-        .x_platform3(0), .y_platform3(58), .width_platform3(39), .height_platform3(5),
-        .x_platform4(55), .y_platform4(58), .width_platform4(39), .height_platform4(5),
-        
+//        .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
+//        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
+//        .x_platform3(0), .y_platform3(58), .width_platform3(39), .height_platform3(5),
+//        .x_platform4(55), .y_platform4(58), .width_platform4(39), .height_platform4(5),
+        .x_platform(x_platform), .y_platform(y_platform), .width_platform(width_platform), .height_platform(height_platform),
         .platform_colour(16'b00000_111111_00000), .bg_colour(0), .oled_data(oled_data));
 
 // 3.A1: instantiate Oled_Display
