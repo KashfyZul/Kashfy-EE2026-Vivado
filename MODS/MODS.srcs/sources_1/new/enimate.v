@@ -30,7 +30,7 @@ module enimate(
     [6:0]x_platform3, [6:0]y_platform3, [6:0]width_platform3, [6:0]height_platform3,
     [6:0]x_platform4, [6:0]y_platform4, [6:0]width_platform4, [6:0]height_platform4,
     reset,
-    output reg [6:0]x_var, reg [6:0]y_var, reg [15:0]center_sq_colour, reg hit
+    output reg [6:0]x_var, reg [6:0]y_var, reg [15:0]center_sq_colour
     );
     
     reg [6:0] x_increment;
@@ -40,8 +40,8 @@ module enimate(
     reg [31:0]falling;
     reg is_y_stat;
     initial begin
-        x_var = 80;
-        y_var = 0;
+        x_var = x_start;
+        y_var = y_start;
         // for some reason x_var and y_var cant take values of x_start and y_start... values must be written dirctly in this initial block
         center_sq_colour = 16'b11111_000000_00000;
         is_y_stat = 0;
@@ -58,8 +58,8 @@ module enimate(
    
     always @ (posedge fps_clock) begin
         if (reset) begin
-            x_var = 80;
-            y_var = 0;
+            x_var = x_start;
+            y_var = y_start;
             center_sq_colour = 16'b11111_000000_00000;
             is_y_stat = 0;
             jump_time = 15;
@@ -101,7 +101,7 @@ module enimate(
         
         // check for collisions with boundaries of screen
         // check left bound of screen
-        if (x_var == 0 && x_vect == 127) begin 
+        if (x_var - 1 == 0 && x_vect == 127) begin 
             x_increment = 0;
         // check right bound of screen
         end else if (x_var + sq_width - 1 == 95 && x_vect == 1) begin 
@@ -184,11 +184,11 @@ module enimate(
         x_var = x_var + x_increment;
         y_var = y_var + y_increment;
         
-        if ((x_var < x_hero + width_hero && x_var + sq_width > x_hero)&& (y_var + sq_height > y_hero && y_var < y_hero + height_hero)) begin
-            hit = 1;
-        end else begin
-            hit = 0;
-        end
+//        if ((x_var < x_hero + width_hero && x_var + sq_width > x_hero)&& (y_var + sq_height > y_hero && y_var < y_hero + height_hero)) begin
+//            hit = 1;
+//        end else begin
+//            hit = 0;
+//        end
     end
     
 endmodule

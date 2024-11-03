@@ -20,18 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module animate #(parameter NUM_PLATFORMS = 4)(
+module animate #(parameter NUM_PLATFORMS = 4, parameter MAX_ENEMIES = 14, parameter PLAYER_RESPAWN_X = 44, parameter PLAYER_RESPAWN_Y = 28)(
     input clk, 
     [6:0]x_start, [6:0]y_start, [6:0]x_vect, [6:0]y_vect, [6:0]sq_width, [6:0]sq_height, 
-    [6:0]x_hero, [6:0]y_hero, [6:0]width_hero, [6:0]height_hero,
-    [31:0]fps, [15:0]stat_colour, [15:0]move_colour, [15:0]jump_colour, 
-//    [6:0]x_platform1, [6:0]y_platform1, [6:0]width_platform1, [6:0]height_platform1,
-//    [6:0]x_platform2, [6:0]y_platform2, [6:0]width_platform2, [6:0]height_platform2,
-//    [6:0]x_platform3, [6:0]y_platform3, [6:0]width_platform3, [6:0]height_platform3,
-//    [6:0]x_platform4, [6:0]y_platform4, [6:0]width_platform4, [6:0]height_platform4,
+    [6:0]enemy_xref [0:MAX_ENEMIES], [6:0]enemy_yref [0:MAX_ENEMIES],
     [6:0] x_platform [0:NUM_PLATFORMS], [6:0] y_platform [0:NUM_PLATFORMS], [6:0] width_platform [0:NUM_PLATFORMS], [6:0] height_platform [0:NUM_PLATFORMS],
     reset,
-    output reg [6:0]x_var, reg [6:0]y_var, reg [15:0]center_sq_colour, reg is_y_stat, reg [3:0]sprite_no
+    output reg [6:0]x_var, reg [6:0]y_var, reg [15:0]center_sq_colour, reg is_y_stat, reg [3:0]sprite_no, reg hero_hit
     );
     
     reg [6:0] x_increment;
@@ -48,7 +43,7 @@ module animate #(parameter NUM_PLATFORMS = 4)(
         center_sq_colour = 16'b11111_000000_00000;
         is_y_stat = 0;
         jump_time = 15;
-        jumping = 0;  
+        jumping = 0; 
         falling = 0;
         start = 1;
     end
@@ -74,6 +69,8 @@ module animate #(parameter NUM_PLATFORMS = 4)(
             start = 0;
         end
         x_increment = x_vect;
+        hero_hit = 0;
+        
 
         if (y_vect == 127) begin // start jump
             jumping = jump_time; // start rising counter (counts down)
@@ -99,7 +96,7 @@ module animate #(parameter NUM_PLATFORMS = 4)(
         
         // check for collisions with boundaries of screen
         // check left bound of screen
-        if (x_var == 0 && x_vect == 127) begin 
+        if (x_var - 1 == 0 && x_vect == 127) begin 
             if (y_increment > 1) begin // added "cling to walls"
                 y_increment = 1;
                 jumping = 0;
@@ -121,78 +118,6 @@ module animate #(parameter NUM_PLATFORMS = 4)(
             end
             x_increment = 0;
         
-//        // check left bound of platform1
-//        end else if (x_var + sq_width == x_platform1 && (y_var + sq_height > y_platform1 && y_var < y_platform1 + height_platform1) && x_vect == 1) begin // left bound of red square
-//            x_increment = 0;
-//        // check right bound of platform1
-//        end else if (x_var == x_platform1 + width_platform1 && (y_var + sq_height > y_platform1 && y_var < y_platform1 + height_platform1) && x_vect == 127) begin // right bound of red square
-//            x_increment = 0;
-//        // check left bound of platform2
-//        end else if (x_var + sq_width == x_platform2 && (y_var + sq_height > y_platform2 && y_var < y_platform2 + height_platform2) && x_vect == 1) begin // left bound of red square
-//            x_increment = 0;
-//        // check right bound of platform2
-//        end else if (x_var == x_platform2 + width_platform2 && (y_var + sq_height > y_platform2 && y_var < y_platform2 + height_platform2) && x_vect == 127) begin // right bound of red square
-//            x_increment = 0;
-//        // check left bound of platform3
-//        end else if (x_var + sq_width == x_platform3 && (y_var + sq_height > y_platform3 && y_var < y_platform3 + height_platform3) && x_vect == 1) begin 
-//            x_increment = 0;
-//        // check right bound of platform3
-//        end else if (x_var == x_platform3 + width_platform3 && (y_var + sq_height > y_platform3 && y_var < y_platform3 + height_platform3) && x_vect == 127) begin 
-//            x_increment = 0;
-//        // check left bound of platform4
-//        end else if (x_var + sq_width == x_platform4 && (y_var + sq_height > y_platform4 && y_var < y_platform4 + height_platform4) && x_vect == 1) begin 
-//            x_increment = 0;
-//        // check right bound of platform4
-//        end else if (x_var == x_platform4 + width_platform4 && (y_var + sq_height > y_platform4 && y_var < y_platform4 + height_platform4) && x_vect == 127) begin 
-//            x_increment = 0;
-        end
-        
-        
-        // check upper bound of screen
-        if ((y_var == 0 || y_var > 63) && (jumping > 0 && jumping < 15)) begin
-            y_increment = 1;
-        // check lower bound of screen
-        end else if (y_var + sq_height - 1 == 63 && (falling >= 0 && falling < 64) && jumping == 0) begin
-            y_increment = 0;
-//        // check upper bound of platform1
-//        end else if ((y_var + sq_height == y_platform1) && (x_var + sq_width > x_platform1 && x_var - 1 < x_platform1 + width_platform1) && (falling >= 0 && falling < 64) && jumping == 0) begin 
-//            y_increment = 0;
-//        // check upper bound of platform2
-//        end else if ((y_var + sq_height == y_platform2) && (x_var + sq_width > x_platform2 && x_var - 1 < x_platform2 + width_platform2) && (falling >= 0 && falling < 64) && jumping == 0) begin 
-//            y_increment = 0;
-//        // check upper bound of platform3
-//        end else if ((y_var + sq_height == y_platform3) && (x_var + sq_width > x_platform3 && x_var - 1 < x_platform3 + width_platform3) && (falling >= 0 && falling < 64) && jumping == 0) begin 
-//            y_increment = 0;
-//        // check upper bound of platform4
-//        end else if ((y_var + sq_height == y_platform4) && (x_var + sq_width > x_platform4 && x_var - 1 < x_platform4 + width_platform4) && (falling >= 0 && falling < 64) && jumping == 0) begin 
-//            y_increment = 0;
-        // check lower bound of screen before collision to slow down player
-        end else if (y_var + sq_height - 1 + y_increment >= 63 && (falling >= 0 && falling < 64) && jumping == 0) begin
-            y_increment = 1; // falling counter
-//        // check upper bound of platform1 before collision to slow down player
-//        end else if ((y_var + sq_height + y_increment >= y_platform1 && y_var + sq_height < y_platform1 + height_platform1) && (x_var + sq_width > x_platform1 && x_var - 1 < x_platform1 + width_platform1) && (falling > 0 && falling < 64)) begin 
-//            y_increment = 1; // falling counter resets
-//        // check upper bound of platform2 before collision to slow down player
-//        end else if ((y_var + sq_height + y_increment >= y_platform2 && y_var + sq_height < y_platform2 + height_platform2) && (x_var + sq_width > x_platform2 && x_var - 1 < x_platform2 + width_platform2) && (falling > 0 && falling < 64)) begin 
-//            y_increment = 1; // falling counter resets
-//        // check upper bound of platform3 before collision to slow down player
-//        end else if ((y_var + sq_height + y_increment >= y_platform3 && y_var + sq_height < y_platform3 + height_platform3) && (x_var + sq_width > x_platform3 && x_var - 1 < x_platform3 + width_platform3) && (falling > 0 && falling < 64)) begin 
-//            y_increment = 1; // falling counter resets
-//        // check upper bound of platform4 before collision to slow down player
-//        end else if ((y_var + sq_height + y_increment >= y_platform4 && y_var + sq_height < y_platform4 + height_platform4) && (x_var + sq_width > x_platform4 && x_var - 1 < x_platform4 + width_platform4) && (falling > 0 && falling < 64)) begin 
-//            y_increment = 1; // falling counter resets
-//        // check lower bound of platform 1
-//        end else if ((y_var <= y_platform1 + height_platform1 - 1 && y_var > y_platform1) && (x_var + sq_width - 1 > x_platform1 && x_var - 1 < x_platform1 + width_platform1) && (jumping > 0 && jumping < 15)) begin // lower bound of red square
-//            y_increment = 1;
-//        // check lower bound of platform 2
-//        end else if ((y_var <= y_platform2 + height_platform2 - 1 && y_var > y_platform2) && (x_var + sq_width - 1 > x_platform2 && x_var - 1 < x_platform2 + width_platform2) && (jumping > 0 && jumping < 15)) begin // lower bound of red square
-//            y_increment = 1;
-//        // check lower bound of platform 3
-//        end else if ((y_var <= y_platform3 + height_platform3 - 1 && y_var > y_platform3) && (x_var + sq_width - 1 > x_platform3 && x_var - 1 < x_platform3 + width_platform3) && (jumping > 0 && jumping < 15)) begin // lower bound of red square
-//            y_increment = 1;
-//        // check lower bound of platform 4
-//        end else if ((y_var <= y_platform4 + height_platform4 - 1 && y_var > y_platform4) && (x_var + sq_width - 1 > x_platform4 && x_var - 1 < x_platform4 + width_platform4) && (jumping > 0 && jumping < 15)) begin // lower bound of red square
-//            y_increment = 1;
         end
         
         for (integer i = 0; i < NUM_PLATFORMS; i = i + 1) begin
@@ -216,21 +141,38 @@ module animate #(parameter NUM_PLATFORMS = 4)(
             
         end
         
+        // check upper bound of screen
+        if ((y_var == 0 || y_var > 63) && (jumping > 0 && jumping < 15)) begin
+            y_increment = 1;
+        // check lower bound of screen
+        end else if (y_var + sq_height - 1 == 63 && (falling >= 0 && falling < 64) && jumping == 0) begin
+            x_var = PLAYER_RESPAWN_X;
+            y_var = PLAYER_RESPAWN_Y;
+            hero_hit = 1;
+        // check lower bound of screen before collision to slow down player
+        end else if (y_var + sq_height - 1 + y_increment >= 63 && (falling >= 0 && falling < 64) && jumping == 0) begin
+            y_increment = 1; // falling counter
+        end
+        
         if (x_increment == 0 && y_increment == 0) begin
-//           center_sq_colour = stat_colour;
             sprite_no = 1; // stationary
-//            center_sq_colour = 16'b11111_000000_00000; 
         end else if (x_increment != 0 && y_increment == 0) begin // lateral movement but no jumping/falling
-//            center_sq_colour = move_colour;
             sprite_no = 2; // walking
-//            center_sq_colour = 16'b11111_000111_00000;
         end else begin
-//            center_sq_colour = jump_colour;
             sprite_no = 3; // jumping
         end
         is_y_stat = (y_increment == 0) ? 1 : 0; 
         x_var = x_var + x_increment;
         y_var = y_var + y_increment;
+        
+        for (integer j = 0; j < MAX_ENEMIES && !hero_hit; j = j + 1) begin
+            if ((x_var < enemy_xref[j] + sq_width && x_var + sq_width > enemy_xref[j]) && (y_var + sq_height > enemy_yref[j] && y_var < enemy_yref[j] + sq_height)) begin
+                hero_hit = 1;
+            end else begin
+                hero_hit = 0;
+            end
+        end
+    
     end
     
 endmodule

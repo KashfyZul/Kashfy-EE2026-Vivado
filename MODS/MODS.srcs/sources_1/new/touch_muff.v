@@ -22,18 +22,19 @@
 
 module touch_muff(
     input clk, hit_muff, start_muff, reset,
-    output reg [2:0]char_no
+    output reg [2:0]char_no,
+    output reg [31:0]muff_count
     );
     
     wire damage_clk;
     flexy_clock(.clk(clk), .m_value(1_249_999), .slow_clk(damage_clk)); // every 1ms
     
-    reg [31:0]muff_count;
-    reg [2:0]random_counter; // count from 0 to 4
+    localparam N = 5; // number of characters    
+    wire [11:0]random_counter; // count from 0 to 4
+    LFSR_random rng (.CLOCK(clk), .rst(reset), .n(N), .random(random_counter));
     
     initial begin
-        random_counter = 0;
-        char_no = start_muff;
+        muff_count = 0;
     end
     
     always @ (posedge damage_clk) begin
@@ -41,11 +42,11 @@ module touch_muff(
         if (reset) begin
             muff_count = 0;
         end
-        if (hit_muff) begin
+        
+        if (hit_muff) begin            
             muff_count = muff_count + 1;
-            char_no = random_counter;            
+            char_no = ((char_no + (random_counter % (N - 1))) + 1) % N;        
         end
-        random_counter = (random_counter == 2) ? 0: random_counter + 1; // currently counts from 0 to 2 just to test with 3 sprites
     end
     
 endmodule

@@ -13,10 +13,11 @@
 
 module Top_Student (
     input clk, btnC, btnL, btnR, btnD, btnU, [4:0]sw,  
-    output [7:0]JC, [2:0]led
+    output [7:0]JC, [2:0]led, [6:0]seg, [3:0]an
     );
     
 parameter NUM_PLATFORMS = 4;    
+parameter MAX_ENEMIES = 14;
 
 // 3.A3: oled_data initialisation
 //reg [15:0] oled_data;
@@ -36,13 +37,49 @@ wire [6:0] y_proj1;
 wire [6:0] x_proj2;
 wire [6:0] y_proj2;
 wire [6:0] x_platform [0:NUM_PLATFORMS];
-assign x_platform[0] = 30; assign x_platform[1] = 55; assign x_platform[2] = 0; assign x_platform[3] = 55;  
+assign x_platform[0] = 0; assign x_platform[1] = 32; assign x_platform[2] = 74; assign x_platform[3] = 35;  
 wire [6:0] y_platform [0:NUM_PLATFORMS];
-assign y_platform[0] = 40; assign y_platform[1] = 20; assign y_platform[2] = 58; assign y_platform[3] = 58;
+assign y_platform[0] = 36; assign y_platform[1] = 18; assign y_platform[2] = 36; assign y_platform[3] = 58;
 wire [6:0] width_platform [0:NUM_PLATFORMS];
-assign width_platform[0] = 25; assign width_platform[1] = 25; assign width_platform[2] = 39; assign width_platform[3] = 39;
+assign width_platform[0] = 28; assign width_platform[1] = 32; assign width_platform[2] = 21; assign width_platform[3] = 32;
 wire [6:0] height_platform [0:NUM_PLATFORMS];
-assign height_platform[0] = 5; assign height_platform[1] = 5; assign height_platform[2] = 5; assign height_platform[3] = 5;
+assign height_platform[0] = 3; assign height_platform[1] = 3; assign height_platform[2] = 3; assign height_platform[3] = 3;
+
+
+
+wire [6:0]enemy_xref [0:MAX_ENEMIES];
+assign enemy_xref[0] = x_var2;
+assign enemy_xref[1] = x_var2;
+assign enemy_xref[2] = x_var2;
+assign enemy_xref[3] = x_var2;
+assign enemy_xref[4] = x_var2;
+assign enemy_xref[5] = x_var2;
+assign enemy_xref[6] = x_var2;
+assign enemy_xref[7] = x_var2;
+assign enemy_xref[8] = x_var2;
+assign enemy_xref[9] = x_var2;
+assign enemy_xref[10] = x_var2;
+assign enemy_xref[11] = x_var2;
+assign enemy_xref[12] = x_var2;
+assign enemy_xref[13] = x_var2;
+assign enemy_xref[14] = x_var2;
+wire [6:0]enemy_yref [0:MAX_ENEMIES];
+assign enemy_yref[0] = y_var2;
+assign enemy_yref[1] = y_var2;
+assign enemy_yref[2] = y_var2;
+assign enemy_yref[3] = y_var2;
+assign enemy_yref[4] = y_var2;
+assign enemy_yref[5] = y_var2;
+assign enemy_yref[6] = y_var2;
+assign enemy_yref[7] = y_var2;
+assign enemy_yref[8] = y_var2;
+assign enemy_yref[9] = y_var2;
+assign enemy_yref[10] = y_var2;
+assign enemy_yref[11] = y_var2;
+assign enemy_yref[12] = y_var2;
+assign enemy_yref[13] = y_var2;
+assign enemy_yref[14] = y_var2;
+
 
 wire reset;
 
@@ -78,7 +115,8 @@ flexy_clock clk_25MHz (.clk(clk), .m_value(7), .slow_clk(clk25m));
 wire [6:0]x_vect;
 wire [6:0]y_vect;
 wire is_y_stat;
-direction_mux choose_direction (.clk(clk), .btnC(btnC), .btnL(btnL), .btnR(btnR), .btnD(btnD), .btnU(btnU), .is_y_stat(is_y_stat), .x_vect(x_vect), .y_vect(y_vect));
+wire facing;
+direction_mux choose_direction (.clk(clk), .btnC(btnC), .btnL(btnL), .btnR(btnR), .btnD(btnD), .btnU(btnU), .is_y_stat(is_y_stat), .x_vect(x_vect), .y_vect(y_vect), .facing(facing));
 
 // animate the movement of the square
 wire [15:0]center_sq_colour;
@@ -86,23 +124,23 @@ wire [6:0] x_spawn = 48;
 wire [6:0] y_spawn = 0;
 wire [3:0] hitbox_size = 8; 
 wire [3:0] sprite_no;
-animate animate_hero (.clk(clk), 
-        .x_start(84), .y_start(0), .x_vect(x_vect), .y_vect(y_vect), .sq_width(hitbox_size), .sq_height(hitbox_size),
-//        .fps(20), .stat_colour(16'b11111_000000_00000), .move_colour(16'b11100_001111_00000), .jump_colour(16'b11111_000000_11000), 
-//        .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
-//        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
-//        .x_platform3(0), .y_platform3(58), .width_platform3(39), .height_platform3(5),
-//        .x_platform4(55), .y_platform4(58), .width_platform4(39), .height_platform4(5),
-        .x_platform(x_platform), .y_platform(y_platform), .width_platform(width_platform), .height_platform(height_platform), 
-        .reset(reset),
-        .x_var(x_var), .y_var(y_var), .center_sq_colour(center_sq_colour), .is_y_stat(is_y_stat), .sprite_no(sprite_no));
 
 // track damage of player (3 lives)
-wire hit;
+wire hero_hit;
 wire hit_muff;
+wire [31:0] muff_count;
 wire [2:0]char_no;
-hero_damage(.clk(clk), .hit(hit), .reset(reset), .LED(led));
-touch_muff(.clk(clk), .hit_muff(hit_muff), .start_muff(0), .reset(reset), .char_no(char_no));
+hero_damage(.clk(clk), .hit(hero_hit), .reset(reset), .LED(led));
+touch_muff(.clk(clk), .hit_muff(hit_muff), .start_muff(0), .reset(reset), .char_no(char_no), .muff_count(muff_count));
+
+animate animate_hero (.clk(clk), 
+        .x_start(84), .y_start(0), .x_vect(x_vect), .y_vect(y_vect), .sq_width(hitbox_size), .sq_height(hitbox_size),
+        .enemy_xref(enemy_xref), .enemy_yref(enemy_yref),
+        .x_platform(x_platform), .y_platform(y_platform), .width_platform(width_platform), .height_platform(height_platform), 
+        .reset(reset),
+        .x_var(x_var), .y_var(y_var), .center_sq_colour(center_sq_colour), .is_y_stat(is_y_stat), .sprite_no(sprite_no), .hero_hit(hero_hit));
+
+
 
 wire proj_move;
 wire proj_hit_enemy;
@@ -113,10 +151,6 @@ wire [6:0]proj_height;
 projectile_animate animate_projectile (.clk(clk), .btnD(btnD), 
         .x_ref(x_var), .y_ref(y_var), .x_vect(x_vect), .y_vect(y_vect), .sq_width(hitbox_size), .sq_height(hitbox_size),
         .char_no(char_no),
-//        .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
-//        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
-//        .x_platform3(0), .y_platform3(58), .width_platform3(39), .height_platform3(5),
-//        .x_platform4(55), .y_platform4(58), .width_platform4(39), .height_platform4(5),
         .x_platform(x_platform), .y_platform(y_platform), .width_platform(width_platform), .height_platform(height_platform), 
         .reset(reset),
         .x_varA(x_proj1), .y_varA(y_proj1), .x_varB(x_proj2), .y_varB(y_proj2), .proj_width(proj_width), .proj_height(proj_height), .proj_move(proj_move), .proj_hit_enemy(proj_hit_enemy)
@@ -124,32 +158,40 @@ projectile_animate animate_projectile (.clk(clk), .btnD(btnD),
 
 // animate the enemy (for test)
 enimate animate_enemy (.clk(clk), 
-        .x_start(80), .y_start(0), .x_vect(127), .y_vect(1), .sq_width(hitbox_size), .sq_height(hitbox_size),
+        .x_start(40), .y_start(0), .x_vect(127), .y_vect(1), .sq_width(hitbox_size), .sq_height(hitbox_size),
+//        .x_start(80), .y_start(0), .x_vect(0), .y_vect(1), .sq_width(hitbox_size), .sq_height(hitbox_size),
         .x_hero(x_var), .y_hero(y_var), .width_hero(8), .height_hero(8),
 //        .fps(20), .stat_colour(16'b11111_000000_00000), .move_colour(16'b11100_001111_00000), .jump_colour(16'b11111_000000_11000), 
-        .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
-        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
-        .x_platform3(0), .y_platform3(58), .width_platform3(39), .height_platform3(5),
-        .x_platform4(55), .y_platform4(58), .width_platform4(39), .height_platform4(5), .reset(reset),
-        .x_var(x_var2), .y_var(y_var2), .center_sq_colour(center_sq_colour), .hit(hit));
+        .x_platform1(x_platform[0]), .y_platform1(y_platform[0]), .width_platform1(width_platform[0]), .height_platform1(height_platform[0]),
+        .x_platform2(x_platform[1]), .y_platform2(y_platform[1]), .width_platform2(width_platform[1]), .height_platform2(height_platform[1]), 
+        .x_platform3(x_platform[2]), .y_platform3(y_platform[2]), .width_platform3(width_platform[2]), .height_platform3(height_platform[2]),
+        .x_platform4(x_platform[3]), .y_platform4(y_platform[3]), .width_platform4(width_platform[3]), .height_platform4(height_platform[3]), 
+        .reset(reset),
+        .x_var(x_var2), .y_var(y_var2), .center_sq_colour(center_sq_colour));
+
 
 // animate the muffin (for test)
-muffinimate animate_muffin (.clk(clk), 
-        .x_start(40), .y_start(0), .x_vect(0), .y_vect(1), .sq_width(hitbox_size), .sq_height(hitbox_size),
+muffinimate2 animate_muffin (.clk(clk),
+        .x_start(40), .y_start(0), .x_vect(0), .y_vect(1), .sq_width(hitbox_size), .sq_height(hitbox_size), 
+//        .x_vect(0), .y_vect(1), .sq_width(hitbox_size), .sq_height(hitbox_size),
         .x_hero(x_var), .y_hero(y_var), .width_hero(8), .height_hero(8),
-//        .fps(20), .stat_colour(16'b11111_000000_00000), .move_colour(16'b11100_001111_00000), .jump_colour(16'b11111_000000_11000), 
-        .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
-        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
-        .x_platform3(0), .y_platform3(58), .width_platform3(39), .height_platform3(5),
-        .x_platform4(55), .y_platform4(58), .width_platform4(39), .height_platform4(5), .reset(reset),
+//        .x_hero(90), .y_hero(90), .width_hero(8), .height_hero(8),
+//        .x_platform(x_platform), .y_platform(y_platform), .width_platform(width_platform), .height_platform(height_platform),
+//        .x_platform1(x_platform[0]), .y_platform1(y_platform[0]), .width_platform1(width_platform[0]), .height_platform1(height_platform[0]),
+//        .x_platform2(x_platform[1]), .y_platform2(y_platform[1]), .width_platform2(width_platform[1]), .height_platform2(height_platform[1]), 
+//        .x_platform3(x_platform[2]), .y_platform3(y_platform[2]), .width_platform3(width_platform[2]), .height_platform3(height_platform[2]),
+//        .x_platform4(x_platform[3]), .y_platform4(y_platform[3]), .width_platform4(width_platform[3]), .height_platform4(height_platform[3]),
+        .x_platform(x_platform), .y_platform(y_platform), .width_platform(width_platform), .height_platform(height_platform), 
+        .reset(reset),
         .x_var(x_muff), .y_var(y_muff), .center_sq_colour(center_sq_colour), .hit_muff(hit_muff));
 
 
 // draw the squares
-make_square draw_sq (.clk(clk), .x(x), .y(y), .sprite_no(sprite_no), .char_no(char_no), .proj_move(proj_move),
+make_square draw_sq (.clk(clk), .x(x), .y(y), .x_vect(x_vect), .y_vect(y_vect), .facing(facing), .sprite_no(sprite_no), .char_no(char_no), .proj_move(proj_move),
         .x_val(x_var), .y_val(y_var), .sq_width(8),.sq_height(8), .sq_colour(center_sq_colour),
-        .x_val2(x_var2), .y_val2(y_var2), .sq_width2(8), .sq_height2(8), .sq_colour2(center_sq_colour),
+        .enemy_xref(enemy_xref), .enemy_yref(enemy_yref), .sq_width2(8), .sq_height2(8), .sq_colour2(center_sq_colour),
         .x_muff(x_muff), .y_muff(y_muff), .sq_width3(8), .sq_height3(8), .sq_colour3(center_sq_colour),
+//        .x_muff(0), .y_muff(0), .sq_width3(8), .sq_height3(8), .sq_colour3(center_sq_colour),
         .x_proj1(x_proj1), .y_proj1(y_proj1), .x_proj2(x_proj2), .y_proj2(y_proj2), .proj_width(proj_width), .proj_height(proj_height), .proj_colour(center_sq_colour),
 //        .x_platform1(30), .y_platform1(40), .width_platform1(25), .height_platform1(5),
 //        .x_platform2(55), .y_platform2(20), .width_platform2(25), .height_platform2(5), 
@@ -157,6 +199,8 @@ make_square draw_sq (.clk(clk), .x(x), .y(y), .sprite_no(sprite_no), .char_no(ch
 //        .x_platform4(55), .y_platform4(58), .width_platform4(39), .height_platform4(5),
         .x_platform(x_platform), .y_platform(y_platform), .width_platform(width_platform), .height_platform(height_platform),
         .platform_colour(16'b00000_111111_00000), .bg_colour(0), .oled_data(oled_data));
+        
+seven_seg_display2 display (.n(muff_count), .CLOCK(clk), .an(an), .seg(seg));        
 
 // 3.A1: instantiate Oled_Display
 Oled_Display Q3A1 (.clk(clk6p25m), .reset(0), .frame_begin(frame_begin), .sending_pixels(sending_pixels),

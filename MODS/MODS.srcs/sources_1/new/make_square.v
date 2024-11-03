@@ -21,15 +21,12 @@
 
 
 module make_square #(parameter NUM_PLATFORMS = 4) (
-    input clk, [6:0]x, [6:0]y, [3:0]sprite_no, [2:0]char_no, proj_move,
+    input clk, 
+    [6:0]x, [6:0]y, [6:0]x_vect, [6:0]y_vect, [3:0]sprite_no, [2:0]char_no, proj_move,
     [6:0]x_val, [6:0]y_val, [6:0]sq_width, [6:0]sq_height, [15:0]sq_colour,
     [6:0]x_val2, [6:0]y_val2, [6:0]sq_width2, [6:0]sq_height2, [15:0]sq_colour2, 
     [6:0]x_muff, [6:0]y_muff, [6:0]sq_width3, [6:0]sq_height3, [15:0]sq_colour3, 
     [6:0]x_proj1, [6:0]y_proj1, [6:0]x_proj2, [6:0]y_proj2, [6:0]proj_width, [6:0]proj_height, [15:0]proj_colour,
-//    [6:0]x_platform1, [6:0]y_platform1, [6:0]width_platform1, [6:0]height_platform1,
-//    [6:0]x_platform2, [6:0]y_platform2, [6:0]width_platform2, [6:0]height_platform2,
-//    [6:0]x_platform3, [6:0]y_platform3, [6:0]width_platform3, [6:0]height_platform3,
-//    [6:0]x_platform4, [6:0]y_platform4, [6:0]width_platform4, [6:0]height_platform4,
     [6:0] x_platform [0:NUM_PLATFORMS], [6:0] y_platform [0:NUM_PLATFORMS], [6:0] width_platform [0:NUM_PLATFORMS], [6:0] height_platform [0:NUM_PLATFORMS],
     [15:0]platform_colour, [15:0]bg_colour,
     output reg [15:0]oled_data
@@ -47,12 +44,57 @@ module make_square #(parameter NUM_PLATFORMS = 4) (
     always @ (posedge clk) begin
         if (x >= x_val && x < x_val + sq_width && y >= y_val && y < y_val + sq_height) begin
             if (char_no == 0) begin
-
-                oled_data = sprite_1_colour;
+                if (sprite_no == 1) begin // stationary
+                    oled_data = sprite_1_colour;
+                end else if (sprite_no == 2) begin // walking
+                    oled_data = sprite_1_colour;
+                end else if (sprite_no == 3) begin // jumping
+                    oled_data = sprite_1_colour;
+                end else begin
+                    oled_data = WHITE;
+                end
             end else if (char_no == 1) begin
-                oled_data = sprite_2_colour;
+                if (sprite_no == 1) begin
+                    oled_data = sprite_2_colour;
+                end else if (sprite_no == 2) begin
+                    oled_data = sprite_2_colour;
+                end else if (sprite_no == 3) begin
+                    oled_data = sprite_2_colour;
+                end else begin
+                    oled_data = WHITE;
+                end
             end else if (char_no == 2) begin
-                oled_data = sprite_3_colour;
+                if (sprite_no == 1) begin
+                    oled_data = sprite_3_colour;
+                end else if (sprite_no == 2) begin
+                    oled_data = sprite_3_colour;
+                end else if (sprite_no == 3) begin
+                    oled_data = sprite_3_colour;
+                end else begin
+                    oled_data = WHITE;
+                end
+            end else if (char_no == 3) begin
+                if (sprite_no == 1) begin
+                    oled_data = BLUE;
+                end else if (sprite_no == 2) begin
+                    oled_data = BLUE;
+                end else if (sprite_no == 3) begin
+                    oled_data = BLUE;
+                end else begin
+                    oled_data = WHITE;
+                end
+            end else if (char_no == 4) begin
+                if (sprite_no == 1) begin
+                    oled_data = RED;
+                end else if (sprite_no == 2) begin
+                    oled_data = RED;
+                end else if (sprite_no == 3) begin
+                    oled_data = RED;
+                end else begin
+                    oled_data = WHITE;
+                end
+            end else begin
+                oled_data = WHITE;
             end
         end else if (x >= x_val2 && x < x_val2 + sq_width2 && y >= y_val2 && y < y_val2 + sq_height2) begin
             oled_data = MAGENTA;

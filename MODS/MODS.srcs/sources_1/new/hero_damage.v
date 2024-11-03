@@ -34,18 +34,21 @@ module hero_damage(
     
     wire damage_clk;
     flexy_clock(.clk(clk), .m_value(49_999), .slow_clk(damage_clk)); // every 1ms
+    wire fps_clock;
+    flexy_clock get_fps_clock (.clk(clk), .m_value(1_249_999), .slow_clk(fps_clock));
     
-    always @ (posedge damage_clk) begin
+    always @ (posedge fps_clock) begin
         if (reset) begin
             LED = 3'b111;
             counter = 0;
         end
+    
         if (counter == 0) begin
             if (hit) begin
                 LED = LED >> 1;
                 counter = counter + 1;
             end
-        end else if (counter == 1000) begin
+        end else if (counter == 40) begin // should have 1 second cooldown
             counter = 0;
         end else begin
             counter = counter + 1;

@@ -1,0 +1,2027 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sun Nov  3 23:27:20 2024
+| Host         : Kashfy-yoga7 running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file Top_Student_timing_summary_routed.rpt -pb Top_Student_timing_summary_routed.pb -rpx Top_Student_timing_summary_routed.rpx -warn_on_violation
+| Design       : Top_Student
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 79 register/latch pins with no clock driven by root clock pin: animate_enemy/get_fps_clock/slow_clk_reg/Q (HIGH)
+
+ There are 90 register/latch pins with no clock driven by root clock pin: animate_hero/get_fps_clock/slow_clk_reg/Q (HIGH)
+
+ There are 58 register/latch pins with no clock driven by root clock pin: animate_muffin/get_fps_clock/slow_clk_reg/Q (HIGH)
+
+ There are 94 register/latch pins with no clock driven by root clock pin: animate_projectile/nolabel_line105/get_fps_clock/slow_clk_reg/Q (HIGH)
+
+ There are 57 register/latch pins with no clock driven by root clock pin: animate_projectile/nolabel_line116/get_fps_clock2/slow_clk_reg/Q (HIGH)
+
+ There are 22 register/latch pins with no clock driven by root clock pin: animate_projectile/nolabel_line71/get_fps_clock/slow_clk_reg/Q (HIGH)
+
+ There are 56 register/latch pins with no clock driven by root clock pin: animate_projectile/nolabel_line82/get_fps_clock/slow_clk_reg/Q (HIGH)
+
+ There are 37 register/latch pins with no clock driven by root clock pin: animate_projectile/nolabel_line93/get_fps_clock/slow_clk_reg/Q (HIGH)
+
+ There are 38 register/latch pins with no clock driven by root clock pin: choose_direction/clk1hz/slow_clk_reg/Q (HIGH)
+
+ There are 115 register/latch pins with no clock driven by root clock pin: clk_6p25MHz/slow_clk_reg/Q (HIGH)
+
+ There are 13 register/latch pins with no clock driven by root clock pin: display/clock1k/slow_clk_reg/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: nolabel_line132/get_fps_clock/slow_clk_reg/Q (HIGH)
+
+ There are 37 register/latch pins with no clock driven by root clock pin: nolabel_line133/nolabel_line30/slow_clk_reg/Q (HIGH)
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 1204 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 5 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 20 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     -5.419      -95.738                     20                  921        0.099        0.000                      0                  921        4.500        0.000                       0                   539  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)       Period(ns)      Frequency(MHz)
+-----        ------------       ----------      --------------
+sys_clk_pin  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin        -5.419      -95.738                     20                  921        0.099        0.000                      0                  921        4.500        0.000                       0                   539  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :           20  Failing Endpoints,  Worst Slack       -5.419ns,  Total Violation      -95.738ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.099ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -5.419ns  (required time - arrival time)
+  Source:                 animate_muffin/rng1/lfsr_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_muffin/rng1/random_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.381ns  (logic 8.878ns (57.719%)  route 6.503ns (42.281%))
+  Logic Levels:           24  (CARRY4=17 LUT2=5 LUT3=1 LUT5=1)
+  Clock Path Skew:        -0.033ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.776ns = ( 14.776 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.069ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.548     5.069    animate_muffin/rng1/clk_IBUF_BUFG
+    SLICE_X42Y23         FDRE                                         r  animate_muffin/rng1/lfsr_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y23         FDRE (Prop_fdre_C_Q)         0.518     5.587 r  animate_muffin/rng1/lfsr_reg[11]/Q
+                         net (fo=3, routed)           0.288     5.876    animate_muffin/rng1/lfsr[11]
+    SLICE_X43Y23         CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.694     6.570 r  animate_muffin/rng1/random_reg[7]_i_39/CO[2]
+                         net (fo=1, routed)           0.505     7.074    animate_muffin/rng1/random_reg[7]_i_39_n_1
+    SLICE_X42Y23         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.689     7.763 r  animate_muffin/rng1/random_reg[7]_i_33/CO[3]
+                         net (fo=1, routed)           0.000     7.763    animate_muffin/rng1/random_reg[7]_i_33_n_0
+    SLICE_X42Y24         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.254     8.017 r  animate_muffin/rng1/random_reg[0]_i_28/CO[0]
+                         net (fo=11, routed)          0.637     8.654    animate_muffin/rng1/CO[0]
+    SLICE_X40Y24         LUT2 (Prop_lut2_I0_O)        0.367     9.021 r  animate_muffin/rng1/random[7]_i_37/O
+                         net (fo=1, routed)           0.000     9.021    animate_muffin/rng1/random[7]_i_37_n_0
+    SLICE_X40Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.571 r  animate_muffin/rng1/random_reg[7]_i_27/CO[3]
+                         net (fo=1, routed)           0.009     9.580    animate_muffin/rng1/random_reg[7]_i_27_n_0
+    SLICE_X40Y25         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     9.808 r  animate_muffin/rng1/random_reg[0]_i_24/CO[2]
+                         net (fo=12, routed)          0.528    10.337    animate_muffin_n_10
+    SLICE_X41Y24         LUT2 (Prop_lut2_I0_O)        0.313    10.650 r  random[7]_i_31/O
+                         net (fo=1, routed)           0.000    10.650    animate_muffin/rng1/lfsr_reg[8]_0[0]
+    SLICE_X41Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.200 r  animate_muffin/rng1/random_reg[7]_i_21/CO[3]
+                         net (fo=1, routed)           0.009    11.209    animate_muffin/rng1/random_reg[7]_i_21_n_0
+    SLICE_X41Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.323 r  animate_muffin/rng1/random_reg[0]_i_19/CO[3]
+                         net (fo=14, routed)          0.971    12.294    animate_muffin/rng1/random_reg[0]_i_19_n_0
+    SLICE_X43Y24         LUT2 (Prop_lut2_I0_O)        0.124    12.418 r  animate_muffin/rng1/random[7]_i_26/O
+                         net (fo=1, routed)           0.000    12.418    animate_muffin/rng1/random[7]_i_26_n_0
+    SLICE_X43Y24         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    12.950 r  animate_muffin/rng1/random_reg[7]_i_15/CO[3]
+                         net (fo=1, routed)           0.009    12.959    animate_muffin/rng1/random_reg[7]_i_15_n_0
+    SLICE_X43Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.073 r  animate_muffin/rng1/random_reg[0]_i_18/CO[3]
+                         net (fo=1, routed)           0.000    13.073    animate_muffin/rng1/random_reg[0]_i_18_n_0
+    SLICE_X43Y26         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    13.344 r  animate_muffin/rng1/random_reg[0]_i_12/CO[0]
+                         net (fo=16, routed)          0.822    14.165    animate_muffin/rng1/random_reg[0]_i_12_n_3
+    SLICE_X44Y24         LUT2 (Prop_lut2_I0_O)        0.373    14.538 r  animate_muffin/rng1/random[7]_i_20/O
+                         net (fo=1, routed)           0.000    14.538    animate_muffin/rng1/random[7]_i_20_n_0
+    SLICE_X44Y24         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    15.070 r  animate_muffin/rng1/random_reg[7]_i_9/CO[3]
+                         net (fo=1, routed)           0.009    15.079    animate_muffin/rng1/random_reg[7]_i_9_n_0
+    SLICE_X44Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.193 r  animate_muffin/rng1/random_reg[0]_i_11/CO[3]
+                         net (fo=1, routed)           0.000    15.193    animate_muffin/rng1/random_reg[0]_i_11_n_0
+    SLICE_X44Y26         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.350 r  animate_muffin/rng1/random_reg[0]_i_3/CO[1]
+                         net (fo=18, routed)          0.744    16.094    animate_muffin/rng1/random_reg[0]_i_3_n_2
+    SLICE_X42Y25         LUT2 (Prop_lut2_I0_O)        0.329    16.423 r  animate_muffin/rng1/random[7]_i_14/O
+                         net (fo=1, routed)           0.000    16.423    animate_muffin/rng1/random[7]_i_14_n_0
+    SLICE_X42Y25         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    16.936 r  animate_muffin/rng1/random_reg[7]_i_3/CO[3]
+                         net (fo=1, routed)           0.000    16.936    animate_muffin/rng1/random_reg[7]_i_3_n_0
+    SLICE_X42Y26         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    17.053 r  animate_muffin/rng1/random_reg[0]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    17.053    animate_muffin/rng1/random_reg[0]_i_2_n_0
+    SLICE_X42Y27         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    17.210 r  animate_muffin/rng1/random_reg[0]_i_1/CO[1]
+                         net (fo=19, routed)          0.635    17.846    animate_muffin/rng1/random_reg[0]_i_1_n_2
+    SLICE_X42Y28         CARRY4 (Prop_carry4_CYINIT_O[1])
+                                                      0.838    18.684 r  animate_muffin/rng1/random_reg[7]_i_2/O[1]
+                         net (fo=5, routed)           1.024    19.708    animate_muffin/rng1/random_reg[7]_i_2_n_6
+    SLICE_X40Y28         LUT5 (Prop_lut5_I0_O)        0.306    20.014 r  animate_muffin/rng1/random[11]_i_4/O
+                         net (fo=4, routed)           0.313    20.327    animate_muffin/rng1/random[11]_i_4_n_0
+    SLICE_X41Y28         LUT3 (Prop_lut3_I2_O)        0.124    20.451 r  animate_muffin/rng1/random[8]_i_1/O
+                         net (fo=1, routed)           0.000    20.451    animate_muffin/rng1/p_0_in[8]
+    SLICE_X41Y28         FDRE                                         r  animate_muffin/rng1/random_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.435    14.776    animate_muffin/rng1/clk_IBUF_BUFG
+    SLICE_X41Y28         FDRE                                         r  animate_muffin/rng1/random_reg[8]/C
+                         clock pessimism              0.260    15.036    
+                         clock uncertainty           -0.035    15.001    
+    SLICE_X41Y28         FDRE (Setup_fdre_C_D)        0.031    15.032    animate_muffin/rng1/random_reg[8]
+  -------------------------------------------------------------------
+                         required time                         15.032    
+                         arrival time                         -20.451    
+  -------------------------------------------------------------------
+                         slack                                 -5.419    
+
+Slack (VIOLATED) :        -5.414ns  (required time - arrival time)
+  Source:                 animate_muffin/rng1/lfsr_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_muffin/rng1/random_reg[11]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.377ns  (logic 8.878ns (57.734%)  route 6.499ns (42.266%))
+  Logic Levels:           24  (CARRY4=17 LUT2=5 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.033ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.776ns = ( 14.776 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.069ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.548     5.069    animate_muffin/rng1/clk_IBUF_BUFG
+    SLICE_X42Y23         FDRE                                         r  animate_muffin/rng1/lfsr_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y23         FDRE (Prop_fdre_C_Q)         0.518     5.587 r  animate_muffin/rng1/lfsr_reg[11]/Q
+                         net (fo=3, routed)           0.288     5.876    animate_muffin/rng1/lfsr[11]
+    SLICE_X43Y23         CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.694     6.570 r  animate_muffin/rng1/random_reg[7]_i_39/CO[2]
+                         net (fo=1, routed)           0.505     7.074    animate_muffin/rng1/random_reg[7]_i_39_n_1
+    SLICE_X42Y23         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.689     7.763 r  animate_muffin/rng1/random_reg[7]_i_33/CO[3]
+                         net (fo=1, routed)           0.000     7.763    animate_muffin/rng1/random_reg[7]_i_33_n_0
+    SLICE_X42Y24         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.254     8.017 r  animate_muffin/rng1/random_reg[0]_i_28/CO[0]
+                         net (fo=11, routed)          0.637     8.654    animate_muffin/rng1/CO[0]
+    SLICE_X40Y24         LUT2 (Prop_lut2_I0_O)        0.367     9.021 r  animate_muffin/rng1/random[7]_i_37/O
+                         net (fo=1, routed)           0.000     9.021    animate_muffin/rng1/random[7]_i_37_n_0
+    SLICE_X40Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.571 r  animate_muffin/rng1/random_reg[7]_i_27/CO[3]
+                         net (fo=1, routed)           0.009     9.580    animate_muffin/rng1/random_reg[7]_i_27_n_0
+    SLICE_X40Y25         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     9.808 r  animate_muffin/rng1/random_reg[0]_i_24/CO[2]
+                         net (fo=12, routed)          0.528    10.337    animate_muffin_n_10
+    SLICE_X41Y24         LUT2 (Prop_lut2_I0_O)        0.313    10.650 r  random[7]_i_31/O
+                         net (fo=1, routed)           0.000    10.650    animate_muffin/rng1/lfsr_reg[8]_0[0]
+    SLICE_X41Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.200 r  animate_muffin/rng1/random_reg[7]_i_21/CO[3]
+                         net (fo=1, routed)           0.009    11.209    animate_muffin/rng1/random_reg[7]_i_21_n_0
+    SLICE_X41Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.323 r  animate_muffin/rng1/random_reg[0]_i_19/CO[3]
+                         net (fo=14, routed)          0.971    12.294    animate_muffin/rng1/random_reg[0]_i_19_n_0
+    SLICE_X43Y24         LUT2 (Prop_lut2_I0_O)        0.124    12.418 r  animate_muffin/rng1/random[7]_i_26/O
+                         net (fo=1, routed)           0.000    12.418    animate_muffin/rng1/random[7]_i_26_n_0
+    SLICE_X43Y24         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    12.950 r  animate_muffin/rng1/random_reg[7]_i_15/CO[3]
+                         net (fo=1, routed)           0.009    12.959    animate_muffin/rng1/random_reg[7]_i_15_n_0
+    SLICE_X43Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.073 r  animate_muffin/rng1/random_reg[0]_i_18/CO[3]
+                         net (fo=1, routed)           0.000    13.073    animate_muffin/rng1/random_reg[0]_i_18_n_0
+    SLICE_X43Y26         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    13.344 r  animate_muffin/rng1/random_reg[0]_i_12/CO[0]
+                         net (fo=16, routed)          0.822    14.165    animate_muffin/rng1/random_reg[0]_i_12_n_3
+    SLICE_X44Y24         LUT2 (Prop_lut2_I0_O)        0.373    14.538 r  animate_muffin/rng1/random[7]_i_20/O
+                         net (fo=1, routed)           0.000    14.538    animate_muffin/rng1/random[7]_i_20_n_0
+    SLICE_X44Y24         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    15.070 r  animate_muffin/rng1/random_reg[7]_i_9/CO[3]
+                         net (fo=1, routed)           0.009    15.079    animate_muffin/rng1/random_reg[7]_i_9_n_0
+    SLICE_X44Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.193 r  animate_muffin/rng1/random_reg[0]_i_11/CO[3]
+                         net (fo=1, routed)           0.000    15.193    animate_muffin/rng1/random_reg[0]_i_11_n_0
+    SLICE_X44Y26         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.350 r  animate_muffin/rng1/random_reg[0]_i_3/CO[1]
+                         net (fo=18, routed)          0.744    16.094    animate_muffin/rng1/random_reg[0]_i_3_n_2
+    SLICE_X42Y25         LUT2 (Prop_lut2_I0_O)        0.329    16.423 r  animate_muffin/rng1/random[7]_i_14/O
+                         net (fo=1, routed)           0.000    16.423    animate_muffin/rng1/random[7]_i_14_n_0
+    SLICE_X42Y25         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    16.936 r  animate_muffin/rng1/random_reg[7]_i_3/CO[3]
+                         net (fo=1, routed)           0.000    16.936    animate_muffin/rng1/random_reg[7]_i_3_n_0
+    SLICE_X42Y26         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    17.053 r  animate_muffin/rng1/random_reg[0]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    17.053    animate_muffin/rng1/random_reg[0]_i_2_n_0
+    SLICE_X42Y27         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    17.210 r  animate_muffin/rng1/random_reg[0]_i_1/CO[1]
+                         net (fo=19, routed)          0.635    17.846    animate_muffin/rng1/random_reg[0]_i_1_n_2
+    SLICE_X42Y28         CARRY4 (Prop_carry4_CYINIT_O[1])
+                                                      0.838    18.684 r  animate_muffin/rng1/random_reg[7]_i_2/O[1]
+                         net (fo=5, routed)           1.024    19.708    animate_muffin/rng1/random_reg[7]_i_2_n_6
+    SLICE_X40Y28         LUT5 (Prop_lut5_I0_O)        0.306    20.014 r  animate_muffin/rng1/random[11]_i_4/O
+                         net (fo=4, routed)           0.309    20.323    animate_muffin/rng1/random[11]_i_4_n_0
+    SLICE_X43Y28         LUT6 (Prop_lut6_I4_O)        0.124    20.447 r  animate_muffin/rng1/random[11]_i_1/O
+                         net (fo=1, routed)           0.000    20.447    animate_muffin/rng1/p_0_in[11]
+    SLICE_X43Y28         FDRE                                         r  animate_muffin/rng1/random_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.435    14.776    animate_muffin/rng1/clk_IBUF_BUFG
+    SLICE_X43Y28         FDRE                                         r  animate_muffin/rng1/random_reg[11]/C
+                         clock pessimism              0.260    15.036    
+                         clock uncertainty           -0.035    15.001    
+    SLICE_X43Y28         FDRE (Setup_fdre_C_D)        0.032    15.033    animate_muffin/rng1/random_reg[11]
+  -------------------------------------------------------------------
+                         required time                         15.033    
+                         arrival time                         -20.447    
+  -------------------------------------------------------------------
+                         slack                                 -5.414    
+
+Slack (VIOLATED) :        -5.407ns  (required time - arrival time)
+  Source:                 animate_muffin/rng1/lfsr_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_muffin/rng1/random_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.370ns  (logic 8.878ns (57.761%)  route 6.492ns (42.239%))
+  Logic Levels:           24  (CARRY4=17 LUT2=5 LUT4=1 LUT5=1)
+  Clock Path Skew:        -0.033ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.776ns = ( 14.776 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.069ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.548     5.069    animate_muffin/rng1/clk_IBUF_BUFG
+    SLICE_X42Y23         FDRE                                         r  animate_muffin/rng1/lfsr_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y23         FDRE (Prop_fdre_C_Q)         0.518     5.587 r  animate_muffin/rng1/lfsr_reg[11]/Q
+                         net (fo=3, routed)           0.288     5.876    animate_muffin/rng1/lfsr[11]
+    SLICE_X43Y23         CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.694     6.570 r  animate_muffin/rng1/random_reg[7]_i_39/CO[2]
+                         net (fo=1, routed)           0.505     7.074    animate_muffin/rng1/random_reg[7]_i_39_n_1
+    SLICE_X42Y23         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.689     7.763 r  animate_muffin/rng1/random_reg[7]_i_33/CO[3]
+                         net (fo=1, routed)           0.000     7.763    animate_muffin/rng1/random_reg[7]_i_33_n_0
+    SLICE_X42Y24         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.254     8.017 r  animate_muffin/rng1/random_reg[0]_i_28/CO[0]
+                         net (fo=11, routed)          0.637     8.654    animate_muffin/rng1/CO[0]
+    SLICE_X40Y24         LUT2 (Prop_lut2_I0_O)        0.367     9.021 r  animate_muffin/rng1/random[7]_i_37/O
+                         net (fo=1, routed)           0.000     9.021    animate_muffin/rng1/random[7]_i_37_n_0
+    SLICE_X40Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.571 r  animate_muffin/rng1/random_reg[7]_i_27/CO[3]
+                         net (fo=1, routed)           0.009     9.580    animate_muffin/rng1/random_reg[7]_i_27_n_0
+    SLICE_X40Y25         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     9.808 r  animate_muffin/rng1/random_reg[0]_i_24/CO[2]
+                         net (fo=12, routed)          0.528    10.337    animate_muffin_n_10
+    SLICE_X41Y24         LUT2 (Prop_lut2_I0_O)        0.313    10.650 r  random[7]_i_31/O
+                         net (fo=1, routed)           0.000    10.650    animate_muffin/rng1/lfsr_reg[8]_0[0]
+    SLICE_X41Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.200 r  animate_muffin/rng1/random_reg[7]_i_21/CO[3]
+                         net (fo=1, routed)           0.009    11.209    animate_muffin/rng1/random_reg[7]_i_21_n_0
+    SLICE_X41Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.323 r  animate_muffin/rng1/random_reg[0]_i_19/CO[3]
+                         net (fo=14, routed)          0.971    12.294    animate_muffin/rng1/random_reg[0]_i_19_n_0
+    SLICE_X43Y24         LUT2 (Prop_lut2_I0_O)        0.124    12.418 r  animate_muffin/rng1/random[7]_i_26/O
+                         net (fo=1, routed)           0.000    12.418    animate_muffin/rng1/random[7]_i_26_n_0
+    SLICE_X43Y24         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    12.950 r  animate_muffin/rng1/random_reg[7]_i_15/CO[3]
+                         net (fo=1, routed)           0.009    12.959    animate_muffin/rng1/random_reg[7]_i_15_n_0
+    SLICE_X43Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.073 r  animate_muffin/rng1/random_reg[0]_i_18/CO[3]
+                         net (fo=1, routed)           0.000    13.073    animate_muffin/rng1/random_reg[0]_i_18_n_0
+    SLICE_X43Y26         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    13.344 r  animate_muffin/rng1/random_reg[0]_i_12/CO[0]
+                         net (fo=16, routed)          0.822    14.165    animate_muffin/rng1/random_reg[0]_i_12_n_3
+    SLICE_X44Y24         LUT2 (Prop_lut2_I0_O)        0.373    14.538 r  animate_muffin/rng1/random[7]_i_20/O
+                         net (fo=1, routed)           0.000    14.538    animate_muffin/rng1/random[7]_i_20_n_0
+    SLICE_X44Y24         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    15.070 r  animate_muffin/rng1/random_reg[7]_i_9/CO[3]
+                         net (fo=1, routed)           0.009    15.079    animate_muffin/rng1/random_reg[7]_i_9_n_0
+    SLICE_X44Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.193 r  animate_muffin/rng1/random_reg[0]_i_11/CO[3]
+                         net (fo=1, routed)           0.000    15.193    animate_muffin/rng1/random_reg[0]_i_11_n_0
+    SLICE_X44Y26         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.350 r  animate_muffin/rng1/random_reg[0]_i_3/CO[1]
+                         net (fo=18, routed)          0.744    16.094    animate_muffin/rng1/random_reg[0]_i_3_n_2
+    SLICE_X42Y25         LUT2 (Prop_lut2_I0_O)        0.329    16.423 r  animate_muffin/rng1/random[7]_i_14/O
+                         net (fo=1, routed)           0.000    16.423    animate_muffin/rng1/random[7]_i_14_n_0
+    SLICE_X42Y25         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    16.936 r  animate_muffin/rng1/random_reg[7]_i_3/CO[3]
+                         net (fo=1, routed)           0.000    16.936    animate_muffin/rng1/random_reg[7]_i_3_n_0
+    SLICE_X42Y26         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    17.053 r  animate_muffin/rng1/random_reg[0]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    17.053    animate_muffin/rng1/random_reg[0]_i_2_n_0
+    SLICE_X42Y27         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    17.210 r  animate_muffin/rng1/random_reg[0]_i_1/CO[1]
+                         net (fo=19, routed)          0.635    17.846    animate_muffin/rng1/random_reg[0]_i_1_n_2
+    SLICE_X42Y28         CARRY4 (Prop_carry4_CYINIT_O[1])
+                                                      0.838    18.684 r  animate_muffin/rng1/random_reg[7]_i_2/O[1]
+                         net (fo=5, routed)           1.024    19.708    animate_muffin/rng1/random_reg[7]_i_2_n_6
+    SLICE_X40Y28         LUT5 (Prop_lut5_I0_O)        0.306    20.014 r  animate_muffin/rng1/random[11]_i_4/O
+                         net (fo=4, routed)           0.302    20.315    animate_muffin/rng1/random[11]_i_4_n_0
+    SLICE_X40Y28         LUT4 (Prop_lut4_I2_O)        0.124    20.439 r  animate_muffin/rng1/random[9]_i_1/O
+                         net (fo=1, routed)           0.000    20.439    animate_muffin/rng1/p_0_in[9]
+    SLICE_X40Y28         FDRE                                         r  animate_muffin/rng1/random_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.435    14.776    animate_muffin/rng1/clk_IBUF_BUFG
+    SLICE_X40Y28         FDRE                                         r  animate_muffin/rng1/random_reg[9]/C
+                         clock pessimism              0.260    15.036    
+                         clock uncertainty           -0.035    15.001    
+    SLICE_X40Y28         FDRE (Setup_fdre_C_D)        0.031    15.032    animate_muffin/rng1/random_reg[9]
+  -------------------------------------------------------------------
+                         required time                         15.032    
+                         arrival time                         -20.439    
+  -------------------------------------------------------------------
+                         slack                                 -5.407    
+
+Slack (VIOLATED) :        -5.358ns  (required time - arrival time)
+  Source:                 animate_muffin/rng1/lfsr_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_muffin/rng1/random_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.365ns  (logic 8.873ns (57.748%)  route 6.492ns (42.252%))
+  Logic Levels:           24  (CARRY4=17 LUT2=5 LUT5=2)
+  Clock Path Skew:        -0.033ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.776ns = ( 14.776 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.069ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.548     5.069    animate_muffin/rng1/clk_IBUF_BUFG
+    SLICE_X42Y23         FDRE                                         r  animate_muffin/rng1/lfsr_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y23         FDRE (Prop_fdre_C_Q)         0.518     5.587 r  animate_muffin/rng1/lfsr_reg[11]/Q
+                         net (fo=3, routed)           0.288     5.876    animate_muffin/rng1/lfsr[11]
+    SLICE_X43Y23         CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.694     6.570 r  animate_muffin/rng1/random_reg[7]_i_39/CO[2]
+                         net (fo=1, routed)           0.505     7.074    animate_muffin/rng1/random_reg[7]_i_39_n_1
+    SLICE_X42Y23         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.689     7.763 r  animate_muffin/rng1/random_reg[7]_i_33/CO[3]
+                         net (fo=1, routed)           0.000     7.763    animate_muffin/rng1/random_reg[7]_i_33_n_0
+    SLICE_X42Y24         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.254     8.017 r  animate_muffin/rng1/random_reg[0]_i_28/CO[0]
+                         net (fo=11, routed)          0.637     8.654    animate_muffin/rng1/CO[0]
+    SLICE_X40Y24         LUT2 (Prop_lut2_I0_O)        0.367     9.021 r  animate_muffin/rng1/random[7]_i_37/O
+                         net (fo=1, routed)           0.000     9.021    animate_muffin/rng1/random[7]_i_37_n_0
+    SLICE_X40Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.571 r  animate_muffin/rng1/random_reg[7]_i_27/CO[3]
+                         net (fo=1, routed)           0.009     9.580    animate_muffin/rng1/random_reg[7]_i_27_n_0
+    SLICE_X40Y25         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     9.808 r  animate_muffin/rng1/random_reg[0]_i_24/CO[2]
+                         net (fo=12, routed)          0.528    10.337    animate_muffin_n_10
+    SLICE_X41Y24         LUT2 (Prop_lut2_I0_O)        0.313    10.650 r  random[7]_i_31/O
+                         net (fo=1, routed)           0.000    10.650    animate_muffin/rng1/lfsr_reg[8]_0[0]
+    SLICE_X41Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.200 r  animate_muffin/rng1/random_reg[7]_i_21/CO[3]
+                         net (fo=1, routed)           0.009    11.209    animate_muffin/rng1/random_reg[7]_i_21_n_0
+    SLICE_X41Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.323 r  animate_muffin/rng1/random_reg[0]_i_19/CO[3]
+                         net (fo=14, routed)          0.971    12.294    animate_muffin/rng1/random_reg[0]_i_19_n_0
+    SLICE_X43Y24         LUT2 (Prop_lut2_I0_O)        0.124    12.418 r  animate_muffin/rng1/random[7]_i_26/O
+                         net (fo=1, routed)           0.000    12.418    animate_muffin/rng1/random[7]_i_26_n_0
+    SLICE_X43Y24         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    12.950 r  animate_muffin/rng1/random_reg[7]_i_15/CO[3]
+                         net (fo=1, routed)           0.009    12.959    animate_muffin/rng1/random_reg[7]_i_15_n_0
+    SLICE_X43Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.073 r  animate_muffin/rng1/random_reg[0]_i_18/CO[3]
+                         net (fo=1, routed)           0.000    13.073    animate_muffin/rng1/random_reg[0]_i_18_n_0
+    SLICE_X43Y26         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    13.344 r  animate_muffin/rng1/random_reg[0]_i_12/CO[0]
+                         net (fo=16, routed)          0.822    14.165    animate_muffin/rng1/random_reg[0]_i_12_n_3
+    SLICE_X44Y24         LUT2 (Prop_lut2_I0_O)        0.373    14.538 r  animate_muffin/rng1/random[7]_i_20/O
+                         net (fo=1, routed)           0.000    14.538    animate_muffin/rng1/random[7]_i_20_n_0
+    SLICE_X44Y24         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    15.070 r  animate_muffin/rng1/random_reg[7]_i_9/CO[3]
+                         net (fo=1, routed)           0.009    15.079    animate_muffin/rng1/random_reg[7]_i_9_n_0
+    SLICE_X44Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.193 r  animate_muffin/rng1/random_reg[0]_i_11/CO[3]
+                         net (fo=1, routed)           0.000    15.193    animate_muffin/rng1/random_reg[0]_i_11_n_0
+    SLICE_X44Y26         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.350 r  animate_muffin/rng1/random_reg[0]_i_3/CO[1]
+                         net (fo=18, routed)          0.744    16.094    animate_muffin/rng1/random_reg[0]_i_3_n_2
+    SLICE_X42Y25         LUT2 (Prop_lut2_I0_O)        0.329    16.423 r  animate_muffin/rng1/random[7]_i_14/O
+                         net (fo=1, routed)           0.000    16.423    animate_muffin/rng1/random[7]_i_14_n_0
+    SLICE_X42Y25         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    16.936 r  animate_muffin/rng1/random_reg[7]_i_3/CO[3]
+                         net (fo=1, routed)           0.000    16.936    animate_muffin/rng1/random_reg[7]_i_3_n_0
+    SLICE_X42Y26         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    17.053 r  animate_muffin/rng1/random_reg[0]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    17.053    animate_muffin/rng1/random_reg[0]_i_2_n_0
+    SLICE_X42Y27         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    17.210 r  animate_muffin/rng1/random_reg[0]_i_1/CO[1]
+                         net (fo=19, routed)          0.635    17.846    animate_muffin/rng1/random_reg[0]_i_1_n_2
+    SLICE_X42Y28         CARRY4 (Prop_carry4_CYINIT_O[1])
+                                                      0.838    18.684 r  animate_muffin/rng1/random_reg[7]_i_2/O[1]
+                         net (fo=5, routed)           1.024    19.708    animate_muffin/rng1/random_reg[7]_i_2_n_6
+    SLICE_X40Y28         LUT5 (Prop_lut5_I0_O)        0.306    20.014 r  animate_muffin/rng1/random[11]_i_4/O
+                         net (fo=4, routed)           0.302    20.315    animate_muffin/rng1/random[11]_i_4_n_0
+    SLICE_X40Y28         LUT5 (Prop_lut5_I3_O)        0.119    20.434 r  animate_muffin/rng1/random[10]_i_1/O
+                         net (fo=1, routed)           0.000    20.434    animate_muffin/rng1/p_0_in[10]
+    SLICE_X40Y28         FDRE                                         r  animate_muffin/rng1/random_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.435    14.776    animate_muffin/rng1/clk_IBUF_BUFG
+    SLICE_X40Y28         FDRE                                         r  animate_muffin/rng1/random_reg[10]/C
+                         clock pessimism              0.260    15.036    
+                         clock uncertainty           -0.035    15.001    
+    SLICE_X40Y28         FDRE (Setup_fdre_C_D)        0.075    15.076    animate_muffin/rng1/random_reg[10]
+  -------------------------------------------------------------------
+                         required time                         15.076    
+                         arrival time                         -20.434    
+  -------------------------------------------------------------------
+                         slack                                 -5.358    
+
+Slack (VIOLATED) :        -5.171ns  (required time - arrival time)
+  Source:                 animate_muffin/rng2/lfsr_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_muffin/rng2/random_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.182ns  (logic 8.623ns (56.796%)  route 6.559ns (43.204%))
+  Logic Levels:           24  (CARRY4=17 LUT1=1 LUT2=4 LUT4=1 LUT5=1)
+  Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.781ns = ( 14.781 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.075ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.554     5.075    animate_muffin/rng2/clk_IBUF_BUFG
+    SLICE_X51Y22         FDRE                                         r  animate_muffin/rng2/lfsr_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y22         FDRE (Prop_fdre_C_Q)         0.456     5.531 f  animate_muffin/rng2/lfsr_reg[11]/Q
+                         net (fo=3, routed)           0.309     5.841    animate_muffin/rng2/lfsr[11]
+    SLICE_X50Y22         LUT1 (Prop_lut1_I0_O)        0.124     5.965 r  animate_muffin/rng2/random[7]_i_41/O
+                         net (fo=1, routed)           0.000     5.965    animate_muffin/rng2/random[7]_i_41_n_0
+    SLICE_X50Y22         CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.574     6.539 r  animate_muffin/rng2/random_reg[7]_i_39__0/CO[2]
+                         net (fo=1, routed)           0.583     7.122    animate_muffin/rng2/random_reg[7]_i_39__0_n_1
+    SLICE_X50Y23         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.686     7.808 r  animate_muffin/rng2/random_reg[7]_i_33__0/CO[3]
+                         net (fo=1, routed)           0.000     7.808    animate_muffin/rng2/random_reg[7]_i_33__0_n_0
+    SLICE_X50Y24         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.254     8.062 r  animate_muffin/rng2/random_reg[0]_i_28__0/CO[0]
+                         net (fo=11, routed)          0.706     8.768    animate_muffin/rng2/DI[1]
+    SLICE_X51Y24         LUT2 (Prop_lut2_I0_O)        0.367     9.135 r  animate_muffin/rng2/random[7]_i_37__0/O
+                         net (fo=1, routed)           0.000     9.135    animate_muffin/rng2/random[7]_i_37__0_n_0
+    SLICE_X51Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.685 r  animate_muffin/rng2/random_reg[7]_i_27__0/CO[3]
+                         net (fo=1, routed)           0.009     9.694    animate_muffin/rng2/random_reg[7]_i_27__0_n_0
+    SLICE_X51Y25         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     9.922 r  animate_muffin/rng2/random_reg[0]_i_24__0/CO[2]
+                         net (fo=12, routed)          0.546    10.468    animate_muffin_n_23
+    SLICE_X49Y24         LUT2 (Prop_lut2_I0_O)        0.313    10.781 r  random[7]_i_31__0/O
+                         net (fo=1, routed)           0.000    10.781    animate_muffin/rng2/lfsr_reg[8]_0[0]
+    SLICE_X49Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.331 r  animate_muffin/rng2/random_reg[7]_i_21__0/CO[3]
+                         net (fo=1, routed)           0.009    11.340    animate_muffin/rng2/random_reg[7]_i_21__0_n_0
+    SLICE_X49Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.454 r  animate_muffin/rng2/random_reg[0]_i_19__0/CO[3]
+                         net (fo=14, routed)          0.998    12.452    animate_muffin/rng2/random_reg[0]_i_19__0_n_0
+    SLICE_X48Y25         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.580    13.032 r  animate_muffin/rng2/random_reg[7]_i_15__0/CO[3]
+                         net (fo=1, routed)           0.000    13.032    animate_muffin/rng2/random_reg[7]_i_15__0_n_0
+    SLICE_X48Y26         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.146 r  animate_muffin/rng2/random_reg[0]_i_18__0/CO[3]
+                         net (fo=1, routed)           0.000    13.146    animate_muffin/rng2/random_reg[0]_i_18__0_n_0
+    SLICE_X48Y27         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    13.417 r  animate_muffin/rng2/random_reg[0]_i_12__0/CO[0]
+                         net (fo=16, routed)          0.650    14.067    animate_muffin/rng2/random_reg[0]_i_12__0_n_3
+    SLICE_X49Y26         LUT2 (Prop_lut2_I0_O)        0.373    14.440 r  animate_muffin/rng2/random[7]_i_20__0/O
+                         net (fo=1, routed)           0.000    14.440    animate_muffin/rng2/random[7]_i_20__0_n_0
+    SLICE_X49Y26         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    14.972 r  animate_muffin/rng2/random_reg[7]_i_9__0/CO[3]
+                         net (fo=1, routed)           0.000    14.972    animate_muffin/rng2/random_reg[7]_i_9__0_n_0
+    SLICE_X49Y27         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.086 r  animate_muffin/rng2/random_reg[0]_i_11__0/CO[3]
+                         net (fo=1, routed)           0.000    15.086    animate_muffin/rng2/random_reg[0]_i_11__0_n_0
+    SLICE_X49Y28         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.243 r  animate_muffin/rng2/random_reg[0]_i_3__0/CO[1]
+                         net (fo=18, routed)          0.762    16.005    animate_muffin/rng2/random_reg[0]_i_3__0_n_2
+    SLICE_X51Y26         LUT2 (Prop_lut2_I0_O)        0.329    16.334 r  animate_muffin/rng2/random[7]_i_14__0/O
+                         net (fo=1, routed)           0.000    16.334    animate_muffin/rng2/random[7]_i_14__0_n_0
+    SLICE_X51Y26         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    16.866 r  animate_muffin/rng2/random_reg[7]_i_3__0/CO[3]
+                         net (fo=1, routed)           0.000    16.866    animate_muffin/rng2/random_reg[7]_i_3__0_n_0
+    SLICE_X51Y27         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.980 r  animate_muffin/rng2/random_reg[0]_i_2__0/CO[3]
+                         net (fo=1, routed)           0.000    16.980    animate_muffin/rng2/random_reg[0]_i_2__0_n_0
+    SLICE_X51Y28         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    17.137 r  animate_muffin/rng2/random_reg[0]_i_1__0/CO[1]
+                         net (fo=19, routed)          0.600    17.737    animate_muffin/rng2/random_reg[0]_i_1__0_n_2
+    SLICE_X50Y27         CARRY4 (Prop_carry4_CYINIT_O[0])
+                                                      0.715    18.452 r  animate_muffin/rng2/random_reg[7]_i_2__0/O[0]
+                         net (fo=6, routed)           1.003    19.455    animate_muffin/rng2/random_reg[7]_i_2__0_n_7
+    SLICE_X52Y28         LUT5 (Prop_lut5_I2_O)        0.295    19.750 r  animate_muffin/rng2/random[11]_i_4__0/O
+                         net (fo=4, routed)           0.384    20.134    animate_muffin/rng2/random[11]_i_4__0_n_0
+    SLICE_X52Y28         LUT4 (Prop_lut4_I2_O)        0.124    20.258 r  animate_muffin/rng2/random[9]_i_1__0/O
+                         net (fo=1, routed)           0.000    20.258    animate_muffin/rng2/p_0_in[9]
+    SLICE_X52Y28         FDRE                                         r  animate_muffin/rng2/random_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.440    14.781    animate_muffin/rng2/clk_IBUF_BUFG
+    SLICE_X52Y28         FDRE                                         r  animate_muffin/rng2/random_reg[9]/C
+                         clock pessimism              0.260    15.041    
+                         clock uncertainty           -0.035    15.006    
+    SLICE_X52Y28         FDRE (Setup_fdre_C_D)        0.081    15.087    animate_muffin/rng2/random_reg[9]
+  -------------------------------------------------------------------
+                         required time                         15.087    
+                         arrival time                         -20.258    
+  -------------------------------------------------------------------
+                         slack                                 -5.171    
+
+Slack (VIOLATED) :        -5.123ns  (required time - arrival time)
+  Source:                 animate_muffin/rng2/lfsr_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_muffin/rng2/random_reg[11]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.130ns  (logic 8.623ns (56.992%)  route 6.507ns (43.008%))
+  Logic Levels:           24  (CARRY4=17 LUT1=1 LUT2=4 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.036ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.779ns = ( 14.779 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.075ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.554     5.075    animate_muffin/rng2/clk_IBUF_BUFG
+    SLICE_X51Y22         FDRE                                         r  animate_muffin/rng2/lfsr_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y22         FDRE (Prop_fdre_C_Q)         0.456     5.531 f  animate_muffin/rng2/lfsr_reg[11]/Q
+                         net (fo=3, routed)           0.309     5.841    animate_muffin/rng2/lfsr[11]
+    SLICE_X50Y22         LUT1 (Prop_lut1_I0_O)        0.124     5.965 r  animate_muffin/rng2/random[7]_i_41/O
+                         net (fo=1, routed)           0.000     5.965    animate_muffin/rng2/random[7]_i_41_n_0
+    SLICE_X50Y22         CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.574     6.539 r  animate_muffin/rng2/random_reg[7]_i_39__0/CO[2]
+                         net (fo=1, routed)           0.583     7.122    animate_muffin/rng2/random_reg[7]_i_39__0_n_1
+    SLICE_X50Y23         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.686     7.808 r  animate_muffin/rng2/random_reg[7]_i_33__0/CO[3]
+                         net (fo=1, routed)           0.000     7.808    animate_muffin/rng2/random_reg[7]_i_33__0_n_0
+    SLICE_X50Y24         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.254     8.062 r  animate_muffin/rng2/random_reg[0]_i_28__0/CO[0]
+                         net (fo=11, routed)          0.706     8.768    animate_muffin/rng2/DI[1]
+    SLICE_X51Y24         LUT2 (Prop_lut2_I0_O)        0.367     9.135 r  animate_muffin/rng2/random[7]_i_37__0/O
+                         net (fo=1, routed)           0.000     9.135    animate_muffin/rng2/random[7]_i_37__0_n_0
+    SLICE_X51Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.685 r  animate_muffin/rng2/random_reg[7]_i_27__0/CO[3]
+                         net (fo=1, routed)           0.009     9.694    animate_muffin/rng2/random_reg[7]_i_27__0_n_0
+    SLICE_X51Y25         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     9.922 r  animate_muffin/rng2/random_reg[0]_i_24__0/CO[2]
+                         net (fo=12, routed)          0.546    10.468    animate_muffin_n_23
+    SLICE_X49Y24         LUT2 (Prop_lut2_I0_O)        0.313    10.781 r  random[7]_i_31__0/O
+                         net (fo=1, routed)           0.000    10.781    animate_muffin/rng2/lfsr_reg[8]_0[0]
+    SLICE_X49Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.331 r  animate_muffin/rng2/random_reg[7]_i_21__0/CO[3]
+                         net (fo=1, routed)           0.009    11.340    animate_muffin/rng2/random_reg[7]_i_21__0_n_0
+    SLICE_X49Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.454 r  animate_muffin/rng2/random_reg[0]_i_19__0/CO[3]
+                         net (fo=14, routed)          0.998    12.452    animate_muffin/rng2/random_reg[0]_i_19__0_n_0
+    SLICE_X48Y25         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.580    13.032 r  animate_muffin/rng2/random_reg[7]_i_15__0/CO[3]
+                         net (fo=1, routed)           0.000    13.032    animate_muffin/rng2/random_reg[7]_i_15__0_n_0
+    SLICE_X48Y26         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.146 r  animate_muffin/rng2/random_reg[0]_i_18__0/CO[3]
+                         net (fo=1, routed)           0.000    13.146    animate_muffin/rng2/random_reg[0]_i_18__0_n_0
+    SLICE_X48Y27         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    13.417 r  animate_muffin/rng2/random_reg[0]_i_12__0/CO[0]
+                         net (fo=16, routed)          0.650    14.067    animate_muffin/rng2/random_reg[0]_i_12__0_n_3
+    SLICE_X49Y26         LUT2 (Prop_lut2_I0_O)        0.373    14.440 r  animate_muffin/rng2/random[7]_i_20__0/O
+                         net (fo=1, routed)           0.000    14.440    animate_muffin/rng2/random[7]_i_20__0_n_0
+    SLICE_X49Y26         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    14.972 r  animate_muffin/rng2/random_reg[7]_i_9__0/CO[3]
+                         net (fo=1, routed)           0.000    14.972    animate_muffin/rng2/random_reg[7]_i_9__0_n_0
+    SLICE_X49Y27         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.086 r  animate_muffin/rng2/random_reg[0]_i_11__0/CO[3]
+                         net (fo=1, routed)           0.000    15.086    animate_muffin/rng2/random_reg[0]_i_11__0_n_0
+    SLICE_X49Y28         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.243 r  animate_muffin/rng2/random_reg[0]_i_3__0/CO[1]
+                         net (fo=18, routed)          0.762    16.005    animate_muffin/rng2/random_reg[0]_i_3__0_n_2
+    SLICE_X51Y26         LUT2 (Prop_lut2_I0_O)        0.329    16.334 r  animate_muffin/rng2/random[7]_i_14__0/O
+                         net (fo=1, routed)           0.000    16.334    animate_muffin/rng2/random[7]_i_14__0_n_0
+    SLICE_X51Y26         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    16.866 r  animate_muffin/rng2/random_reg[7]_i_3__0/CO[3]
+                         net (fo=1, routed)           0.000    16.866    animate_muffin/rng2/random_reg[7]_i_3__0_n_0
+    SLICE_X51Y27         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.980 r  animate_muffin/rng2/random_reg[0]_i_2__0/CO[3]
+                         net (fo=1, routed)           0.000    16.980    animate_muffin/rng2/random_reg[0]_i_2__0_n_0
+    SLICE_X51Y28         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    17.137 r  animate_muffin/rng2/random_reg[0]_i_1__0/CO[1]
+                         net (fo=19, routed)          0.600    17.737    animate_muffin/rng2/random_reg[0]_i_1__0_n_2
+    SLICE_X50Y27         CARRY4 (Prop_carry4_CYINIT_O[0])
+                                                      0.715    18.452 r  animate_muffin/rng2/random_reg[7]_i_2__0/O[0]
+                         net (fo=6, routed)           1.003    19.455    animate_muffin/rng2/random_reg[7]_i_2__0_n_7
+    SLICE_X52Y28         LUT5 (Prop_lut5_I2_O)        0.295    19.750 r  animate_muffin/rng2/random[11]_i_4__0/O
+                         net (fo=4, routed)           0.332    20.081    animate_muffin/rng2/random[11]_i_4__0_n_0
+    SLICE_X52Y27         LUT6 (Prop_lut6_I4_O)        0.124    20.205 r  animate_muffin/rng2/random[11]_i_1__0/O
+                         net (fo=1, routed)           0.000    20.205    animate_muffin/rng2/p_0_in[11]
+    SLICE_X52Y27         FDRE                                         r  animate_muffin/rng2/random_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.438    14.779    animate_muffin/rng2/clk_IBUF_BUFG
+    SLICE_X52Y27         FDRE                                         r  animate_muffin/rng2/random_reg[11]/C
+                         clock pessimism              0.260    15.039    
+                         clock uncertainty           -0.035    15.004    
+    SLICE_X52Y27         FDRE (Setup_fdre_C_D)        0.079    15.083    animate_muffin/rng2/random_reg[11]
+  -------------------------------------------------------------------
+                         required time                         15.083    
+                         arrival time                         -20.205    
+  -------------------------------------------------------------------
+                         slack                                 -5.123    
+
+Slack (VIOLATED) :        -5.119ns  (required time - arrival time)
+  Source:                 animate_muffin/rng2/lfsr_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_muffin/rng2/random_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.124ns  (logic 8.623ns (57.015%)  route 6.501ns (42.985%))
+  Logic Levels:           24  (CARRY4=17 LUT1=1 LUT2=4 LUT5=2)
+  Clock Path Skew:        -0.036ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.779ns = ( 14.779 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.075ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.554     5.075    animate_muffin/rng2/clk_IBUF_BUFG
+    SLICE_X51Y22         FDRE                                         r  animate_muffin/rng2/lfsr_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y22         FDRE (Prop_fdre_C_Q)         0.456     5.531 f  animate_muffin/rng2/lfsr_reg[11]/Q
+                         net (fo=3, routed)           0.309     5.841    animate_muffin/rng2/lfsr[11]
+    SLICE_X50Y22         LUT1 (Prop_lut1_I0_O)        0.124     5.965 r  animate_muffin/rng2/random[7]_i_41/O
+                         net (fo=1, routed)           0.000     5.965    animate_muffin/rng2/random[7]_i_41_n_0
+    SLICE_X50Y22         CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.574     6.539 r  animate_muffin/rng2/random_reg[7]_i_39__0/CO[2]
+                         net (fo=1, routed)           0.583     7.122    animate_muffin/rng2/random_reg[7]_i_39__0_n_1
+    SLICE_X50Y23         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.686     7.808 r  animate_muffin/rng2/random_reg[7]_i_33__0/CO[3]
+                         net (fo=1, routed)           0.000     7.808    animate_muffin/rng2/random_reg[7]_i_33__0_n_0
+    SLICE_X50Y24         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.254     8.062 r  animate_muffin/rng2/random_reg[0]_i_28__0/CO[0]
+                         net (fo=11, routed)          0.706     8.768    animate_muffin/rng2/DI[1]
+    SLICE_X51Y24         LUT2 (Prop_lut2_I0_O)        0.367     9.135 r  animate_muffin/rng2/random[7]_i_37__0/O
+                         net (fo=1, routed)           0.000     9.135    animate_muffin/rng2/random[7]_i_37__0_n_0
+    SLICE_X51Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.685 r  animate_muffin/rng2/random_reg[7]_i_27__0/CO[3]
+                         net (fo=1, routed)           0.009     9.694    animate_muffin/rng2/random_reg[7]_i_27__0_n_0
+    SLICE_X51Y25         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     9.922 r  animate_muffin/rng2/random_reg[0]_i_24__0/CO[2]
+                         net (fo=12, routed)          0.546    10.468    animate_muffin_n_23
+    SLICE_X49Y24         LUT2 (Prop_lut2_I0_O)        0.313    10.781 r  random[7]_i_31__0/O
+                         net (fo=1, routed)           0.000    10.781    animate_muffin/rng2/lfsr_reg[8]_0[0]
+    SLICE_X49Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.331 r  animate_muffin/rng2/random_reg[7]_i_21__0/CO[3]
+                         net (fo=1, routed)           0.009    11.340    animate_muffin/rng2/random_reg[7]_i_21__0_n_0
+    SLICE_X49Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.454 r  animate_muffin/rng2/random_reg[0]_i_19__0/CO[3]
+                         net (fo=14, routed)          0.998    12.452    animate_muffin/rng2/random_reg[0]_i_19__0_n_0
+    SLICE_X48Y25         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.580    13.032 r  animate_muffin/rng2/random_reg[7]_i_15__0/CO[3]
+                         net (fo=1, routed)           0.000    13.032    animate_muffin/rng2/random_reg[7]_i_15__0_n_0
+    SLICE_X48Y26         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.146 r  animate_muffin/rng2/random_reg[0]_i_18__0/CO[3]
+                         net (fo=1, routed)           0.000    13.146    animate_muffin/rng2/random_reg[0]_i_18__0_n_0
+    SLICE_X48Y27         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    13.417 r  animate_muffin/rng2/random_reg[0]_i_12__0/CO[0]
+                         net (fo=16, routed)          0.650    14.067    animate_muffin/rng2/random_reg[0]_i_12__0_n_3
+    SLICE_X49Y26         LUT2 (Prop_lut2_I0_O)        0.373    14.440 r  animate_muffin/rng2/random[7]_i_20__0/O
+                         net (fo=1, routed)           0.000    14.440    animate_muffin/rng2/random[7]_i_20__0_n_0
+    SLICE_X49Y26         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    14.972 r  animate_muffin/rng2/random_reg[7]_i_9__0/CO[3]
+                         net (fo=1, routed)           0.000    14.972    animate_muffin/rng2/random_reg[7]_i_9__0_n_0
+    SLICE_X49Y27         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.086 r  animate_muffin/rng2/random_reg[0]_i_11__0/CO[3]
+                         net (fo=1, routed)           0.000    15.086    animate_muffin/rng2/random_reg[0]_i_11__0_n_0
+    SLICE_X49Y28         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.243 r  animate_muffin/rng2/random_reg[0]_i_3__0/CO[1]
+                         net (fo=18, routed)          0.762    16.005    animate_muffin/rng2/random_reg[0]_i_3__0_n_2
+    SLICE_X51Y26         LUT2 (Prop_lut2_I0_O)        0.329    16.334 r  animate_muffin/rng2/random[7]_i_14__0/O
+                         net (fo=1, routed)           0.000    16.334    animate_muffin/rng2/random[7]_i_14__0_n_0
+    SLICE_X51Y26         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    16.866 r  animate_muffin/rng2/random_reg[7]_i_3__0/CO[3]
+                         net (fo=1, routed)           0.000    16.866    animate_muffin/rng2/random_reg[7]_i_3__0_n_0
+    SLICE_X51Y27         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.980 r  animate_muffin/rng2/random_reg[0]_i_2__0/CO[3]
+                         net (fo=1, routed)           0.000    16.980    animate_muffin/rng2/random_reg[0]_i_2__0_n_0
+    SLICE_X51Y28         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    17.137 r  animate_muffin/rng2/random_reg[0]_i_1__0/CO[1]
+                         net (fo=19, routed)          0.600    17.737    animate_muffin/rng2/random_reg[0]_i_1__0_n_2
+    SLICE_X50Y27         CARRY4 (Prop_carry4_CYINIT_O[0])
+                                                      0.715    18.452 r  animate_muffin/rng2/random_reg[7]_i_2__0/O[0]
+                         net (fo=6, routed)           1.003    19.455    animate_muffin/rng2/random_reg[7]_i_2__0_n_7
+    SLICE_X52Y28         LUT5 (Prop_lut5_I2_O)        0.295    19.750 r  animate_muffin/rng2/random[11]_i_4__0/O
+                         net (fo=4, routed)           0.326    20.075    animate_muffin/rng2/random[11]_i_4__0_n_0
+    SLICE_X52Y27         LUT5 (Prop_lut5_I3_O)        0.124    20.199 r  animate_muffin/rng2/random[10]_i_1__0/O
+                         net (fo=1, routed)           0.000    20.199    animate_muffin/rng2/p_0_in[10]
+    SLICE_X52Y27         FDRE                                         r  animate_muffin/rng2/random_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.438    14.779    animate_muffin/rng2/clk_IBUF_BUFG
+    SLICE_X52Y27         FDRE                                         r  animate_muffin/rng2/random_reg[10]/C
+                         clock pessimism              0.260    15.039    
+                         clock uncertainty           -0.035    15.004    
+    SLICE_X52Y27         FDRE (Setup_fdre_C_D)        0.077    15.081    animate_muffin/rng2/random_reg[10]
+  -------------------------------------------------------------------
+                         required time                         15.081    
+                         arrival time                         -20.199    
+  -------------------------------------------------------------------
+                         slack                                 -5.119    
+
+Slack (VIOLATED) :        -5.112ns  (required time - arrival time)
+  Source:                 animate_muffin/rng2/lfsr_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_muffin/rng2/random_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.121ns  (logic 8.623ns (57.026%)  route 6.498ns (42.974%))
+  Logic Levels:           24  (CARRY4=17 LUT1=1 LUT2=4 LUT3=1 LUT5=1)
+  Clock Path Skew:        -0.036ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.779ns = ( 14.779 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.075ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.554     5.075    animate_muffin/rng2/clk_IBUF_BUFG
+    SLICE_X51Y22         FDRE                                         r  animate_muffin/rng2/lfsr_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y22         FDRE (Prop_fdre_C_Q)         0.456     5.531 f  animate_muffin/rng2/lfsr_reg[11]/Q
+                         net (fo=3, routed)           0.309     5.841    animate_muffin/rng2/lfsr[11]
+    SLICE_X50Y22         LUT1 (Prop_lut1_I0_O)        0.124     5.965 r  animate_muffin/rng2/random[7]_i_41/O
+                         net (fo=1, routed)           0.000     5.965    animate_muffin/rng2/random[7]_i_41_n_0
+    SLICE_X50Y22         CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.574     6.539 r  animate_muffin/rng2/random_reg[7]_i_39__0/CO[2]
+                         net (fo=1, routed)           0.583     7.122    animate_muffin/rng2/random_reg[7]_i_39__0_n_1
+    SLICE_X50Y23         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.686     7.808 r  animate_muffin/rng2/random_reg[7]_i_33__0/CO[3]
+                         net (fo=1, routed)           0.000     7.808    animate_muffin/rng2/random_reg[7]_i_33__0_n_0
+    SLICE_X50Y24         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.254     8.062 r  animate_muffin/rng2/random_reg[0]_i_28__0/CO[0]
+                         net (fo=11, routed)          0.706     8.768    animate_muffin/rng2/DI[1]
+    SLICE_X51Y24         LUT2 (Prop_lut2_I0_O)        0.367     9.135 r  animate_muffin/rng2/random[7]_i_37__0/O
+                         net (fo=1, routed)           0.000     9.135    animate_muffin/rng2/random[7]_i_37__0_n_0
+    SLICE_X51Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.685 r  animate_muffin/rng2/random_reg[7]_i_27__0/CO[3]
+                         net (fo=1, routed)           0.009     9.694    animate_muffin/rng2/random_reg[7]_i_27__0_n_0
+    SLICE_X51Y25         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     9.922 r  animate_muffin/rng2/random_reg[0]_i_24__0/CO[2]
+                         net (fo=12, routed)          0.546    10.468    animate_muffin_n_23
+    SLICE_X49Y24         LUT2 (Prop_lut2_I0_O)        0.313    10.781 r  random[7]_i_31__0/O
+                         net (fo=1, routed)           0.000    10.781    animate_muffin/rng2/lfsr_reg[8]_0[0]
+    SLICE_X49Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.331 r  animate_muffin/rng2/random_reg[7]_i_21__0/CO[3]
+                         net (fo=1, routed)           0.009    11.340    animate_muffin/rng2/random_reg[7]_i_21__0_n_0
+    SLICE_X49Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.454 r  animate_muffin/rng2/random_reg[0]_i_19__0/CO[3]
+                         net (fo=14, routed)          0.998    12.452    animate_muffin/rng2/random_reg[0]_i_19__0_n_0
+    SLICE_X48Y25         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.580    13.032 r  animate_muffin/rng2/random_reg[7]_i_15__0/CO[3]
+                         net (fo=1, routed)           0.000    13.032    animate_muffin/rng2/random_reg[7]_i_15__0_n_0
+    SLICE_X48Y26         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.146 r  animate_muffin/rng2/random_reg[0]_i_18__0/CO[3]
+                         net (fo=1, routed)           0.000    13.146    animate_muffin/rng2/random_reg[0]_i_18__0_n_0
+    SLICE_X48Y27         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    13.417 r  animate_muffin/rng2/random_reg[0]_i_12__0/CO[0]
+                         net (fo=16, routed)          0.650    14.067    animate_muffin/rng2/random_reg[0]_i_12__0_n_3
+    SLICE_X49Y26         LUT2 (Prop_lut2_I0_O)        0.373    14.440 r  animate_muffin/rng2/random[7]_i_20__0/O
+                         net (fo=1, routed)           0.000    14.440    animate_muffin/rng2/random[7]_i_20__0_n_0
+    SLICE_X49Y26         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    14.972 r  animate_muffin/rng2/random_reg[7]_i_9__0/CO[3]
+                         net (fo=1, routed)           0.000    14.972    animate_muffin/rng2/random_reg[7]_i_9__0_n_0
+    SLICE_X49Y27         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.086 r  animate_muffin/rng2/random_reg[0]_i_11__0/CO[3]
+                         net (fo=1, routed)           0.000    15.086    animate_muffin/rng2/random_reg[0]_i_11__0_n_0
+    SLICE_X49Y28         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.243 r  animate_muffin/rng2/random_reg[0]_i_3__0/CO[1]
+                         net (fo=18, routed)          0.762    16.005    animate_muffin/rng2/random_reg[0]_i_3__0_n_2
+    SLICE_X51Y26         LUT2 (Prop_lut2_I0_O)        0.329    16.334 r  animate_muffin/rng2/random[7]_i_14__0/O
+                         net (fo=1, routed)           0.000    16.334    animate_muffin/rng2/random[7]_i_14__0_n_0
+    SLICE_X51Y26         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    16.866 r  animate_muffin/rng2/random_reg[7]_i_3__0/CO[3]
+                         net (fo=1, routed)           0.000    16.866    animate_muffin/rng2/random_reg[7]_i_3__0_n_0
+    SLICE_X51Y27         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.980 r  animate_muffin/rng2/random_reg[0]_i_2__0/CO[3]
+                         net (fo=1, routed)           0.000    16.980    animate_muffin/rng2/random_reg[0]_i_2__0_n_0
+    SLICE_X51Y28         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    17.137 r  animate_muffin/rng2/random_reg[0]_i_1__0/CO[1]
+                         net (fo=19, routed)          0.600    17.737    animate_muffin/rng2/random_reg[0]_i_1__0_n_2
+    SLICE_X50Y27         CARRY4 (Prop_carry4_CYINIT_O[0])
+                                                      0.715    18.452 r  animate_muffin/rng2/random_reg[7]_i_2__0/O[0]
+                         net (fo=6, routed)           1.003    19.455    animate_muffin/rng2/random_reg[7]_i_2__0_n_7
+    SLICE_X52Y28         LUT5 (Prop_lut5_I2_O)        0.295    19.750 r  animate_muffin/rng2/random[11]_i_4__0/O
+                         net (fo=4, routed)           0.323    20.072    animate_muffin/rng2/random[11]_i_4__0_n_0
+    SLICE_X52Y27         LUT3 (Prop_lut3_I2_O)        0.124    20.196 r  animate_muffin/rng2/random[8]_i_1__0/O
+                         net (fo=1, routed)           0.000    20.196    animate_muffin/rng2/p_0_in[8]
+    SLICE_X52Y27         FDRE                                         r  animate_muffin/rng2/random_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.438    14.779    animate_muffin/rng2/clk_IBUF_BUFG
+    SLICE_X52Y27         FDRE                                         r  animate_muffin/rng2/random_reg[8]/C
+                         clock pessimism              0.260    15.039    
+                         clock uncertainty           -0.035    15.004    
+    SLICE_X52Y27         FDRE (Setup_fdre_C_D)        0.081    15.085    animate_muffin/rng2/random_reg[8]
+  -------------------------------------------------------------------
+                         required time                         15.085    
+                         arrival time                         -20.196    
+  -------------------------------------------------------------------
+                         slack                                 -5.112    
+
+Slack (VIOLATED) :        -5.010ns  (required time - arrival time)
+  Source:                 animate_muffin/rng1/lfsr_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_muffin/rng1/random_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        14.973ns  (logic 8.857ns (59.155%)  route 6.116ns (40.845%))
+  Logic Levels:           24  (CARRY4=17 LUT2=6 LUT6=1)
+  Clock Path Skew:        -0.033ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.776ns = ( 14.776 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.069ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.548     5.069    animate_muffin/rng1/clk_IBUF_BUFG
+    SLICE_X42Y23         FDRE                                         r  animate_muffin/rng1/lfsr_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y23         FDRE (Prop_fdre_C_Q)         0.518     5.587 r  animate_muffin/rng1/lfsr_reg[11]/Q
+                         net (fo=3, routed)           0.288     5.876    animate_muffin/rng1/lfsr[11]
+    SLICE_X43Y23         CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.694     6.570 r  animate_muffin/rng1/random_reg[7]_i_39/CO[2]
+                         net (fo=1, routed)           0.505     7.074    animate_muffin/rng1/random_reg[7]_i_39_n_1
+    SLICE_X42Y23         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.689     7.763 r  animate_muffin/rng1/random_reg[7]_i_33/CO[3]
+                         net (fo=1, routed)           0.000     7.763    animate_muffin/rng1/random_reg[7]_i_33_n_0
+    SLICE_X42Y24         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.254     8.017 r  animate_muffin/rng1/random_reg[0]_i_28/CO[0]
+                         net (fo=11, routed)          0.637     8.654    animate_muffin/rng1/CO[0]
+    SLICE_X40Y24         LUT2 (Prop_lut2_I0_O)        0.367     9.021 r  animate_muffin/rng1/random[7]_i_37/O
+                         net (fo=1, routed)           0.000     9.021    animate_muffin/rng1/random[7]_i_37_n_0
+    SLICE_X40Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.571 r  animate_muffin/rng1/random_reg[7]_i_27/CO[3]
+                         net (fo=1, routed)           0.009     9.580    animate_muffin/rng1/random_reg[7]_i_27_n_0
+    SLICE_X40Y25         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     9.808 r  animate_muffin/rng1/random_reg[0]_i_24/CO[2]
+                         net (fo=12, routed)          0.528    10.337    animate_muffin_n_10
+    SLICE_X41Y24         LUT2 (Prop_lut2_I0_O)        0.313    10.650 r  random[7]_i_31/O
+                         net (fo=1, routed)           0.000    10.650    animate_muffin/rng1/lfsr_reg[8]_0[0]
+    SLICE_X41Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.200 r  animate_muffin/rng1/random_reg[7]_i_21/CO[3]
+                         net (fo=1, routed)           0.009    11.209    animate_muffin/rng1/random_reg[7]_i_21_n_0
+    SLICE_X41Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.323 r  animate_muffin/rng1/random_reg[0]_i_19/CO[3]
+                         net (fo=14, routed)          0.971    12.294    animate_muffin/rng1/random_reg[0]_i_19_n_0
+    SLICE_X43Y24         LUT2 (Prop_lut2_I0_O)        0.124    12.418 r  animate_muffin/rng1/random[7]_i_26/O
+                         net (fo=1, routed)           0.000    12.418    animate_muffin/rng1/random[7]_i_26_n_0
+    SLICE_X43Y24         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    12.950 r  animate_muffin/rng1/random_reg[7]_i_15/CO[3]
+                         net (fo=1, routed)           0.009    12.959    animate_muffin/rng1/random_reg[7]_i_15_n_0
+    SLICE_X43Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.073 r  animate_muffin/rng1/random_reg[0]_i_18/CO[3]
+                         net (fo=1, routed)           0.000    13.073    animate_muffin/rng1/random_reg[0]_i_18_n_0
+    SLICE_X43Y26         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    13.344 r  animate_muffin/rng1/random_reg[0]_i_12/CO[0]
+                         net (fo=16, routed)          0.822    14.165    animate_muffin/rng1/random_reg[0]_i_12_n_3
+    SLICE_X44Y24         LUT2 (Prop_lut2_I0_O)        0.373    14.538 r  animate_muffin/rng1/random[7]_i_20/O
+                         net (fo=1, routed)           0.000    14.538    animate_muffin/rng1/random[7]_i_20_n_0
+    SLICE_X44Y24         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    15.070 r  animate_muffin/rng1/random_reg[7]_i_9/CO[3]
+                         net (fo=1, routed)           0.009    15.079    animate_muffin/rng1/random_reg[7]_i_9_n_0
+    SLICE_X44Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.193 r  animate_muffin/rng1/random_reg[0]_i_11/CO[3]
+                         net (fo=1, routed)           0.000    15.193    animate_muffin/rng1/random_reg[0]_i_11_n_0
+    SLICE_X44Y26         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.350 r  animate_muffin/rng1/random_reg[0]_i_3/CO[1]
+                         net (fo=18, routed)          0.744    16.094    animate_muffin/rng1/random_reg[0]_i_3_n_2
+    SLICE_X42Y25         LUT2 (Prop_lut2_I0_O)        0.329    16.423 r  animate_muffin/rng1/random[7]_i_14/O
+                         net (fo=1, routed)           0.000    16.423    animate_muffin/rng1/random[7]_i_14_n_0
+    SLICE_X42Y25         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    16.936 r  animate_muffin/rng1/random_reg[7]_i_3/CO[3]
+                         net (fo=1, routed)           0.000    16.936    animate_muffin/rng1/random_reg[7]_i_3_n_0
+    SLICE_X42Y26         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    17.053 r  animate_muffin/rng1/random_reg[0]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    17.053    animate_muffin/rng1/random_reg[0]_i_2_n_0
+    SLICE_X42Y27         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    17.210 r  animate_muffin/rng1/random_reg[0]_i_1/CO[1]
+                         net (fo=19, routed)          0.696    17.906    animate_muffin/rng1/random_reg[0]_i_1_n_2
+    SLICE_X42Y28         LUT2 (Prop_lut2_I0_O)        0.332    18.238 r  animate_muffin/rng1/random[7]_i_8/O
+                         net (fo=1, routed)           0.000    18.238    animate_muffin/rng1/random[7]_i_8_n_0
+    SLICE_X42Y28         CARRY4 (Prop_carry4_S[0]_O[3])
+                                                      0.608    18.846 r  animate_muffin/rng1/random_reg[7]_i_2/O[3]
+                         net (fo=3, routed)           0.889    19.735    animate_muffin/rng1/random_reg[7]_i_2_n_4
+    SLICE_X43Y28         LUT6 (Prop_lut6_I4_O)        0.307    20.042 r  animate_muffin/rng1/random[7]_i_1/O
+                         net (fo=1, routed)           0.000    20.042    animate_muffin/rng1/p_0_in[7]
+    SLICE_X43Y28         FDRE                                         r  animate_muffin/rng1/random_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.435    14.776    animate_muffin/rng1/clk_IBUF_BUFG
+    SLICE_X43Y28         FDRE                                         r  animate_muffin/rng1/random_reg[7]/C
+                         clock pessimism              0.260    15.036    
+                         clock uncertainty           -0.035    15.001    
+    SLICE_X43Y28         FDRE (Setup_fdre_C_D)        0.031    15.032    animate_muffin/rng1/random_reg[7]
+  -------------------------------------------------------------------
+                         required time                         15.032    
+                         arrival time                         -20.042    
+  -------------------------------------------------------------------
+                         slack                                 -5.010    
+
+Slack (VIOLATED) :        -4.958ns  (required time - arrival time)
+  Source:                 animate_muffin/rng1/lfsr_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_muffin/rng1/random_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        14.921ns  (logic 9.061ns (60.728%)  route 5.860ns (39.272%))
+  Logic Levels:           26  (CARRY4=19 LUT2=6 LUT5=1)
+  Clock Path Skew:        -0.033ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.776ns = ( 14.776 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.069ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.548     5.069    animate_muffin/rng1/clk_IBUF_BUFG
+    SLICE_X42Y23         FDRE                                         r  animate_muffin/rng1/lfsr_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y23         FDRE (Prop_fdre_C_Q)         0.518     5.587 r  animate_muffin/rng1/lfsr_reg[11]/Q
+                         net (fo=3, routed)           0.288     5.876    animate_muffin/rng1/lfsr[11]
+    SLICE_X43Y23         CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.694     6.570 r  animate_muffin/rng1/random_reg[7]_i_39/CO[2]
+                         net (fo=1, routed)           0.505     7.074    animate_muffin/rng1/random_reg[7]_i_39_n_1
+    SLICE_X42Y23         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.689     7.763 r  animate_muffin/rng1/random_reg[7]_i_33/CO[3]
+                         net (fo=1, routed)           0.000     7.763    animate_muffin/rng1/random_reg[7]_i_33_n_0
+    SLICE_X42Y24         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.254     8.017 r  animate_muffin/rng1/random_reg[0]_i_28/CO[0]
+                         net (fo=11, routed)          0.637     8.654    animate_muffin/rng1/CO[0]
+    SLICE_X40Y24         LUT2 (Prop_lut2_I0_O)        0.367     9.021 r  animate_muffin/rng1/random[7]_i_37/O
+                         net (fo=1, routed)           0.000     9.021    animate_muffin/rng1/random[7]_i_37_n_0
+    SLICE_X40Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.571 r  animate_muffin/rng1/random_reg[7]_i_27/CO[3]
+                         net (fo=1, routed)           0.009     9.580    animate_muffin/rng1/random_reg[7]_i_27_n_0
+    SLICE_X40Y25         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     9.808 r  animate_muffin/rng1/random_reg[0]_i_24/CO[2]
+                         net (fo=12, routed)          0.528    10.337    animate_muffin_n_10
+    SLICE_X41Y24         LUT2 (Prop_lut2_I0_O)        0.313    10.650 r  random[7]_i_31/O
+                         net (fo=1, routed)           0.000    10.650    animate_muffin/rng1/lfsr_reg[8]_0[0]
+    SLICE_X41Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.200 r  animate_muffin/rng1/random_reg[7]_i_21/CO[3]
+                         net (fo=1, routed)           0.009    11.209    animate_muffin/rng1/random_reg[7]_i_21_n_0
+    SLICE_X41Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.323 r  animate_muffin/rng1/random_reg[0]_i_19/CO[3]
+                         net (fo=14, routed)          0.971    12.294    animate_muffin/rng1/random_reg[0]_i_19_n_0
+    SLICE_X43Y24         LUT2 (Prop_lut2_I0_O)        0.124    12.418 r  animate_muffin/rng1/random[7]_i_26/O
+                         net (fo=1, routed)           0.000    12.418    animate_muffin/rng1/random[7]_i_26_n_0
+    SLICE_X43Y24         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    12.950 r  animate_muffin/rng1/random_reg[7]_i_15/CO[3]
+                         net (fo=1, routed)           0.009    12.959    animate_muffin/rng1/random_reg[7]_i_15_n_0
+    SLICE_X43Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.073 r  animate_muffin/rng1/random_reg[0]_i_18/CO[3]
+                         net (fo=1, routed)           0.000    13.073    animate_muffin/rng1/random_reg[0]_i_18_n_0
+    SLICE_X43Y26         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    13.344 r  animate_muffin/rng1/random_reg[0]_i_12/CO[0]
+                         net (fo=16, routed)          0.822    14.165    animate_muffin/rng1/random_reg[0]_i_12_n_3
+    SLICE_X44Y24         LUT2 (Prop_lut2_I0_O)        0.373    14.538 r  animate_muffin/rng1/random[7]_i_20/O
+                         net (fo=1, routed)           0.000    14.538    animate_muffin/rng1/random[7]_i_20_n_0
+    SLICE_X44Y24         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    15.070 r  animate_muffin/rng1/random_reg[7]_i_9/CO[3]
+                         net (fo=1, routed)           0.009    15.079    animate_muffin/rng1/random_reg[7]_i_9_n_0
+    SLICE_X44Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.193 r  animate_muffin/rng1/random_reg[0]_i_11/CO[3]
+                         net (fo=1, routed)           0.000    15.193    animate_muffin/rng1/random_reg[0]_i_11_n_0
+    SLICE_X44Y26         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.350 r  animate_muffin/rng1/random_reg[0]_i_3/CO[1]
+                         net (fo=18, routed)          0.744    16.094    animate_muffin/rng1/random_reg[0]_i_3_n_2
+    SLICE_X42Y25         LUT2 (Prop_lut2_I0_O)        0.329    16.423 r  animate_muffin/rng1/random[7]_i_14/O
+                         net (fo=1, routed)           0.000    16.423    animate_muffin/rng1/random[7]_i_14_n_0
+    SLICE_X42Y25         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    16.936 r  animate_muffin/rng1/random_reg[7]_i_3/CO[3]
+                         net (fo=1, routed)           0.000    16.936    animate_muffin/rng1/random_reg[7]_i_3_n_0
+    SLICE_X42Y26         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    17.053 r  animate_muffin/rng1/random_reg[0]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    17.053    animate_muffin/rng1/random_reg[0]_i_2_n_0
+    SLICE_X42Y27         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    17.210 r  animate_muffin/rng1/random_reg[0]_i_1/CO[1]
+                         net (fo=19, routed)          0.696    17.906    animate_muffin/rng1/random_reg[0]_i_1_n_2
+    SLICE_X42Y28         LUT2 (Prop_lut2_I0_O)        0.332    18.238 r  animate_muffin/rng1/random[7]_i_8/O
+                         net (fo=1, routed)           0.000    18.238    animate_muffin/rng1/random[7]_i_8_n_0
+    SLICE_X42Y28         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    18.751 r  animate_muffin/rng1/random_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    18.751    animate_muffin/rng1/random_reg[7]_i_2_n_0
+    SLICE_X42Y29         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.868 r  animate_muffin/rng1/random_reg[11]_i_3/CO[3]
+                         net (fo=1, routed)           0.000    18.868    animate_muffin/rng1/random_reg[11]_i_3_n_0
+    SLICE_X42Y30         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    19.025 r  animate_muffin/rng1/random_reg[11]_i_2/CO[1]
+                         net (fo=9, routed)           0.633    19.658    animate_muffin/rng1/random_reg[11]_i_2_n_2
+    SLICE_X43Y28         LUT5 (Prop_lut5_I0_O)        0.332    19.990 r  animate_muffin/rng1/random[6]_i_1/O
+                         net (fo=1, routed)           0.000    19.990    animate_muffin/rng1/p_0_in[6]
+    SLICE_X43Y28         FDRE                                         r  animate_muffin/rng1/random_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         1.435    14.776    animate_muffin/rng1/clk_IBUF_BUFG
+    SLICE_X43Y28         FDRE                                         r  animate_muffin/rng1/random_reg[6]/C
+                         clock pessimism              0.260    15.036    
+                         clock uncertainty           -0.035    15.001    
+    SLICE_X43Y28         FDRE (Setup_fdre_C_D)        0.031    15.032    animate_muffin/rng1/random_reg[6]
+  -------------------------------------------------------------------
+                         required time                         15.032    
+                         arrival time                         -19.990    
+  -------------------------------------------------------------------
+                         slack                                 -4.958    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.099ns  (arrival time - required time)
+  Source:                 animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[12]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.500ns  (logic 0.373ns (74.560%)  route 0.127ns (25.440%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.244ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.564     1.447    animate_projectile/nolabel_line105/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X30Y49         FDRE                                         r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X30Y49         FDRE (Prop_fdre_C_Q)         0.164     1.611 r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]/Q
+                         net (fo=3, routed)           0.127     1.738    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]
+    SLICE_X30Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.156     1.894 r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[8]_i_1__3/CO[3]
+                         net (fo=1, routed)           0.001     1.894    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[8]_i_1__3_n_0
+    SLICE_X30Y50         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.053     1.947 r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[12]_i_1__3/O[0]
+                         net (fo=1, routed)           0.000     1.947    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[12]_i_1__3_n_7
+    SLICE_X30Y50         FDRE                                         r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.830     1.958    animate_projectile/nolabel_line105/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X30Y50         FDRE                                         r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[12]/C
+                         clock pessimism             -0.244     1.714    
+    SLICE_X30Y50         FDRE (Hold_fdre_C_D)         0.134     1.848    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[12]
+  -------------------------------------------------------------------
+                         required time                         -1.848    
+                         arrival time                           1.947    
+  -------------------------------------------------------------------
+                         slack                                  0.099    
+
+Slack (MET) :             0.105ns  (arrival time - required time)
+  Source:                 animate_muffin/get_fps_clock/COUNT_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_muffin/get_fps_clock/COUNT_reg[12]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.477ns  (logic 0.355ns (74.381%)  route 0.122ns (25.619%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.244ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.564     1.447    animate_muffin/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X33Y49         FDRE                                         r  animate_muffin/get_fps_clock/COUNT_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y49         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  animate_muffin/get_fps_clock/COUNT_reg[10]/Q
+                         net (fo=3, routed)           0.122     1.710    animate_muffin/get_fps_clock/COUNT_reg[10]
+    SLICE_X33Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     1.870 r  animate_muffin/get_fps_clock/COUNT_reg[8]_i_1__5/CO[3]
+                         net (fo=1, routed)           0.001     1.870    animate_muffin/get_fps_clock/COUNT_reg[8]_i_1__5_n_0
+    SLICE_X33Y50         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.054     1.924 r  animate_muffin/get_fps_clock/COUNT_reg[12]_i_1__5/O[0]
+                         net (fo=1, routed)           0.000     1.924    animate_muffin/get_fps_clock/COUNT_reg[12]_i_1__5_n_7
+    SLICE_X33Y50         FDRE                                         r  animate_muffin/get_fps_clock/COUNT_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.830     1.958    animate_muffin/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X33Y50         FDRE                                         r  animate_muffin/get_fps_clock/COUNT_reg[12]/C
+                         clock pessimism             -0.244     1.714    
+    SLICE_X33Y50         FDRE (Hold_fdre_C_D)         0.105     1.819    animate_muffin/get_fps_clock/COUNT_reg[12]
+  -------------------------------------------------------------------
+                         required time                         -1.819    
+                         arrival time                           1.924    
+  -------------------------------------------------------------------
+                         slack                                  0.105    
+
+Slack (MET) :             0.112ns  (arrival time - required time)
+  Source:                 animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[14]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.513ns  (logic 0.386ns (75.204%)  route 0.127ns (24.796%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.244ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.564     1.447    animate_projectile/nolabel_line105/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X30Y49         FDRE                                         r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X30Y49         FDRE (Prop_fdre_C_Q)         0.164     1.611 r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]/Q
+                         net (fo=3, routed)           0.127     1.738    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]
+    SLICE_X30Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.156     1.894 r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[8]_i_1__3/CO[3]
+                         net (fo=1, routed)           0.001     1.894    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[8]_i_1__3_n_0
+    SLICE_X30Y50         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.066     1.960 r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[12]_i_1__3/O[2]
+                         net (fo=1, routed)           0.000     1.960    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[12]_i_1__3_n_5
+    SLICE_X30Y50         FDRE                                         r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.830     1.958    animate_projectile/nolabel_line105/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X30Y50         FDRE                                         r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[14]/C
+                         clock pessimism             -0.244     1.714    
+    SLICE_X30Y50         FDRE (Hold_fdre_C_D)         0.134     1.848    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[14]
+  -------------------------------------------------------------------
+                         required time                         -1.848    
+                         arrival time                           1.960    
+  -------------------------------------------------------------------
+                         slack                                  0.112    
+
+Slack (MET) :             0.116ns  (arrival time - required time)
+  Source:                 animate_muffin/get_fps_clock/COUNT_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_muffin/get_fps_clock/COUNT_reg[14]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.488ns  (logic 0.366ns (74.958%)  route 0.122ns (25.042%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.244ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.564     1.447    animate_muffin/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X33Y49         FDRE                                         r  animate_muffin/get_fps_clock/COUNT_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y49         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  animate_muffin/get_fps_clock/COUNT_reg[10]/Q
+                         net (fo=3, routed)           0.122     1.710    animate_muffin/get_fps_clock/COUNT_reg[10]
+    SLICE_X33Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     1.870 r  animate_muffin/get_fps_clock/COUNT_reg[8]_i_1__5/CO[3]
+                         net (fo=1, routed)           0.001     1.870    animate_muffin/get_fps_clock/COUNT_reg[8]_i_1__5_n_0
+    SLICE_X33Y50         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.065     1.935 r  animate_muffin/get_fps_clock/COUNT_reg[12]_i_1__5/O[2]
+                         net (fo=1, routed)           0.000     1.935    animate_muffin/get_fps_clock/COUNT_reg[12]_i_1__5_n_5
+    SLICE_X33Y50         FDRE                                         r  animate_muffin/get_fps_clock/COUNT_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.830     1.958    animate_muffin/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X33Y50         FDRE                                         r  animate_muffin/get_fps_clock/COUNT_reg[14]/C
+                         clock pessimism             -0.244     1.714    
+    SLICE_X33Y50         FDRE (Hold_fdre_C_D)         0.105     1.819    animate_muffin/get_fps_clock/COUNT_reg[14]
+  -------------------------------------------------------------------
+                         required time                         -1.819    
+                         arrival time                           1.935    
+  -------------------------------------------------------------------
+                         slack                                  0.116    
+
+Slack (MET) :             0.135ns  (arrival time - required time)
+  Source:                 animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[13]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.536ns  (logic 0.409ns (76.267%)  route 0.127ns (23.733%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.244ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.564     1.447    animate_projectile/nolabel_line105/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X30Y49         FDRE                                         r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X30Y49         FDRE (Prop_fdre_C_Q)         0.164     1.611 r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]/Q
+                         net (fo=3, routed)           0.127     1.738    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]
+    SLICE_X30Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.156     1.894 r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[8]_i_1__3/CO[3]
+                         net (fo=1, routed)           0.001     1.894    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[8]_i_1__3_n_0
+    SLICE_X30Y50         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.089     1.983 r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[12]_i_1__3/O[1]
+                         net (fo=1, routed)           0.000     1.983    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[12]_i_1__3_n_6
+    SLICE_X30Y50         FDRE                                         r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.830     1.958    animate_projectile/nolabel_line105/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X30Y50         FDRE                                         r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[13]/C
+                         clock pessimism             -0.244     1.714    
+    SLICE_X30Y50         FDRE (Hold_fdre_C_D)         0.134     1.848    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[13]
+  -------------------------------------------------------------------
+                         required time                         -1.848    
+                         arrival time                           1.983    
+  -------------------------------------------------------------------
+                         slack                                  0.135    
+
+Slack (MET) :             0.137ns  (arrival time - required time)
+  Source:                 animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[15]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.538ns  (logic 0.411ns (76.356%)  route 0.127ns (23.644%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.244ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.564     1.447    animate_projectile/nolabel_line105/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X30Y49         FDRE                                         r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X30Y49         FDRE (Prop_fdre_C_Q)         0.164     1.611 r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]/Q
+                         net (fo=3, routed)           0.127     1.738    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]
+    SLICE_X30Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.156     1.894 r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[8]_i_1__3/CO[3]
+                         net (fo=1, routed)           0.001     1.894    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[8]_i_1__3_n_0
+    SLICE_X30Y50         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.091     1.985 r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[12]_i_1__3/O[3]
+                         net (fo=1, routed)           0.000     1.985    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[12]_i_1__3_n_4
+    SLICE_X30Y50         FDRE                                         r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.830     1.958    animate_projectile/nolabel_line105/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X30Y50         FDRE                                         r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[15]/C
+                         clock pessimism             -0.244     1.714    
+    SLICE_X30Y50         FDRE (Hold_fdre_C_D)         0.134     1.848    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[15]
+  -------------------------------------------------------------------
+                         required time                         -1.848    
+                         arrival time                           1.985    
+  -------------------------------------------------------------------
+                         slack                                  0.137    
+
+Slack (MET) :             0.139ns  (arrival time - required time)
+  Source:                 animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[16]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.540ns  (logic 0.413ns (76.443%)  route 0.127ns (23.557%))
+  Logic Levels:           3  (CARRY4=3)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.244ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.564     1.447    animate_projectile/nolabel_line105/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X30Y49         FDRE                                         r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X30Y49         FDRE (Prop_fdre_C_Q)         0.164     1.611 r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]/Q
+                         net (fo=3, routed)           0.127     1.738    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[10]
+    SLICE_X30Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.156     1.894 r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[8]_i_1__3/CO[3]
+                         net (fo=1, routed)           0.001     1.894    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[8]_i_1__3_n_0
+    SLICE_X30Y50         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.040     1.934 r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[12]_i_1__3/CO[3]
+                         net (fo=1, routed)           0.000     1.934    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[12]_i_1__3_n_0
+    SLICE_X30Y51         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.053     1.987 r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[16]_i_1__3/O[0]
+                         net (fo=1, routed)           0.000     1.987    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[16]_i_1__3_n_7
+    SLICE_X30Y51         FDRE                                         r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.830     1.958    animate_projectile/nolabel_line105/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X30Y51         FDRE                                         r  animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[16]/C
+                         clock pessimism             -0.244     1.714    
+    SLICE_X30Y51         FDRE (Hold_fdre_C_D)         0.134     1.848    animate_projectile/nolabel_line105/get_fps_clock/COUNT_reg[16]
+  -------------------------------------------------------------------
+                         required time                         -1.848    
+                         arrival time                           1.987    
+  -------------------------------------------------------------------
+                         slack                                  0.139    
+
+Slack (MET) :             0.141ns  (arrival time - required time)
+  Source:                 animate_muffin/get_fps_clock/COUNT_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_muffin/get_fps_clock/COUNT_reg[13]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.513ns  (logic 0.391ns (76.178%)  route 0.122ns (23.822%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.244ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.564     1.447    animate_muffin/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X33Y49         FDRE                                         r  animate_muffin/get_fps_clock/COUNT_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y49         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  animate_muffin/get_fps_clock/COUNT_reg[10]/Q
+                         net (fo=3, routed)           0.122     1.710    animate_muffin/get_fps_clock/COUNT_reg[10]
+    SLICE_X33Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     1.870 r  animate_muffin/get_fps_clock/COUNT_reg[8]_i_1__5/CO[3]
+                         net (fo=1, routed)           0.001     1.870    animate_muffin/get_fps_clock/COUNT_reg[8]_i_1__5_n_0
+    SLICE_X33Y50         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.090     1.960 r  animate_muffin/get_fps_clock/COUNT_reg[12]_i_1__5/O[1]
+                         net (fo=1, routed)           0.000     1.960    animate_muffin/get_fps_clock/COUNT_reg[12]_i_1__5_n_6
+    SLICE_X33Y50         FDRE                                         r  animate_muffin/get_fps_clock/COUNT_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.830     1.958    animate_muffin/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X33Y50         FDRE                                         r  animate_muffin/get_fps_clock/COUNT_reg[13]/C
+                         clock pessimism             -0.244     1.714    
+    SLICE_X33Y50         FDRE (Hold_fdre_C_D)         0.105     1.819    animate_muffin/get_fps_clock/COUNT_reg[13]
+  -------------------------------------------------------------------
+                         required time                         -1.819    
+                         arrival time                           1.960    
+  -------------------------------------------------------------------
+                         slack                                  0.141    
+
+Slack (MET) :             0.141ns  (arrival time - required time)
+  Source:                 animate_muffin/get_fps_clock/COUNT_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_muffin/get_fps_clock/COUNT_reg[15]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.513ns  (logic 0.391ns (76.178%)  route 0.122ns (23.822%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.244ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.564     1.447    animate_muffin/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X33Y49         FDRE                                         r  animate_muffin/get_fps_clock/COUNT_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y49         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  animate_muffin/get_fps_clock/COUNT_reg[10]/Q
+                         net (fo=3, routed)           0.122     1.710    animate_muffin/get_fps_clock/COUNT_reg[10]
+    SLICE_X33Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     1.870 r  animate_muffin/get_fps_clock/COUNT_reg[8]_i_1__5/CO[3]
+                         net (fo=1, routed)           0.001     1.870    animate_muffin/get_fps_clock/COUNT_reg[8]_i_1__5_n_0
+    SLICE_X33Y50         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.090     1.960 r  animate_muffin/get_fps_clock/COUNT_reg[12]_i_1__5/O[3]
+                         net (fo=1, routed)           0.000     1.960    animate_muffin/get_fps_clock/COUNT_reg[12]_i_1__5_n_4
+    SLICE_X33Y50         FDRE                                         r  animate_muffin/get_fps_clock/COUNT_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.830     1.958    animate_muffin/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X33Y50         FDRE                                         r  animate_muffin/get_fps_clock/COUNT_reg[15]/C
+                         clock pessimism             -0.244     1.714    
+    SLICE_X33Y50         FDRE (Hold_fdre_C_D)         0.105     1.819    animate_muffin/get_fps_clock/COUNT_reg[15]
+  -------------------------------------------------------------------
+                         required time                         -1.819    
+                         arrival time                           1.960    
+  -------------------------------------------------------------------
+                         slack                                  0.141    
+
+Slack (MET) :             0.144ns  (arrival time - required time)
+  Source:                 animate_muffin/get_fps_clock/COUNT_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            animate_muffin/get_fps_clock/COUNT_reg[16]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.516ns  (logic 0.394ns (76.317%)  route 0.122ns (23.683%))
+  Logic Levels:           3  (CARRY4=3)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.244ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.564     1.447    animate_muffin/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X33Y49         FDRE                                         r  animate_muffin/get_fps_clock/COUNT_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y49         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  animate_muffin/get_fps_clock/COUNT_reg[10]/Q
+                         net (fo=3, routed)           0.122     1.710    animate_muffin/get_fps_clock/COUNT_reg[10]
+    SLICE_X33Y49         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     1.870 r  animate_muffin/get_fps_clock/COUNT_reg[8]_i_1__5/CO[3]
+                         net (fo=1, routed)           0.001     1.870    animate_muffin/get_fps_clock/COUNT_reg[8]_i_1__5_n_0
+    SLICE_X33Y50         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.039     1.909 r  animate_muffin/get_fps_clock/COUNT_reg[12]_i_1__5/CO[3]
+                         net (fo=1, routed)           0.000     1.909    animate_muffin/get_fps_clock/COUNT_reg[12]_i_1__5_n_0
+    SLICE_X33Y51         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.054     1.963 r  animate_muffin/get_fps_clock/COUNT_reg[16]_i_1__5/O[0]
+                         net (fo=1, routed)           0.000     1.963    animate_muffin/get_fps_clock/COUNT_reg[16]_i_1__5_n_7
+    SLICE_X33Y51         FDRE                                         r  animate_muffin/get_fps_clock/COUNT_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=538, routed)         0.830     1.958    animate_muffin/get_fps_clock/clk_IBUF_BUFG
+    SLICE_X33Y51         FDRE                                         r  animate_muffin/get_fps_clock/COUNT_reg[16]/C
+                         clock pessimism             -0.244     1.714    
+    SLICE_X33Y51         FDRE (Hold_fdre_C_D)         0.105     1.819    animate_muffin/get_fps_clock/COUNT_reg[16]
+  -------------------------------------------------------------------
+                         required time                         -1.819    
+                         arrival time                           1.963    
+  -------------------------------------------------------------------
+                         slack                                  0.144    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     BUFG/I   n/a            2.155         10.000      7.845      BUFGCTRL_X0Y0  clk_IBUF_BUFG_inst/I
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X31Y66   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[0]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X31Y68   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[10]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X31Y68   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[11]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X31Y69   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[12]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X31Y69   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[13]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X31Y69   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[14]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X31Y69   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[15]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X31Y70   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[16]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X31Y70   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[17]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y68   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[10]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y68   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[11]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y69   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[12]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y69   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[13]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y69   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[14]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y69   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[15]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y70   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[16]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y70   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[17]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y70   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[18]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y70   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[19]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y66   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[0]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y66   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[1]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y72   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[24]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y72   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[24]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y72   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[25]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y72   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[25]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y72   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[26]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y72   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[26]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y72   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[27]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X31Y72   animate_projectile/nolabel_line116/get_fps_clock2/COUNT_reg[27]/C
+
+
+
